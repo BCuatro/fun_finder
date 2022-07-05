@@ -6,12 +6,13 @@ import SignupFormContainer from './session/signup_form_container'
 import MainPage from '../main/main_page';
 import NavBarContainer from '../nav/nav_bar_container';
 
+
 const App= () => (
     <div>
         <NavBarContainer />
         <Switch>
             <AuthRoute exact path="/" component={MainPage} />
-            <AuthRoute exact path="/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/login" co ponent={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
         </Switch>
     </div>

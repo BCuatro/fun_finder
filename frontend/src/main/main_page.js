@@ -6,6 +6,7 @@ class MainPage extends React.Component {
                 <h1> Fun Finder</h1>
                 <footer>
                     Tap and Snack
+                    
                 </footer>
             </div>
         );
