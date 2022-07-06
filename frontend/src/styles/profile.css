@@ -3,7 +3,7 @@
   list-style-type: none;
   height: 30px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0;
   border-bottom: #082a3a solid;
@@ -18,7 +18,7 @@
   }
 
 .tabsHeader > li{
-    width: 65px;
+    width: 100px;
     padding-top: 4px;
     text-align: center;
     cursor: pointer;
@@ -28,7 +28,7 @@
     margin:0;
   }
   .tabsHeader > li:hover{
-    width: 65px;
+    width: 100px;
     height: 25px;
     color: #e46905;
     padding-top: 4px;
