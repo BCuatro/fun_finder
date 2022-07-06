@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import "../../styles/login.css"
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -45,21 +46,34 @@ class LoginForm extends React.Component {
       }
       render() {
          return(
-            <div>
+            <div className = "login-form-container">
                 <form onSubmit ={this.handleSubmit}>
                     <div> 
-                        <input type ="text"
-                            value = {this.state.email}
-                            onChange = {this.update('email')}
-                            placeholder = "Email"
-                        />
+                        <br />
+                        <h2>Log In </h2>
+                        <div className="modal-input-container">
+                                <input type ="text"
+                                    id ="email"
+                                    required
+                                    className= "modal-input"
+                                    value = {this.state.email}
+                                    onChange = {this.update('email')}
+                                />
+                                <label htmlFor='email' className="modal-label"> Email:</label> 
+                            </div>
                         <br/>
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder="Password"
-                        />
-                        <input type = "submit" value= "Submit" />
+                        <div className="modal-input-container">
+                            <input type ="password"
+                                id ="password"
+                                required
+                                className= "modal-input"
+                                value = {this.state.password}
+                                onChange = {this.update('password')}
+                            />
+                            <label htmlFor='password' className="modal-label">Password:</label> 
+                        </div>
+                        <br />
+                        <input className="loginbutton" type = "submit" value= "Submit" />
                         {this.renderErrors()}
                     </div>
                 </form>

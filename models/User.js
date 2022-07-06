@@ -27,10 +27,10 @@ const UserSchema = new Schema({
       required: true
     },
     
-    birthdate: {
-      type: Date,
-      required: true
-    },
+    // birthdate: {
+    //   type: Date,
+    //   required: true
+    // },
 
     date: {
       type: Date,

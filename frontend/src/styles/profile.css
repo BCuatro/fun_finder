@@ -1,0 +1,51 @@
+.tabsHeader{
+  display: flex;
+  list-style-type: none;
+  height: 30px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  border-bottom: #082a3a solid;
+  border-top:#082a3a solid;
+  background-color: transparent;
+  opacity: 50%;
+}
+
+.tabsHeader:hover{
+    
+    opacity: 100%;
+  }
+
+.tabsHeader > li{
+    width: 65px;
+    padding-top: 4px;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    background-color: transparent;
+    padding:0;
+    margin:0;
+  }
+  .tabsHeader > li:hover{
+    width: 65px;
+    height: 25px;
+    color: #e46905;
+    padding-top: 4px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    
+  }
+  
+  .tabsHeader > li:focus{
+  
+    background-color: #1f6cab;  
+  
+  }
+  
+  
+  ul{
+    list-style-type: none;
+  }
