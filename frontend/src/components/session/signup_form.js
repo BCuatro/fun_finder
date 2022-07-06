@@ -81,6 +81,7 @@ class SignupForm extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                     <div>
                         <br /> 
+                        <h2>Sign Up</h2>
                         <div className="modal-input-container">
                             <input type ="text"
                                 id ="first_name"

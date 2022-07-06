@@ -1,0 +1,71 @@
+.login-form-container{
+    
+    position: relative;
+    display: flex;
+    
+}
+
+.modal-input-container {
+    position: relative;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .modal-label {
+    position: absolute;
+    left: 5px;
+    color: #d3d3d3;
+    transition: .6s all;
+    cursor: text;
+  }
+  .modal-input {
+    width: 75%;
+    border-radius: 10px;
+    outline: 0;
+    padding: .5em;
+    border: 2px solid #082a3a;
+    box-shadow: none;
+    color: #e46905;
+  
+  }
+  
+  .modal-input:focus,
+  .modal-input:valid {
+    border-color: #1f6cab;
+    
+  }
+  .modal-input:focus~.modal-label,
+  .modal-input:valid~.modal-label {
+    font-size: 14px;
+    top: -22px;
+    color: #e46905;
+    padding: 0;
+    transition: .6s;
+    
+  }
+
+  .loginbutton{
+    padding: 5px;
+    margin: 5px;
+    height: 30px;
+   
+    border: solid #fff2e2;
+    font-size: 9px;
+    font-weight: 50;
+    cursor: pointer;
+    color: #fff2e2;
+    /* border-radius: 7px; */
+    background: #e46905;
+    transition: all 0.2s ease;
+    width: 70%;
+    
+    
+ 
+  }
+  .loginbutton:hover{
+    outline: 3px solid #e46905;
+    outline-offset: .3rem;
+
+  }
+
+  
