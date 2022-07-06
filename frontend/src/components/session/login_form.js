@@ -1,6 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import "../../styles/login.css"
+import { Link, withRouter } from 'react-router-dom';
+import "../../styles/session.css"
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -45,11 +45,16 @@ class LoginForm extends React.Component {
         );
       }
       render() {
+        
+
          return(
-            <div className = "login-form-container">
+            <div className = "form-container">
                 <form onSubmit ={this.handleSubmit}>
                     <div> 
                         <br />
+                        <div className="overlay-left">
+                            <Link to={'/signup'} id="sessionlinks">Signup</Link> 
+                        </div>
                         <h2>Log In </h2>
                         <div className="modal-input-container">
                                 <input type ="text"
@@ -73,7 +78,7 @@ class LoginForm extends React.Component {
                             <label htmlFor='password' className="modal-label">Password:</label> 
                         </div>
                         <br />
-                        <input className="loginbutton" type = "submit" value= "Submit" />
+                        <input className="sessionbutton" type = "submit" value= "Submit" />
                         {this.renderErrors()}
                     </div>
                 </form>

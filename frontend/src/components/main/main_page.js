@@ -4,6 +4,7 @@ class MainPage extends React.Component {
         return (
             <div>
                 <h1> Welcome To Fun Finder</h1>
+                
                 <footer>
                     Tap and Snack
                     

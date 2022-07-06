@@ -1,6 +1,8 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import "../../styles/signup.css"
+import { Link, withRouter } from 'react-router-dom';
+import LoginFormContainer from './login_form_container';
+import "../../styles/session.css"
+
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -77,10 +79,13 @@ class SignupForm extends React.Component {
       }
       render() {
          return(
-            <div className = "sign-form-container">
+            <div className = "form-container">
                 <form onSubmit ={this.handleSubmit}>
                     <div>
                         <br /> 
+                        <div className="overlay-right">
+                            <Link to={'/login'} id="sessionlinks">Signup</Link>
+                        </div>
                         <h2>Sign Up</h2>
                         <div className="modal-input-container">
                             <input type ="text"
@@ -154,7 +159,9 @@ class SignupForm extends React.Component {
                         </div>
                         
                         <br/>
-                        <input className="button" type = "submit" value= "Submit" />
+                        <input className="sessionbutton" type = "submit" value= "Submit" />
+                        <Link to={'/login'}id="sessionlinks">Login</Link>
+
                         {this.renderErrors()}
                         {/* <input type ="date"
                             value = {this.state.birthdate}

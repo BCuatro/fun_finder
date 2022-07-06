@@ -14,8 +14,8 @@
 #logged_out {
     
     display:flex;
-   width: 100%;
-    left: 100%;
+    width: 100%;
+    /* left: 100%; */
     flex-direction: column;
     align-items: end;
     font-size: larger;

@@ -1,4 +1,4 @@
-.login-form-container{
+.form-container{
     
     position: relative;
     display: flex;
@@ -44,7 +44,7 @@
     
   }
 
-  .loginbutton{
+  .sessionbutton{
     padding: 5px;
     margin: 5px;
     height: 30px;
@@ -62,10 +62,45 @@
     
  
   }
-  .loginbutton:hover{
+  .sessionbutton:hover{
     outline: 3px solid #e46905;
     outline-offset: .3rem;
 
+  }
+
+  .overlay-right{
+  position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+  background-color: pink;
+	transform: translateX(50%);
+	transition: transform 3s ease-in-out;
+  z-index: 100;
+  }
+  .overlay-left{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-color: pink;
+    transform: translateX(0);
+    transition: transform 3s ease-in-out;
+    z-index: 100;
+  
+    
   }
 
   
