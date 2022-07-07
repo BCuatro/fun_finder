@@ -1,6 +1,9 @@
 {
   "name": "fun_finder",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.15.0"
+  },
   "description": "",
   "main": "app.js",
   "scripts": {
