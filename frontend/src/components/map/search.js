@@ -4,7 +4,10 @@ import usePlacesAutocomplete, {
   getLatLng
 } from "use-places-autocomplete";
 
-export default function Search({ panTo }) {  
+export default function Search({ panTo, type }) {  
+
+  const chosenType = type
+
   const {
     ready,
     value,
@@ -18,24 +21,10 @@ export default function Search({ panTo }) {
     debounce: 300
   });
 
-  const handleIntroverts = () => {
-    // Update the keyword of the input element
-    let e;
-    let intro = ['cafe', 'bowling', 'museum', 'restaurant'];
-    e = intro[Math.floor(Math.random() * intro.length)]
-    setValue(e);
-  };
-
-  const handleExtroverts = () => {
-    let e;
-    let intro = ['amusement park', 'public park', 'zoo', 'bar'];
-    e = intro[Math.floor(Math.random() * intro.length)]
-    setValue(e);
-  };
-
   const handleInput = e => {
     // Update the keyword of the input element
     setValue(e.target.value);
+    console.log(chosenType)
   };
 
   const handleSelect = ({ description }, autoSelect = false) => () => {
@@ -44,7 +33,6 @@ export default function Search({ panTo }) {
       clearSuggestions();
     }
 
-    // Get latitude and longitude via utility functions
     getGeocode({ address: description })
       .then(results => getLatLng(results[0]))
       .then(({ lat, lng }) => {
@@ -69,10 +57,6 @@ export default function Search({ panTo }) {
       );
     });
 
-    if (data.length > 0) {
-      handleSelect(data[0], true)()
-    }
-
   return (
     <div>
       <input
@@ -81,9 +65,47 @@ export default function Search({ panTo }) {
         disabled={!ready}
         placeholder="Where are you going?"
       />
-      <button onClick={handleIntroverts}>Introvert</button>
-      <button onClick={handleExtroverts}>Extrovert</button>
       {status === "OK" && <ul>{renderSuggestions()}</ul>}
+      <button onClick={renderSuggestions}></button>
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// so here we will have a button to Search, it will replace the functionality of 
+// the search bar's results
+
+
+{/* <button onClick={handleIntroverts}>Introvert</button>
+<button onClick={handleExtroverts}>Extrovert</button> */}
+
+// const handleIntroverts = () => {
+//   // Update the keyword of the input element
+//   let e;
+//   let intro = ['cafe', 'bowling', 'museum', 'restaurant'];
+//   e = intro[Math.floor(Math.random() * intro.length)]
+//   setValue(e);
+// };
+
+// const handleExtroverts = () => {
+//   let e;
+//   let intro = ['amusement park', 'public park', 'zoo', 'bar'];
+//   e = intro[Math.floor(Math.random() * intro.length)]
+//   setValue(e);
+// };
+
+ // if (data.length > 0) {
+    //   handleSelect(data[0], true)()
+    // }
