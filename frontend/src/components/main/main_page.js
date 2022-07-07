@@ -7,7 +7,7 @@ const MainPage = (props) => {
 
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: key,
+        googleMapsApiKey: google_maps_key,
         libraries: ["places"]
         })
     
