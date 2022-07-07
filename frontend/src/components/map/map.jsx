@@ -30,13 +30,17 @@ export default function Map() {
     mapRef.current.setZoom(12);
     let map = mapRef.current;
 
-
-
+    var randType;
+    const types = ['cafe', 'bowling', 'museum', 'restaurant', 'amusement park', 'public park', 'zoo', 'bar'];
+    randType =  types[Math.floor(Math.random() * types.length)] 
+    // console.log('lookin for type', randType) =>giving random type to search query
+    // trial code 
     let request = { 
       location: { lat, lng },
-      radius: "500",
-      type: ["church"]  
-    };
+      // seems that radius is what drops pins on the map
+      radius: "300",
+      type: randType
+    };  
 
     let service = new google.maps.places.PlacesService(mapRef.current);
     service.nearbySearch(request, callback);

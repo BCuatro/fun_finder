@@ -18,16 +18,31 @@ export default function Search({ panTo }) {
     debounce: 300
   });
 
+  const handleIntroverts = () => {
+    // Update the keyword of the input element
+    let e;
+    let intro = ['cafe', 'bowling', 'museum', 'restaurant'];
+    e = intro[Math.floor(Math.random() * intro.length)]
+    setValue(e);
+  };
+
+  const handleExtroverts = () => {
+    let e;
+    let intro = ['amusement park', 'public park', 'zoo', 'bar'];
+    e = intro[Math.floor(Math.random() * intro.length)]
+    setValue(e);
+  };
+
   const handleInput = e => {
     // Update the keyword of the input element
     setValue(e.target.value);
   };
 
-  const handleSelect = ({ description }) => () => {
-    // When user selects a place, we can replace the keyword without request data from API
-    // by setting the second parameter to "false"
-    setValue(description, false);
-    clearSuggestions();
+  const handleSelect = ({ description }, autoSelect = false) => () => {
+    if (!autoSelect) {
+      setValue(description, false);
+      clearSuggestions();
+    }
 
     // Get latitude and longitude via utility functions
     getGeocode({ address: description })
@@ -36,7 +51,7 @@ export default function Search({ panTo }) {
         panTo({ lat, lng });
       })
       .catch(error => {
-        console.log("😱 Error: ", error);
+        console.log("Error: ", error);
       });
   };
 
@@ -54,6 +69,10 @@ export default function Search({ panTo }) {
       );
     });
 
+    if (data.length > 0) {
+      handleSelect(data[0], true)()
+    }
+
   return (
     <div>
       <input
@@ -62,7 +81,8 @@ export default function Search({ panTo }) {
         disabled={!ready}
         placeholder="Where are you going?"
       />
-      {/* We can use the "status" to decide whether we should display the dropdown or not */}
+      <button onClick={handleIntroverts}>Introvert</button>
+      <button onClick={handleExtroverts}>Extrovert</button>
       {status === "OK" && <ul>{renderSuggestions()}</ul>}
     </div>
   );
