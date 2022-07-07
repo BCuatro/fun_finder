@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import "../../styles/session.css"
 
 class LoginForm extends React.Component {
@@ -19,6 +19,9 @@ class LoginForm extends React.Component {
         }
         this.setState({errors: nextProps.errors})
     }
+    // componentWillUnmount(){
+    //         this.props.removeErrors();
+    // }
 
     update(field){
         return e => this.setState({
@@ -52,34 +55,34 @@ class LoginForm extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                     <div> 
                         <br />
-                        <div className="overlay-left">
+                        {/* <div className="overlay-left">
                             <Link to={'/signup'} id="sessionlinks">Signup</Link> 
-                        </div>
-                        <h2>Log In </h2>
+                        </div> */}
+                        <h2 className="logintitle">Log In </h2>
                         <div className="modal-input-container">
                                 <input type ="text"
-                                    id ="email"
+                                    id ="loginemail"
                                     required
                                     className= "modal-input"
                                     value = {this.state.email}
                                     onChange = {this.update('email')}
                                 />
-                                <label htmlFor='email' className="modal-label"> Email:</label> 
+                                <label htmlFor='loginemail' className="modal-label"> Email:</label> 
                             </div>
                         <br/>
                         <div className="modal-input-container">
                             <input type ="password"
-                                id ="password"
+                                id ="loginpassword"
                                 required
                                 className= "modal-input"
                                 value = {this.state.password}
                                 onChange = {this.update('password')}
                             />
-                            <label htmlFor='password' className="modal-label">Password:</label> 
+                            <label htmlFor='loginpassword' className="modal-label">Password:</label> 
                         </div>
                         <br />
                         <input className="sessionbutton" type = "submit" value= "Submit" />
-                        {this.renderErrors()}
+                        {/* {this.renderErrors()} */}
                     </div>
                 </form>
             </div>

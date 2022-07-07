@@ -2,6 +2,7 @@
     
     position: relative;
     display: flex;
+    align-items: center;
     
 }
 
@@ -47,6 +48,8 @@
   .sessionbutton{
     padding: 5px;
     margin: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
     height: 30px;
    
     border: solid #fff2e2;
@@ -59,7 +62,6 @@
     transition: all 0.2s ease;
     width: 70%;
     
-    
  
   }
   .sessionbutton:hover{
@@ -68,39 +70,95 @@
 
   }
 
-  .overlay-right{
-  position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-	height: 100%;
-	width: 50%;
-  background-color: pink;
-	transform: translateX(50%);
-	transition: transform 3s ease-in-out;
-  z-index: 100;
-  }
-  .overlay-left{
+  .overlay{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    top: 0;
+    padding: 30px 30px;
     height: 100%;
-    width: 50%;
-    background-color: pink;
-    transform: translateX(0);
-    transition: transform 3s ease-in-out;
-    z-index: 100;
-  
+    width: 40%;
+    background-color: #fff2e2;
+    border: solid 5px #e46905;
+    border-radius: 10%;
+    z-index: 1000;
     
   }
+  #right{
+  
+	transform: translateX(-50%);
+	transition: transform 2.5s ease;
+  
+  background-color: #fff2e2;
+  color: #c4c459;
+  
+  }
+  #left{
+    
+    transform: translateX(50%);
+    transition: transform 2.5s ease;
+    background-color: #fff2e2;
+    color:#1f6cab;
+  
+  }
+ 
+#login{
+  background: #1f6cab;
+  margin-top: 0;
+ 
+}
+
+#login:hover{
+  outline: 3px solid #1f6cab;
+  outline-offset: .3rem;
+}
+.logintitle{
+  color: #1f6cab;
+  font-family: sans-serif cursive;
+  font-size: 2em;
+}
+
+.signuptitle{
+  color: #c4c459;
+  font-family: sans-serif cursive;
+  font-size: 2em;
+}
+
+#signup{
+  background: #c4c459;
+  margin-top: 10px;
+}
+
+#signup:hover{
+  outline: 3px solid #c4c459;
+  outline-offset: .3rem;
+}
+
+.sessionscontainer{
+  position: relative;
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  border: #082a3a dashed 5px;
+  border-radius: 10%;
+
+  width: 60vw;
+  transform: translate(30%);
+}
+
+.seslogo{
+  height:200px;
+  width:200px;
+  }
+
+  .signupform{
+    transform: translateY(-5%)
+  }
+
+
+
 
   
