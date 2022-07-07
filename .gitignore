@@ -1,2 +1,4 @@
 /config/keys.js
 /node_modules
+
+/frontend/src/config/google_maps_key.js
