@@ -13,7 +13,7 @@ import "./../../styles/map.css"
 
 export default function Map() {
 
-  let types = ['bowling', 'museum', 'restaurant', 'amusement park', 'public park', 'zoo', 'bar'];
+  let types = ['bowling', 'museum', 'restaurant', 'public park', 'zoo', 'bar'];
 
   const introverted = () => {
     types = ['cafe', 'bakery', 'movie_theater', 'museum']
@@ -21,7 +21,7 @@ export default function Map() {
   }
 
   const extraverted = () => {
-    types = ['bowling', 'amusement park', 'bar']
+    types = ['bowling', 'restaurant', 'bar']
     console.log(types)
   }
 
@@ -78,6 +78,13 @@ export default function Map() {
               });
 
           let container_block = document.getElementById( 'address-details-container' );
+          if (document.getElementById("address-name")){
+          document.getElementById("address-name").remove()
+          }
+          if (document.getElementById("address-details")){
+            document.getElementById("address-details").remove()
+            }
+
           
           let address_name_to_insert = document.createElement( 'div' );
           address_name_to_insert.innerHTML = `${random.name}` ;

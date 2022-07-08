@@ -19,8 +19,7 @@ const MainPage = (props) => {
             <Map />
                 <div id="address-details-container"></div>
             <footer>
-                Tap and Snack
-                
+                {/* Tap and Snack */}
             </footer>
         </div>
     );
