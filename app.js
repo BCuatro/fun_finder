@@ -33,8 +33,8 @@ app.get("/",(req,res)=> {
     res.send("What's Poppin!");
 
 });
-
-app.use(passport.initialize());
+import initialize from 'passport';
+app.use(initialize());
 require('./config/passport')(passport);
 
 app.use(bodyParser.urlencoded({ extended: false }));
