@@ -6,7 +6,7 @@ const users = require("./routes/api/users")
 const tweets = require("./routes/api/tweets")
 const bodyParser = require('body-parser');
 const User = require("./models/User");
-const passport = require("passport")
+const passport = require("./frontend/src/config/passport")
 // const { emit } = require("nodemon");
 const path = require('path');
 
