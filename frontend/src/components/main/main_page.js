@@ -16,10 +16,10 @@ const MainPage = (props) => {
     return (
         <div>
             <h1> Welcome To Fun Finder</h1>
-            <footer>
-                Tap and Snack
-                <Map />
+            <Map />
                 <div id="address-details-container"></div>
+            <footer>
+                {/* Tap and Snack */}
             </footer>
         </div>
     );

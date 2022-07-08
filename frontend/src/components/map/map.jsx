@@ -7,15 +7,31 @@ import {
     Circle,
     MarkerClusterer
 } from "@react-google-maps/api"
-// import mapStyles from "./../mapStyles"
+import mapStyles from "./mapStyles"
 import Search from "./search";
 import "./../../styles/map.css"
 
 export default function Map() {
 
+  let types = ['bowling', 'museum', 'restaurant', 'public park', 'zoo', 'bar'];
+
+  const introverted = () => {
+    types = ['cafe', 'bakery', 'movie_theater', 'museum']
+    console.log(types)
+  }
+
+  const extraverted = () => {
+    types = ['bowling', 'restaurant', 'bar']
+    console.log(types)
+  }
+
+  const both = () => {
+    types = ['bowling', 'cafe', 'bakery', 'movie_theater', 'bowling', 'museum', 'restaurant', 'amusement park', 'public park', 'zoo', 'bar']
+  }
+
     const center = useMemo(() => ({ lat: 40.73629, lng: -73.99379 }), []);
     const options = {
-        // styles: mapStyles,
+        styles: mapStyles,
         disableDefaultUI: true,
         zoomControl: true
     }
@@ -25,51 +41,61 @@ export default function Map() {
     mapRef.current = map;
   }, []);
 
+
   const panTo = React.useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
-    mapRef.current.setZoom(12);
+    mapRef.current.setZoom(14);
     let map = mapRef.current;
 
     var randType;
-    const types = ['cafe', 'bowling', 'museum', 'restaurant', 'amusement park', 'public park', 'zoo', 'bar'];
     randType =  types[Math.floor(Math.random() * types.length)] 
-    // console.log('lookin for type', randType) =>giving random type to search query
-    // trial code 
+
+    console.log(randType)
+
     let request = { 
       location: { lat, lng },
-      // seems that radius is what drops pins on the map
       radius: "300",
       type: randType
     };  
 
     let service = new google.maps.places.PlacesService(mapRef.current);
     service.nearbySearch(request, callback);
-    // service.getDetails(request, callback)
-    // service.textSearch(request, callback);
 
     function callback(results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (let i = 0; i < results.length; i++) {
-          let place = results[i];
-          new google.maps.Marker({
-            position: place.geometry.location,
-            map
-          });
+        // for (let i = 0; i < results.length; i++) {
+        //   let place = results[i];
+        //   new google.maps.Marker({
+        //     position: place.geometry.location,
+        //     map
+        //   });
           // console.log(results[i].name)
-        //   console.log(results[i].vicinity)
 
-        let container_block = document.getElementById( 'address-details-container' );
-        
-        let address_name_to_insert = document.createElement( 'div' );
-        address_name_to_insert.innerHTML = `${results[i].name}` ;
-        container_block.appendChild( address_name_to_insert )
-        address_name_to_insert.id = 'address-name'
+          const random = results[Math.floor(Math.random() * results.length)];
+          new google.maps.Marker({
+                position: random.geometry.location,
+                map
+              });
 
-        let address_details_to_insert = document.createElement( 'div' );
-        address_details_to_insert.innerHTML = `${results[i].vicinity}` ;
-        container_block.appendChild( address_details_to_insert )
-        address_details_to_insert.id = 'address-details'
-        }
+          let container_block = document.getElementById( 'address-details-container' );
+          if (document.getElementById("address-name")){
+          document.getElementById("address-name").remove()
+          }
+          if (document.getElementById("address-details")){
+            document.getElementById("address-details").remove()
+            }
+
+          
+          let address_name_to_insert = document.createElement( 'div' );
+          address_name_to_insert.innerHTML = `${random.name}` ;
+          container_block.appendChild( address_name_to_insert )
+          address_name_to_insert.id = 'address-name'
+
+          let address_details_to_insert = document.createElement( 'div' );
+          address_details_to_insert.innerHTML = `${random.vicinity}` ;
+          container_block.appendChild( address_details_to_insert )
+          address_details_to_insert.id = 'address-details'
+        // }
       }
     }
   }, []);
@@ -77,6 +103,11 @@ export default function Map() {
 
     return <div className="container">
         <div className="controls"><h1>Map</h1></div>
+        <p>What's you personality type?</p>
+        <button onClick={introverted}>Introverted</button>
+        <button onClick={extraverted}>Extraverted</button>
+        <button onClick={both}>Both</button>
+
         <Search panTo={panTo} />
         <div className="map">
             <GoogleMap 
@@ -91,3 +122,8 @@ export default function Map() {
         {/* <div id="address-details-container"></div> */}
     </div >
 }
+
+// so here we will have a button for introvert a button for randomo and a button for
+// extravert which will change the types array
+// on click for introverted have a css color change as well and possibly text
+// change to that's great

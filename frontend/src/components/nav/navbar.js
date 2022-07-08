@@ -31,8 +31,9 @@ class NavBar extends React.Component {
                 <div className="container">
                     <Link to={'/'} > <img src={logo} className="logo" alt="logo" /></Link>
                     <div id="logged_out">
-                        <Link to={'/signup'} id="sessionlinks">Signup</Link>
-                        <Link to={'/login'}id="sessionlinks">Login</Link>
+                        {/* <Link to={'/signup'} id="sessionlinks">Signup</Link>
+                        <Link to={'/login'}id="sessionlinks">Login</Link> */}
+                        <Link to={'/sessions'}id="sessionlinks">Login/Signup</Link>
                     </div>
                     
                 </div>

@@ -36,6 +36,9 @@ class SignupForm extends React.Component {
         }
         this.setState({errors: nextProps.errors})
     }
+    // componentWillUnmount(){
+    //     this.props.removeErrors();
+    // }   
     getAge(dateString) {
     let today = new Date();
     let birthDate = new Date(dateString);
@@ -83,10 +86,10 @@ class SignupForm extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                     <div>
                         <br /> 
-                        <div className="overlay-right">
+                        {/* <div className="overlay-right">
                             <Link to={'/login'} id="sessionlinks">Signup</Link>
-                        </div>
-                        <h2>Sign Up</h2>
+                        </div> */}
+                        <h2 className="signuptitle">Sign Up</h2>
                         <div className="modal-input-container">
                             <input type ="text"
                                 id ="first_name"
@@ -160,7 +163,7 @@ class SignupForm extends React.Component {
                         
                         <br/>
                         <input className="sessionbutton" type = "submit" value= "Submit" />
-                        <Link to={'/login'}id="sessionlinks">Login</Link>
+                        
 
                         {this.renderErrors()}
                         {/* <input type ="date"
