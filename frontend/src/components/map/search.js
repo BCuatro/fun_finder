@@ -61,7 +61,7 @@ export default function Search({ panTo }) {
   }
 
   return (
-    <div>
+    <div className="search-container">
       {/* <input
         value={value}
         onChange={handleInput}
@@ -71,6 +71,8 @@ export default function Search({ panTo }) {
       <button 
         onClick={handleInput}
         disabled={!ready}
+        className="category-button"
+        id="find-place-button"
       >Find Me A Place!</button>
       {/* We can use the "status" to decide whether we should display the dropdown or not */}
       {status === "OK" ? renderSuggestions() : null }

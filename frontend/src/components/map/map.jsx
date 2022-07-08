@@ -9,7 +9,8 @@ import {
 } from "@react-google-maps/api"
 import mapStyles from "./mapStyles"
 import Search from "./search";
-import "./../../styles/map.css"
+import "./../../styles/map.css";
+
 
 export default function Map() {
 
@@ -102,13 +103,13 @@ export default function Map() {
 
 
     return <div className="container">
-        <div className="controls"><h1>Map</h1></div>
-        <p>What's you personality type?</p>
-        <button onClick={introverted}>Introverted</button>
-        <button onClick={extraverted}>Extraverted</button>
-        <button onClick={both}>Both</button>
-
-        <Search panTo={panTo} />
+        <div className="map-random-buttons-container">
+          <p id="personality-question">What is your personality type?</p>
+          <button onClick={introverted} className="category-button">Introverted</button>
+          <button onClick={extraverted}  className="category-button">Extraverted</button>
+          <button onClick={both}  className="category-button">Both</button>
+          <Search panTo={panTo} />
+        </div>
         <div className="map">
             <GoogleMap 
             zoom={10} 
@@ -119,7 +120,6 @@ export default function Map() {
             >
             </GoogleMap>
         </div>
-        {/* <div id="address-details-container"></div> */}
     </div >
 }
 
