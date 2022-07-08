@@ -1,8 +1,12 @@
 .container {
     display: flex;
-    height: 400px;
+    height: 100px;
+    width: 20%;
 }
 
+.category-button {
+    margin: 10px;
+}
 
 .controls input {
     border: none;
@@ -20,6 +24,50 @@
 }
 
 .map-container {
-    position: none;
+    position: relative;
     height: 350px;
+    left: 150px;
+    bottom: 120px;
+}
+
+.map-random-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.category-button {
+    border: none;
+    background-color: orangered;
+    color: white;
+    margin: 20px;
+
+}
+
+.category-button:hover {
+    background-color: rgb(133, 7, 7);
+    cursor: pointer;
+}
+
+#find-place-button {
+    height: 20px;
+    font-size: 18px;
+    background-color: rgb(70, 196, 228)
+}
+
+#personality-question {
+    color: rgb(8, 8, 8);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

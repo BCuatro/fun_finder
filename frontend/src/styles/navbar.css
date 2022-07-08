@@ -25,3 +25,8 @@
     position: relative;
 }
 
+#sessionlinks {
+    position: relative;
+    right: -300px;
+    top: 30px;
+}
