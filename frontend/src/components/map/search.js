@@ -71,7 +71,7 @@ export default function Search({ panTo }) {
       <button 
         onClick={handleInput}
         disabled={!ready}
-      >click me</button>
+      >Find Me A Place!</button>
       {/* We can use the "status" to decide whether we should display the dropdown or not */}
       {status === "OK" ? renderSuggestions() : null }
     </div>
