@@ -8,17 +8,23 @@ import NavBarContainer from './nav/nav_bar_container';
 import ProfileContainer from './profile/profile_container';
 import "../styles/app.css"
 import Sessions from './session/sessions';
+import LoginMainPage from './main/login_main_page';
 
 
 
 const App= () => (
     
     <div className="app">
-        <NavBarContainer />
+         <header>
+            <NavBarContainer />
+         </header>
         <Switch>
-            <Route exact path="/" component={MainPage} />
+            <AuthRoute exact path="/" component={MainPage} />
+            
+            
             <AuthRoute exact path="/sessions" component={Sessions} />
             {/* <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
+            <ProtectedRoute exact path="/main" component={LoginMainPage} />
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
         </Switch>
     </div>

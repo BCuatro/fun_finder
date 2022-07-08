@@ -6,7 +6,8 @@ const users = require("./routes/api/users")
 const tweets = require("./routes/api/tweets")
 const bodyParser = require('body-parser');
 const User = require("./models/User");
-const passport = require("./frontend/src/config/passport")
+// const passport = require("./frontend/src/config/passport")
+const passport = require("passport")
 // const { emit } = require("nodemon");
 const path = require('path');
 
@@ -33,9 +34,9 @@ app.get("/",(req,res)=> {
     res.send("What's Poppin!");
 
 });
-import initialize from 'passport';
-app.use(initialize());
-require('./config/passport')(passport);
+// import initialize from 'passport';
+app.use(passport.initialize());
+require("./frontend/src/config/passport")(passport);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

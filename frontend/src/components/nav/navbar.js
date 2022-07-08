@@ -19,12 +19,16 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                
-                <div>
+            <div className= "loginNavContainer">
+                <div> 
                     <Link to={'/'} > <img src={logo} className="logo" alt="logo" /></Link>
-                    <Link to={'/profile'}>Profile</Link>
-                    <button onClick={this.logoutUser}>Logout</button>
                 </div>
+
+                <div className ="seslinks">
+                    <Link className="profileLink" to={'/profile'}>Profile</Link>
+                    <button className = "logoutButton" onClick={this.logoutUser}>Logout</button>
+                </div>
+            </div>
             );
         } else {
             return (

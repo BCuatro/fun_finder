@@ -30,3 +30,27 @@
     right: -300px;
     top: 30px;
 }
+
+.loginNavContainer{
+    position: relative;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.seslinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoutButton{
+    width: 15vw;
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: #082a3a dashed 2px;
+    background-color: #c4c459;
+    
+}
