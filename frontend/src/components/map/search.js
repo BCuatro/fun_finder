@@ -4,10 +4,7 @@ import usePlacesAutocomplete, {
   getLatLng
 } from "use-places-autocomplete";
 
-export default function Search({ panTo, type }) {  
-
-  const chosenType = type
-
+export default function Search({ panTo }) {  
   const {
     ready,
     value,
@@ -23,89 +20,60 @@ export default function Search({ panTo, type }) {
 
   const handleInput = e => {
     // Update the keyword of the input element
-    setValue(e.target.value);
-    console.log(chosenType)
+    let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    let randLetter =  alphabet[Math.floor(Math.random() * alphabet.length)]
+    setValue(randLetter);
   };
 
-  const handleSelect = ({ description }, autoSelect = false) => () => {
-    if (!autoSelect) {
-      setValue(description, false);
-      clearSuggestions();
-    }
+  const handleSelect = ({ description }) => () => {
+    // When user selects a place, we can replace the keyword without request data from API
+    // by setting the second parameter to "false"
+    setValue(description, false);
+    clearSuggestions();
 
+    // Get latitude and longitude via utility functions
     getGeocode({ address: description })
       .then(results => getLatLng(results[0]))
       .then(({ lat, lng }) => {
         panTo({ lat, lng });
       })
       .catch(error => {
-        console.log("Error: ", error);
+        console.log("😱 Error: ", error);
       });
   };
 
-  const renderSuggestions = () =>
-    data.map(suggestion => {
+  const renderSuggestions = () => {
+    let suggestion = data[0]
       const {
         place_id,
         structured_formatting: { main_text, secondary_text }
       } = suggestion;
 
-      return (
-        <li key={place_id} onClick={handleSelect(suggestion)}>
-          <strong>{main_text}</strong> <small>{secondary_text}</small>
-        </li>
-      );
-    });
+      handleSelect(suggestion)()
+
+      // return (
+        // <li key={place_id} onClick={handleSelect(suggestion)}>
+        //   <strong>{main_text}</strong> <small>{secondary_text}</small>
+        // </li>
+        // <button key={place_id} onClick={handleSelect(suggestion)}></button>
+      // );
+    ;
+  }
 
   return (
     <div>
-      <input
+      {/* <input
         value={value}
         onChange={handleInput}
         disabled={!ready}
         placeholder="Where are you going?"
-      />
-      {status === "OK" && <ul>{renderSuggestions()}</ul>}
-      <button onClick={renderSuggestions}></button>
+      /> */}
+      <button 
+        onClick={handleInput}
+        disabled={!ready}
+      >click me</button>
+      {/* We can use the "status" to decide whether we should display the dropdown or not */}
+      {status === "OK" ? renderSuggestions() : null }
     </div>
   );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// so here we will have a button to Search, it will replace the functionality of 
-// the search bar's results
-
-
-{/* <button onClick={handleIntroverts}>Introvert</button>
-<button onClick={handleExtroverts}>Extrovert</button> */}
-
-// const handleIntroverts = () => {
-//   // Update the keyword of the input element
-//   let e;
-//   let intro = ['cafe', 'bowling', 'museum', 'restaurant'];
-//   e = intro[Math.floor(Math.random() * intro.length)]
-//   setValue(e);
-// };
-
-// const handleExtroverts = () => {
-//   let e;
-//   let intro = ['amusement park', 'public park', 'zoo', 'bar'];
-//   e = intro[Math.floor(Math.random() * intro.length)]
-//   setValue(e);
-// };
-
- // if (data.length > 0) {
-    //   handleSelect(data[0], true)()
-    // }
+} 

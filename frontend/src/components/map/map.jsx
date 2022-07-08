@@ -35,7 +35,7 @@ export default function Map() {
 
   const panTo = React.useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
-    mapRef.current.setZoom(12);
+    mapRef.current.setZoom(14);
     let map = mapRef.current;
 
     var randType;
@@ -86,7 +86,7 @@ export default function Map() {
     return <div className="container">
         <div className="controls"><h1>Map</h1></div>
         <p>Are you introverted?</p>
-        <button onClick={introverted}>Yes</button>
+        <button onClick={introverted}>Introverted</button>
         <Search panTo={panTo} />
         <div className="map">
             <GoogleMap 
