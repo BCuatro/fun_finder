@@ -15,9 +15,10 @@ class SignupForm extends React.Component {
             birthdate: "",
             password: "",
             password2:"",
-            bYear: new Date().getFullYear(),
-            bMonth: new Date().getMonth() + 1,
-            bDay: new Date().getDate(),
+            // bYear: new Date().getFullYear(),
+            // bMonth: new Date().getMonth() + 1,
+            // bDay: new Date().getDate(),
+            // profilepicture:"",
             errors: {}
         };
         console.log(new Date().getFullYear()-17)
@@ -29,6 +30,7 @@ class SignupForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
         this.renderErrors = this.renderErrors.bind(this);
+        // this.handleFile = this.handleFile.bind(this)
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.signedIn ===true){
@@ -56,16 +58,40 @@ class SignupForm extends React.Component {
             [field]: e.currentTarget.value
         });
     }
+    // handleFile = (event) => {
+	// 	if (event.target.files && event.target.files.length > 0) {
+	// 		const reader = new FileReader();
+	// 		reader.readAsDataURL(event.target.files[0])
+	// 	}
+	// };
+
     handleSubmit(e) {
         e.preventDefault();
+        // let profilePicture = new FormData()
+        // // formData.append("email", this.state.email)
+        // // formData.append("fname", this.state.fname)
+        // // formData.append("lname", this.state.lname)
+        // // formData.append("gender", this.state.gender)
+        // // formData.append("password", this.state.password)
+        // // formData.append("password2", this.state.password2)
+        // // formData.append("profilePicture", this.state.profilePicture)
+        // profilePicture.append('picture', this.state.file);
+        // // this.props.uploadPicture(profilePicture).then(url => {this.setState({
+        // //     errors: [],
+        // //     inputReset: Date.now(),
+        // //     file: null,
+        // //     pictureUrl: null,
+        // //   })
+        // // })
         let user ={
             email: this.state.email,
             fname: this.state.fname,
             lname: this.state.lname,
-            gender: this.state.gender,
-            birthdate: this.state.birthdate,
+            // gender: this.state.gender,
+            // birthdate: this.state.birthdate,
             password: this.state.password,
-            password2: this.state.password2
+            password2: this.state.password2,
+            // profilepicture: this.state.profilepicture
         };
         this.props.signup(user,this.props.history);
     }
@@ -126,7 +152,7 @@ class SignupForm extends React.Component {
                         </div>
                         
                         <br/>
-                        <div className="modal-input-container">
+                        {/* <div className="modal-input-container">
                             <input type ="text"
                                 id ="gender"
                                 required
@@ -135,7 +161,7 @@ class SignupForm extends React.Component {
                                 onChange = {this.update('gender')}
                             />
                             <label htmlFor='gender' className="modal-label">Gender:</label> 
-                        </div>
+                        </div> */}
                        
                         <br/>
                         <div className="modal-input-container">
@@ -160,6 +186,14 @@ class SignupForm extends React.Component {
                             />
                             <label htmlFor='password2' className="modal-label">Confirm Password:</label> 
                         </div>
+                        {/* <div className="modal-input-container">
+                            <input type ="file"
+                                name= "profilePicture"
+                                accept='image/*'
+                                onChange={this.handleFile}
+                            />
+                            {/* <label htmlFor='file' className="modal-label">Upload Image:</label> 
+                            </div>  */}
                         
                         <br/>
                         <input className="sessionbutton" type = "submit" value= "Submit" />

@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const app = express()
-const db = require('./frontend/src/config/keys').mongoURI;
+const db = require('./config/keys').mongoURI;
 const users = require("./routes/api/users")
 const tweets = require("./routes/api/tweets")
 const bodyParser = require('body-parser');
@@ -11,13 +11,19 @@ const passport = require("passport")
 // const { emit } = require("nodemon");
 const path = require('path');
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'));
-  app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  })
-}
 
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static('uploads'));
+//   app.get('/', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+//   })
+// }
+
+// app.use(express.static('uploads/'));
+// app.post('/upload, upload.single(profilePicture'), (req, res) =>{
+//   const uploaded = req.file.location
+  
+// }
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
@@ -36,8 +42,8 @@ app.get("/",(req,res)=> {
 });
 // import initialize from 'passport';
 app.use(passport.initialize());
-require("./frontend/src/config/passport")(passport);
-
+require("./config/passport")(passport);
+app.use('/uploads/',express.static('uploads'))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/api/users", users );
