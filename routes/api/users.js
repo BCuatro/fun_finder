@@ -152,7 +152,7 @@ router.post('/login', (req, res) => {
 })
 
 
-router.patch("/:id",
+router.patch("/current",
   passport.authenticate("jwt", {session: false }),
   (req, res) => {
       User.findByIdAndUpdate(req.params.user_id, {
