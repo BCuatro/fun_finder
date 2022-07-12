@@ -53,12 +53,18 @@ const upload = multer({
 router.get("/test",  (req, res)=>{
     res.json({msg: "This is the user route"})
 });
+router.get('/', (req, res) => {
+    User.find()
+        .then(users => res.json(users))
+        .catch(err => res.status(404).json({ nousersfound: 'No users found' }));
+});
 
 router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
     res.json({
         id: req.user.id,
         fname: req.user.fname,
         email: req.user.email,
+        lname: req.user.lname,
         // profilepicture: req.user.profilepicture
     });
 })
@@ -130,8 +136,9 @@ router.post('/login', (req, res) => {
             if(isMatch){
                  const payload ={
                     id: user.id, 
-                    // fname: user.fname,
-                    email: user.email
+                    fname: user.fname,
+                    email: user.email,
+                    lname:user.lname
                  }
                  jwt.sign(
                     payload,
@@ -152,7 +159,7 @@ router.post('/login', (req, res) => {
 })
 
 
-router.patch("/current",
+router.patch("/",
   passport.authenticate("jwt", {session: false }),
   (req, res) => {
       User.findByIdAndUpdate(req.params.user_id, {
