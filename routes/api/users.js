@@ -136,9 +136,9 @@ router.post('/login', (req, res) => {
             if(isMatch){
                  const payload ={
                     id: user.id, 
-                    fname: user.fname,
+                    // fname: user.fname,
                     email: user.email,
-                    lname:user.lname
+                    // lname: user.lname
                  }
                  jwt.sign(
                     payload,
@@ -159,12 +159,13 @@ router.post('/login', (req, res) => {
 })
 
 
-router.patch("/",
+router.patch("/:id",
   passport.authenticate("jwt", {session: false }),
-  (req, res) => {
-      User.findByIdAndUpdate(req.params.user_id, {
-      fname: req.body.fname,            
-    }, { new: true })
+  async (req, res) => {
+    User.findByIdAndUpdate(req.params.id, {
+      fname: req.body.fname,  
+      lname: req.body.lname,       
+    }, { $set: req.body})
     .then(user=> res.json(user))
     .catch(error => res.status(404).json(error))
 })

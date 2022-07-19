@@ -4,16 +4,32 @@ import React from 'react';
 class EditForm extends React.Component{
     constructor(props) {
         super(props);
-        this.state =this.props.currentUser
+        this.state ={
+            id: this.props.userId,
+            fname:"",
+            lname:""
+        }
        
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleFile = this.handleFile.bind(this)
         // this.handleProfilePic =this.handleProfilePic.bind(this)
         
       }
-    
+    // componentWillUnmount(){
+    //     this.props.user
+
+    // }
       componentDidMount() {
+        debugger
         this.props.fetchUser(this.state.id)
+        this.setState({
+            fname: this.props.user.fname, 
+            lname: this.props.user.lname
+        })
+        // .then(
+        //     data =>console.log(data)
+        // )
+    
       }
 
         // handleFile(e) {
@@ -33,6 +49,14 @@ class EditForm extends React.Component{
             [type]: e.currentTarget.value
         })
     }
+    // componentDidUpdate(prevProps, prevState) {
+    //     console.log(this.state)
+    //     console.log(prevState)
+    //     console.log(prevProps)
+    //     if (prevState.fname !== this.state.fname || prevState.lname !== this.state.lname) {
+    //         this.props.fetchUser(this.state.id)
+    //     }
+    //   }
 
     // handleProfilePic(user){
     //     if (!user.profile_picUrl) {
