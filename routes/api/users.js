@@ -176,7 +176,7 @@ router.patch("/:id",
       gender: req.body.gender,  
       slogan: req.body.slogan, 
       pronouns: req.body.pronouns    
-    }, { $set: req.body})
+    }, { new: true })
     .then(user=> res.json(user))
     .catch(error => res.status(404).json(error))
 })
