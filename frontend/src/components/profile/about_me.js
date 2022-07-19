@@ -7,7 +7,7 @@ const aboutMe =(user) =>{
      <div className ="aboutmecontainer">
 
      <h2 id="AboutTitle">About Me</h2>
-     <label>First Name:</label>
+     <label>First Name: {user.email}</label>
      <br />
      <label>Last Name:</label>
      <br />

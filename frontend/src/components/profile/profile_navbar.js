@@ -42,7 +42,12 @@ export default class ProfileNavBar extends React.Component {
     this.selectTab = this.selectTab.bind(this);
   }
  
- 
+  // componentDidMount(){
+        
+       
+  //   this.props.fetchUser(this.props.userId)
+  //   // this.props.fetchUsers()
+  // }
   selectTab(num) {
     this.setState({selectedTab: num});
   }
@@ -51,8 +56,8 @@ export default class ProfileNavBar extends React.Component {
     
     
     const tabs = [
-        {title: 'About', content: aboutMe(this.props.user)},
-        {title: 'My Pictures', content: photoAlbum(this.props.user)},
+        {title: 'About', content: aboutMe(this.props.currentUser)},
+        {title: 'My Pictures', content: photoAlbum(this.props.currentUser)},
         {title: 'My Hangout', content: 'Tap and Snack'},
         {title: 'My Experience', content: "You're probably wondering how I got here"},
       

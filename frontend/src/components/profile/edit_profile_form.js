@@ -6,8 +6,10 @@ class EditForm extends React.Component{
         super(props);
         this.state ={
             id: this.props.userId,
-            fname:"",
-            lname:""
+            // fname:"",
+            // lname:""
+            fname: this.props.user.fname, 
+            lname: this.props.user.lname
         }
        
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,17 +17,17 @@ class EditForm extends React.Component{
         // this.handleProfilePic =this.handleProfilePic.bind(this)
         
       }
-    // componentWillUnmount(){
-    //     this.props.user
+      componentWillUnmount(){
+        // this.props.removeErrors();
 
-    // }
+      }
       componentDidMount() {
-        debugger
+        
         this.props.fetchUser(this.state.id)
-        this.setState({
-            fname: this.props.user.fname, 
-            lname: this.props.user.lname
-        })
+        // this.setState({
+        //     fname: this.props.user.fname, 
+        //     lname: this.props.user.lname
+        // })
         // .then(
         //     data =>console.log(data)
         // )
@@ -38,9 +40,13 @@ class EditForm extends React.Component{
 
       handleSubmit(e) {
         e.preventDefault();
-        this.props.updateUser(this.state).then(this.props.closeModal)
+        
+        this.props.updateUser(this.state)
+        .then( this.forceUpdate())
+        .then(this.props.closeModal)
     //     const formData = new FormData();
     //     formData.append('user[profile_pic]', this.state.photoFile)
+        
       }
     
 
@@ -71,10 +77,11 @@ class EditForm extends React.Component{
    
     
     render(){ 
+        debugger
         return (
             <div className="editform">
                 <form onSubmit={this.handleSubmit}>
-                    <button onClick={()=>{this.props.closeModal();}} className="close-x">X</button>
+                    <button onClick={()=>{this.props.closeModal()}} className="close-x">X</button>
              
                     <h2>Edit Profile</h2>
                     <div className="modal-input-container">
