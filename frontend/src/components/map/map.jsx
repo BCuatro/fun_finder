@@ -170,26 +170,27 @@ export default function Map() {
 
 
   return <div className="container">
-    <div className="map-random-buttons-container">
-      <p id="personality-question">Pick a category:</p>
-      <button onClick={introverted} id="introverted-button" className="category-button">I'm shy. Choose for me!</button>
-      <button onClick={extraverted} id="extraverted-button" className="category-button">I'm an extravert!</button>
-      <button onClick={bar} id="bar-button" className="category-button">Take me to a bar!</button>
-      <button onClick={food} id="food-button" className="category-button">I'm hungry. Find food!</button>
-      <button onClick={cafe} id="cafe-button" className="category-button">Craving café coffee!</button>
-      <button onClick={tourist_attraction} id="tourist-button" className="category-button">I'm feeling like a tourist!</button>
-      {/* <button onClick={both} className="category-button">Both</button> */}
-      <Search panTo={panTo} />
-    </div>
-    <div className="map">
-      <GoogleMap
-        zoom={10}
-        center={center}
-        mapContainerClassName="map-container"
-        options={options}
-        onLoad={onMapLoad}
-      >
-      </GoogleMap>
+    <div className="mini-container">
+      <div className="map-random-buttons-container">
+        <p id="personality-question">Pick a category:</p>
+        <button onClick={introverted} id="introverted-button" className="category-button">I'm shy. Choose for me!</button>
+        <button onClick={extraverted} id="extraverted-button" className="category-button">I'm an extravert!</button>
+        <button onClick={bar} id="bar-button" className="category-button">Take me to a bar!</button>
+        <button onClick={food} id="food-button" className="category-button">I'm hungry. Find food!</button>
+        <button onClick={cafe} id="cafe-button" className="category-button">Craving café coffee!</button>
+        <button onClick={tourist_attraction} id="tourist-button" className="category-button">I'm feeling like a tourist!</button>
+        <Search panTo={panTo} />
+      </div>
+      <div className="map">
+        <GoogleMap
+          zoom={10}
+          center={center}
+          mapContainerClassName="map-container"
+          options={options}
+          onLoad={onMapLoad}
+        >
+        </GoogleMap>
+      </div>
     </div>
   </div >
 }

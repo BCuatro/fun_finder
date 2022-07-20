@@ -1,19 +1,22 @@
-.logo{
+.logo {
     height: 7em;
     width: 7em;
 }
-.nav_header{
-    
+
+.nav_header {
+
     display: inline-flex;
 }
-.container{
-   display: inline-flex;
-   width: 1000px;
-   
+
+.container {
+    display: inline-flex;
+    width: 100%;
+
 }
+
 #logged_out {
-    
-    display:flex;
+
+    display: flex;
     width: 100%;
     /* left: 100%; */
     flex-direction: column;
@@ -21,7 +24,7 @@
     font-size: larger;
 }
 
-.nav_header{
+.nav_header {
     position: relative;
 }
 
@@ -31,7 +34,7 @@
     top: 30px;
 }
 
-.loginNavContainer{
+.loginNavContainer {
     position: relative;
     width: 80vw;
     display: flex;
@@ -39,18 +42,18 @@
 
 }
 
-.seslinks{
+.seslinks {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.logoutButton{
+.logoutButton {
     width: 15vw;
     padding: 3px;
     margin-top: 5px;
     border-radius: 10px;
     border: #082a3a dashed 2px;
     background-color: #c4c459;
-    
+
 }
