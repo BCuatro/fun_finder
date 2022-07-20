@@ -11,6 +11,7 @@ import Modal from '../modal/modal';
 class Profile extends React.Component{
     constructor(props){
         super(props)
+        // this.props = this.props
         
         
         this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -23,7 +24,8 @@ class Profile extends React.Component{
         
        
         // this.props.fetchUser(this.props.match.params.userId)
-        this.props.fetchUsers()
+        // this.props.fetchUsers()
+        this.props.fetchUser(this.props.userId)
         
     }
     handleOpenModal(e){
@@ -33,6 +35,10 @@ class Profile extends React.Component{
     
     
     render(){ 
+        // console.log("profile check")
+        // console.log(this.props.users)
+        // console.log(this.props.currentUser)
+        // console.log(this.props.match.params.userId)
       
         // let editButton
         // const {user} = this.props
@@ -40,7 +46,7 @@ class Profile extends React.Component{
         //     editButton = <button onClick = {this.handleOpenModal}>Edit Profile</button> } else{
         //         editButton =""
         //     } 
-            
+            if(!this.props.user) return null
     
         return (
             
@@ -51,8 +57,9 @@ class Profile extends React.Component{
                 </div>
                 <div className="profilepicture">
                    <div> <img id= "profilepic" src={propic} className="profile picture" alt="profile picture" />
-                        <p id="ptext">Name: SpiderMan</p>
-                        <p id ="ptext">Pronouns:"He/His</p>
+                        <p id="ptext">{this.props.user.slogan}</p>
+                        <p id="ptext">Name:{this.props.user.fname} {this.props.user.lname}</p>
+                        <p id ="ptext">Pronouns: {this.props.user.pronouns}</p>
                         <button onClick = {this.handleOpenModal}>Edit Profile</button> 
                     </div>
                 </div>

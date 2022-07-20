@@ -7,17 +7,14 @@ const aboutMe =(user) =>{
      <div className ="aboutmecontainer">
 
      <h2 id="AboutTitle">About Me</h2>
-     <label>First Name: {user.email}</label>
+     <label>First Name: {user.fname}</label>
      <br />
-     <label>Last Name:</label>
+     <label>Last Name: {user.lname}</label>
      <br />
-     <label>Gender:</label>
+     <label>Pronouns:{ user.pronouns}</label>
      <br />
-     <label>Preference:</label>
+     <label>Gender: {user.gender}</label>
      <br />
-     <label>Pronouns:</label>
-     <br />
-     <label>Looking For:</label>
      
    </div>
         

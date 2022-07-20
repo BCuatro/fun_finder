@@ -26,17 +26,18 @@ const UserSchema = new Schema({
       type: String,
       required: true
     },
-    bio: {
+    slogan: {
       type: String,
       default: ""
     },
-    
+    pronouns: {
+      type: String,
+      default: ""
+    },
     // birthdate: {
     //   type: Date,
-    //   required: true
+    //   default: ""
     // },
-
-  
 
     date: {
       type: Date,

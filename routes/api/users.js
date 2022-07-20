@@ -50,9 +50,9 @@ const upload = multer({
     })
   })
 
-router.get("/test",  (req, res)=>{
-    res.json({msg: "This is the user route"})
-});
+// router.get("/test",  (req, res)=>{
+//     res.json({msg: "This is the user route"})
+// });
 router.get('/', (req, res) => {
     User.find()
         .then(users => res.json(users))
@@ -65,6 +65,9 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
         fname: req.user.fname,
         email: req.user.email,
         lname: req.user.lname,
+        gender: req.user.gender,
+        pronouns: req.user.pronouns,
+        slogan: req.user.slogan,
         // profilepicture: req.user.profilepicture
     });
 })
@@ -98,8 +101,10 @@ router.post('/register', (req, res) => {
                 .then((user) => {
                     const payload ={
                         id: user.id, 
-                        // fname: user.fname,
-                        email: user.email
+                        fname: user.fname,
+                        email: user.email,
+                        lname: user.lname,
+
                      };
                 
                     jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600},(err, token) =>{
@@ -136,9 +141,12 @@ router.post('/login', (req, res) => {
             if(isMatch){
                  const payload ={
                     id: user.id, 
-                    // fname: user.fname,
+                    fname: user.fname,
                     email: user.email,
-                    // lname: user.lname
+                    lname: user.lname,
+                    pronouns: user.pronouns,
+                    gender: user.gender,
+                    slogan: user.slogan,
                  }
                  jwt.sign(
                     payload,
@@ -161,18 +169,27 @@ router.post('/login', (req, res) => {
 
 router.patch("/:id",
   passport.authenticate("jwt", {session: false }),
-  async (req, res) => {
+  (req, res) => {
     User.findByIdAndUpdate(req.params.id, {
       fname: req.body.fname,  
-      lname: req.body.lname,       
-    }, { $set: req.body})
+      lname: req.body.lname,   
+      gender: req.body.gender,  
+      slogan: req.body.slogan, 
+      pronouns: req.body.pronouns    
+    }, { new: true })
     .then(user=> res.json(user))
     .catch(error => res.status(404).json(error))
 })
 
 router.get("/:id", (req, res) => {
-    User.findById(req.params.user_id)
-      .then(user => res.json(user))
+    console.log(req.params)
+    User.findById(req.params.id)
+      .then(
+        user => 
+        {
+            console.log(user)
+            res.json(user)
+        })
       .catch(err => res.json(err))
 })
 

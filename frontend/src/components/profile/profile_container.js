@@ -6,10 +6,20 @@ import Profile from './profile';
 
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-      currentUser: state.session.user,
-      user: state.entities.users[ownProps.match.params.userId]
-    };
+  // const users =state.entities.users
+  // const user =state.entities.users.data.filter(ele=>ele._id === state.session.user.id)[0]
+  const user =state.entities.users[ownProps.match.params.userId]
+  // const user = state.entities.users[state.session.user.id]
+  const currentUser =state.session.user
+  const userId= ownProps.match.params.userId
+ 
+  return{
+    
+    // users,
+    user,
+    currentUser,
+    userId
+  }
   };
   
   const mapDispatchToProps = dispatch => {

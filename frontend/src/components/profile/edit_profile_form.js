@@ -9,7 +9,11 @@ class EditForm extends React.Component{
             // fname:"",
             // lname:""
             fname: this.props.user.fname, 
-            lname: this.props.user.lname
+            lname: this.props.user.lname,
+            gender: this.props.user.gender,
+            pronouns: this.props.user.pronouns,
+            slogan: this.props.user.slogan,
+
         }
        
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -93,7 +97,7 @@ class EditForm extends React.Component{
                                 onChange = {this.handleUpdate('fname')}
                             />
                             <label htmlFor='first_name' className="modal-label">First Name:</label> 
-                        </div>
+                    </div>
 
                     <br />
                     <div className="modal-input-container">
@@ -105,16 +109,37 @@ class EditForm extends React.Component{
                                 onChange = {this.handleUpdate('lname')}
                             />
                             <label htmlFor='last_name' className="modal-label">Last Name:</label> 
-                        </div>
+                    </div>
+                    <div className="modal-input-container">
+                            <input type ="text"
+                                id ="gender"
+                                required
+                                className= "modal-input"
+                                value = {this.state.gender}
+                                onChange = {this.handleUpdate('gender')}
+                            />
+                            <label htmlFor='last_name' className="modal-label">Gender:</label> 
+                    </div>
+                    <div className="modal-input-container">
+                            <input type ="text"
+                                id ="pronouns"
+                                required
+                                className= "modal-input"
+                                value = {this.state.pronouns}
+                                onChange = {this.handleUpdate('pronouns')}
+                            />
+                            <label htmlFor='last_name' className="modal-label">Pronouns</label> 
+                    </div>
+                   
                     <div className="modal-input-container">
                         <input type="text"  //take a look at your label
-                            id="bio"
+                            id="slogan"
                             required
                             className= "modal-input"
-                            value={this.state.bio}
-                            onChange={this.handleUpdate('bio')}
+                            value={this.state.slogan}
+                            onChange={this.handleUpdate('slogan')}
                         />
-                        <label htmlFor= "bio" className="modal-label">Bio</label>
+                        <label htmlFor= "slogan" className="modal-label">Slogan</label>
                     </div>
                     
                     <button onClick = {this.handleSubmit}>Submit</button>
