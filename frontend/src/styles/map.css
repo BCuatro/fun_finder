@@ -24,6 +24,8 @@
     height: 100px;
     display: flex;
     justify-content: center;
+    position: relative;
+    left: 40px;
 }
 
 .map-container {

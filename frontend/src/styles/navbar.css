@@ -1,10 +1,13 @@
 .logo {
     height: 7em;
     width: 7em;
+    position: relative;
+    left: 8px;
+    top: 8px;
 }
 
 .nav_header {
-
+    width: 100%;
     display: inline-flex;
 }
 
@@ -15,13 +18,15 @@
 }
 
 #logged_out {
-
     display: flex;
     width: 100%;
     /* left: 100%; */
     flex-direction: column;
     align-items: end;
     font-size: larger;
+    position: relative;
+    top: 20px;
+    right: 20px;
 }
 
 .nav_header {
@@ -29,9 +34,20 @@
 }
 
 #sessionlinks {
-    position: relative;
+    /* position: relative;
     right: -300px;
-    top: 30px;
+    top: 30px; */
+    color: rgb(173, 120, 77);
+    border-radius: 5px;
+    height: 25px;
+    text-decoration: none;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .loginNavContainer {
