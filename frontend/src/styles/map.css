@@ -62,12 +62,18 @@
 }
 
 #find-place-button {
-    height: 20px;
+    height: 25px;
     font-size: 18px;
-    background-color: rgb(70, 196, 228)
+    background-color: blue;
+    color: aliceblue;
+}
+
+#find-place-button:hover {
+    background-color: rgb(133, 7, 7);
+    cursor: pointer;
 }
 
 #personality-question {
     color: rgb(8, 8, 8);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

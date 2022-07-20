@@ -17,36 +17,71 @@ export default function Map() {
   let types = ['cafe', 'bakery', 'museum', 'restaurant', 'public_park', 'bar', 'gym', 'tourist_attraction'];
 
   const introverted = () => {
+    let divs = document.getElementsByClassName('category-button')
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = 'orangered'
+    }
+    document.getElementById('introverted-button').style.backgroundColor = 'blue';
     types = ['cafe', 'bakery', 'museum', 'shopping_mall', 'tourist_attraction']
     console.log(types)
   }
 
   const extraverted = () => {
+    let divs = document.getElementsByClassName('category-button')
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = 'orangered'
+    }
+    document.getElementById('extraverted-button').style.backgroundColor = 'blue';
     types = ['restaurant', 'bar', 'gym', 'tourist_attraction']
     console.log(types)
   }
 
   const bar = () => {
+    let divs = document.getElementsByClassName('category-button')
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = 'orangered'
+    }
+    document.getElementById('bar-button').style.backgroundColor = 'blue';
     types = ['bar']
     console.log(types)
   }
 
-  const bakery = () => {
-    types = ['bakery']
+  const food = () => {
+    let divs = document.getElementsByClassName('category-button')
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = 'orangered'
+    }
+    document.getElementById('food-button').style.backgroundColor = 'blue';
+    types = ['bakery', 'restaurant']
     console.log(types)
   }
 
   const cafe = () => {
+    let divs = document.getElementsByClassName('category-button')
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = 'orangered'
+    }
+    document.getElementById('cafe-button').style.backgroundColor = 'blue';
     types = ['cafe']
     console.log(types)
   }
 
   const tourist_attraction = () => {
+    let divs = document.getElementsByClassName('category-button')
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = 'orangered'
+    }
+    document.getElementById('tourist-button').style.backgroundColor = 'blue';
     types = ['tourist_attraction']
     console.log(types)
   }
 
   const both = () => {
+    let divs = document.getElementsByClassName('category-button')
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = 'orangered'
+    }
+    document.getElementById('both-button').style.backgroundColor = 'blue';
     types = ['cafe', 'bakery', 'movie_theater', 'museum', 'restaurant', 'amusement park', 'public park', 'bar']
   }
 
@@ -136,13 +171,13 @@ export default function Map() {
 
   return <div className="container">
     <div className="map-random-buttons-container">
-      <p id="personality-question">What is your personality type?</p>
-      <button onClick={introverted} className="category-button">I'm shy. Choose for me!</button>
-      <button onClick={extraverted} className="category-button">I'm an extravert!</button>
-      <button onClick={bar} className="category-button">Take me to a bar!</button>
-      <button onClick={bakery} className="category-button">I'm hungry. Find food!</button>
-      <button onClick={cafe} className="category-button">Craving café coffee!</button>
-      <button onClick={tourist_attraction} className="category-button">I'm feeling like a tourist!</button>
+      <p id="personality-question">Pick a category:</p>
+      <button onClick={introverted} id="introverted-button" className="category-button">I'm shy. Choose for me!</button>
+      <button onClick={extraverted} id="extraverted-button" className="category-button">I'm an extravert!</button>
+      <button onClick={bar} id="bar-button" className="category-button">Take me to a bar!</button>
+      <button onClick={food} id="food-button" className="category-button">I'm hungry. Find food!</button>
+      <button onClick={cafe} id="cafe-button" className="category-button">Craving café coffee!</button>
+      <button onClick={tourist_attraction} id="tourist-button" className="category-button">I'm feeling like a tourist!</button>
       {/* <button onClick={both} className="category-button">Both</button> */}
       <Search panTo={panTo} />
     </div>
