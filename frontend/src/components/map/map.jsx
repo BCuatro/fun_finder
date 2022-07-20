@@ -143,12 +143,12 @@ export default function Map() {
 
 
         let address_name_to_insert = document.createElement('div');
-        address_name_to_insert.innerHTML = `${random.name}`;
+        address_name_to_insert.innerHTML = `${random.name}&nbsp;`;
         container_block.appendChild(address_name_to_insert)
         address_name_to_insert.id = 'address-name'
 
         let address_details_to_insert = document.createElement('div');
-        address_details_to_insert.innerHTML = `${random.vicinity}`;
+        address_details_to_insert.innerHTML = ` ${random.vicinity}`;
         container_block.appendChild(address_details_to_insert)
         address_details_to_insert.id = 'address-details'
         // }
