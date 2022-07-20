@@ -172,10 +172,14 @@ export default function Map() {
   return <div className="container">
     <div className="mini-container">
       <div className="map-random-buttons-container">
-        <p id="personality-question">Pick a category:</p>
+        <p id="personality-question">
+          <div>
+            Pick a category:
+          </div>
+        </p>
         <button onClick={introverted} id="introverted-button" className="category-button">I'm shy. Choose for me!</button>
-        <button onClick={extraverted} id="extraverted-button" className="category-button">I'm an extravert!</button>
-        <button onClick={bar} id="bar-button" className="category-button">Take me to a bar!</button>
+        <button onClick={extraverted} id="extraverted-button" className="category-button">I'm an extravert! You pick!</button>
+        <button onClick={bar} id="bar-button" className="category-button">Take me to a bar now!</button>
         <button onClick={food} id="food-button" className="category-button">I'm hungry. Find food!</button>
         <button onClick={cafe} id="cafe-button" className="category-button">Craving café coffee!</button>
         <button onClick={tourist_attraction} id="tourist-button" className="category-button">I'm feeling like a tourist!</button>
