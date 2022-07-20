@@ -14,15 +14,15 @@ import "./../../styles/map.css";
 
 export default function Map() {
 
-  let types = ['bowling', 'museum', 'restaurant', 'public park', 'zoo', 'bar'];
+  let types = ['cafe', 'bakery', 'museum', 'restaurant', 'public_park', 'bar', 'gym', 'tourist_attraction'];
 
   const introverted = () => {
-    types = ['cafe', 'bakery', 'movie_theater', 'museum']
+    types = ['cafe', 'bakery', 'museum', 'shopping_mall', 'tourist_attraction']
     console.log(types)
   }
 
   const extraverted = () => {
-    types = ['bowling', 'restaurant', 'bar']
+    types = ['restaurant', 'bar', 'gym', 'tourist_attraction']
     console.log(types)
   }
 
@@ -41,8 +41,13 @@ export default function Map() {
     console.log(types)
   }
 
+  const tourist_attraction = () => {
+    types = ['tourist_attraction']
+    console.log(types)
+  }
+
   const both = () => {
-    types = ['bowling', 'cafe', 'bakery', 'movie_theater', 'bowling', 'museum', 'restaurant', 'amusement park', 'public park', 'zoo', 'bar']
+    types = ['cafe', 'bakery', 'movie_theater', 'museum', 'restaurant', 'amusement park', 'public park', 'bar']
   }
 
   const center = useMemo(() => ({ lat: 40.73629, lng: -73.99379 }), []);
@@ -112,6 +117,18 @@ export default function Map() {
         container_block.appendChild(address_details_to_insert)
         address_details_to_insert.id = 'address-details'
         // }
+      } else {
+        let container_block = document.getElementById('address-details-container');
+        if (document.getElementById("address-name")) {
+          document.getElementById("address-name").remove()
+        }
+        if (document.getElementById("address-details")) {
+          document.getElementById("address-details").remove()
+        }
+        let address_name_to_insert = document.createElement('div');
+        address_name_to_insert.innerHTML = `We didn't find anything in this area. Click again :)`;
+        container_block.appendChild(address_name_to_insert)
+        address_name_to_insert.id = 'address-name'
       }
     }
   }, []);
@@ -120,13 +137,13 @@ export default function Map() {
   return <div className="container">
     <div className="map-random-buttons-container">
       <p id="personality-question">What is your personality type?</p>
-      <button onClick={introverted} className="category-button">I am introverted</button>
-      <button onClick={extraverted} className="category-button">I am extraverted</button>
-      <button onClick={bar} className="category-button">I want bars now!</button>
-      <button onClick={bakery} className="category-button">Find me a bakery yum!</button>
-      <button onClick={cafe} className="category-button">Cafeeeee!</button>
-
-      <button onClick={both} className="category-button">Both</button>
+      <button onClick={introverted} className="category-button">I'm shy. Choose for me!</button>
+      <button onClick={extraverted} className="category-button">I'm an extravert!</button>
+      <button onClick={bar} className="category-button">Take me to a bar!</button>
+      <button onClick={bakery} className="category-button">I'm hungry. Find food!</button>
+      <button onClick={cafe} className="category-button">Craving café coffee!</button>
+      <button onClick={tourist_attraction} className="category-button">I'm feeling like a tourist!</button>
+      {/* <button onClick={both} className="category-button">Both</button> */}
       <Search panTo={panTo} />
     </div>
     <div className="map">
