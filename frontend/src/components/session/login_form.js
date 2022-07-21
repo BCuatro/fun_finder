@@ -8,21 +8,32 @@ class LoginForm extends React.Component {
         this.state = {
             email: "",
             password: "",
-            errors: {}
+            loginErrors: {}
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.handleDemoUser = this.handleDemoUser.bind(this);
+        this.handleToggle = this.handleToggle.bind(this)
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.currentUser ===true){
             this.props.history.push('/tweets');
         }
-        this.setState({errors: nextProps.errors})
+        this.setState({loginErrors: nextProps.loginErrors})
     }
     // componentWillUnmount(){
     //         this.props.removeErrors();
     // }
+
+    handleToggle() {
+        
+        if (this.state.pos === "left"){
+         
+         this.setState({pos: "right"}) 
+        } else {
+         this.setState({pos: "left"}) 
+        }
+     }
 
     update(field){
         return e => this.setState({
@@ -45,9 +56,9 @@ class LoginForm extends React.Component {
     renderErrors() {
         return(
           <ul>
-            {Object.keys(this.state.errors).map((error, i) => (
-              <li key={`error-${i}`}>
-                {this.state.errors[error]}
+            {Object.keys(this.state.loginErrors).map((loginError, i) => (
+              <li key={`loginError-${i}`}>
+                {this.state.loginErrors[loginError]}
               </li>
             ))}
           </ul>
@@ -61,9 +72,7 @@ class LoginForm extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                     <div> 
                         <br />
-                        {/* <div className="overlay-left">
-                            <Link to={'/signup'} id="sessionlinks">Signup</Link> 
-                        </div> */}
+                        {this.renderErrors()}
                         <h2 className="logintitle">Log In </h2>
                         <div className="modal-input-container">
                                 <input type ="text"
@@ -90,7 +99,8 @@ class LoginForm extends React.Component {
                         <input className="sessionbutton" type = "submit" value= "Submit" />
                         <br />
                         <button className ="sessionbutton" id="demo" onClick = {this.handleDemoUser}>DemoUser</button>
-                        {/* {this.renderErrors()} */}
+                        
+                        
                     </div>
                 </form>
             </div>

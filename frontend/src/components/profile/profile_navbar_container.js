@@ -9,18 +9,17 @@ import ProfileNavBar from "./profile_navbar"
 
 const mapStateToProps = (state, ownProps) => {
 
-     
-  const users =state.entities.users
-  // const user =state.entities.users.data.filter(ele=>ele._id === state.session.user.id)[0]
   const currentUser =state.session.user
-  // const userId= state.session.user.id
+  // const users =state.entities.users
+  const user =state.entities.users[ownProps.match.params.userId]
+  const userId= ownProps.match.params.userId
  
   return{
     
-    users,
-    // user,
+    // users,
+    user,
     currentUser,
-    // userId
+    userId
   }
        
    };
@@ -28,7 +27,7 @@ const mapStateToProps = (state, ownProps) => {
    const mapDispatchToProps = dispatch => {
      return {
       fetchUser: (userId) => dispatch(fetchUser(userId)),
-      // fetchUsers: () => dispatch(fetchUsers()),
+      fetchUsers: () => dispatch(fetchUsers()),
          
      };
    };

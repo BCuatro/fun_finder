@@ -5,6 +5,9 @@ import jwt_decode from "jwt-decode";
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
+export const RECEIVE_SIGNUP_ERRORS = "RECEIVE_SIGNUP_ERRORS";
+export const REMOVE_SESSION_ERRORS = "REMOVE_SESSION_ERRORS";
+export const REMOVE_SIGNUP_ERRORS = "REMOVE_SIGNUP_ERRORS";
 export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
 export const RECEIVE_USER_SIGN_IN = "RECEIVE_USER_SIGN_IN";
 
@@ -26,6 +29,21 @@ export const receiveErrors = errors => ({
     errors
 });
 
+export const receiveSignupErrors = errors => ({
+    type: RECEIVE_SIGNUP_ERRORS,
+    errors
+});
+
+export const removeErrors = errors => ({
+    type: REMOVE_SESSION_ERRORS,
+    errors
+});
+
+export const removeSignupErrors = errors => ({
+    type: REMOVE_SIGNUP_ERRORS,
+    errors
+});
+
 
 export const signup = user => dispatch => (
      APIUtil.signup(user).then(res => {
@@ -35,8 +53,8 @@ export const signup = user => dispatch => (
         const decoded = jwt_decode(token);
         dispatch(receiveCurrentUser(decoded));
     })
-        .catch(err => {
-            dispatch(receiveErrors(err.response.data));
+        .catch(signupErr => {
+            dispatch(receiveSignupErrors(signupErr.response.data));
         })
 );
 

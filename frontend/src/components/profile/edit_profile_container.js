@@ -12,16 +12,17 @@ import EditForm from "./edit_profile_form";
 const mapStateToProps = (state, ownProps) => {
   
     const users =state.entities.users
-    const user =state.entities.users.data.filter(ele=>ele._id === state.session.user.id)[0]
+    // const user =state.entities.users.data.filter(ele=>ele._id === state.session.user.id)[0]
     const currentUser =state.session.user
+    const user =state.entities.users[ownProps.match.params.userId]
     const userId= state.session.user.id
    
     return{
       
       users,
-      user,
       currentUser,
-      userId
+      userId,
+      user
     }
       
   };
