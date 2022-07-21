@@ -1,5 +1,5 @@
 .about-me-container {
-    background-color: greenyellow;
+    background-color: rgb(128, 187, 41);
     display: flex;
     justify-content: space-around;
     flex-direction: row;
