@@ -72,9 +72,7 @@ class LoginForm extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                     <div> 
                         <br />
-                        {/* <div className="overlay-left">
-                            <Link to={'/signup'} id="sessionlinks">Signup</Link> 
-                        </div> */}
+                        {this.renderErrors()}
                         <h2 className="logintitle">Log In </h2>
                         <div className="modal-input-container">
                                 <input type ="text"
@@ -101,16 +99,8 @@ class LoginForm extends React.Component {
                         <input className="sessionbutton" type = "submit" value= "Submit" />
                         <br />
                         <button className ="sessionbutton" id="demo" onClick = {this.handleDemoUser}>DemoUser</button>
-                        {/* <button className="sessionbutton" id="signup" onClick ={this.handleToggle}>Go To SignUp</button> */}
-                       {/* <div id= {this.state.pos}>
-                            <div id= "overlay" >
-                                <h2>Welcome to Fun Finder</h2>
-                                <Link to={'/'} ><img src={logo} className="seslogo" alt="seslogo" /></Link>
-                                <h2>Tap and Snack</h2>
-                                <p>Click center icon to go back to randomizer</p>
-                            </div>
-                        </div> */}
-                        {this.renderErrors()}
+                        
+                        
                     </div>
                 </form>
             </div>

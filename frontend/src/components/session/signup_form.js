@@ -28,9 +28,8 @@ class SignupForm extends React.Component {
         console.log(this.update("birthdate"))
        
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.clearedErrors = false;
+        this.clearedErrors = false;
         this.renderSignupErrors = this.renderSignupErrors.bind(this);
-        this.handleToggle = this.handleToggle.bind(this)
         // this.handleFile = this.handleFile.bind(this)
     }
     componentWillReceiveProps(nextProps){
@@ -54,15 +53,6 @@ class SignupForm extends React.Component {
     return age;
     }    
 
-    handleToggle() {
-        
-        if (this.state.pos === "left"){
-         
-         this.setState({pos: "right"}) 
-        } else {
-         this.setState({pos: "left"}) 
-        }
-     }
 
     update(field){
         return e => this.setState({
@@ -123,9 +113,7 @@ class SignupForm extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                     <div>
                         <br /> 
-                        {/* <div className="overlay-right">
-                            <Link to={'/login'} id="sessionlinks">Signup</Link>
-                        </div> */}
+                        {this.renderSignupErrors()}
                         <h2 className="signuptitle">Sign Up</h2>
                         <div className="modal-input-container">
                             <input type ="text"
@@ -211,20 +199,7 @@ class SignupForm extends React.Component {
                         {/* <button className ="sessionbutton" id="login" onClick ={this.handleToggle}>Go To Login</button> */}
                         
 
-                        {this.renderSignupErrors()}
-                        {/* <div id= {this.state.pos}>
-                            <div id= "overlay">
-                                    <h2>Welcome to Fun Finder</h2>
-                                    <Link to={'/'} ><img src={logo} className="seslogo" alt="seslogo" /></Link>
-                                    <h2>Tap and Snack</h2>
-                                    <p>Click center icon to go back to randomizer</p>
-                            </div>
-                        </div > */}
-                           
-                        {/* <input type ="date"
-                            value = {this.state.birthdate}
-                            onChange = {this.update('birthdate')}
-                        /> */}
+                        
                     </div>
                 </form>
             </div>
