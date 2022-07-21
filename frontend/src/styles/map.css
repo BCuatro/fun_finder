@@ -26,6 +26,7 @@
     justify-content: center;
     position: relative;
     left: 40px;
+    z-index: 1;
 }
 
 .map-container {
@@ -67,7 +68,8 @@
     height: 80px;
     width: 150px;
     font-size: 16px;
-    font-family: system-ui
+    font-family: system-ui;
+    z-index: 2;
 }
 
 .category-button:hover {
