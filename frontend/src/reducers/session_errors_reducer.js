@@ -1,5 +1,6 @@
-const { RECEIVE_SESSION_ERRORS,RECEIVE_CURRENT_USER } = require("../actions/session_actions");
+const { RECEIVE_SESSION_ERRORS,RECEIVE_CURRENT_USER, REMOVE_SESSION_ERRORS } = require("../actions/session_actions");
 const _nullErrors = [];
+
 const SessionErrorsReducer = (state = _nullErrors, action) =>{
     Object.freeze(state);
     switch(action.type){
@@ -7,6 +8,8 @@ const SessionErrorsReducer = (state = _nullErrors, action) =>{
             return action.errors;
         case RECEIVE_CURRENT_USER:
             return _nullErrors;
+        case REMOVE_SESSION_ERRORS:
+            return [];
         default:
             return state;
     }
