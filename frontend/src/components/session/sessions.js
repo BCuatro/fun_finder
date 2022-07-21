@@ -24,6 +24,7 @@ class Sessions extends React.Component {
        } else {
         this.setState({pos: "left"}) 
        }
+       
     }
 
     // renderErrors() {
