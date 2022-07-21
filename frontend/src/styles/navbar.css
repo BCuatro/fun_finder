@@ -7,7 +7,7 @@
 }
 
 .nav_header {
-    width: 100%;
+    width: 90%;
     display: inline-flex;
 }
 
@@ -52,9 +52,9 @@
 
 .loginNavContainer {
     position: relative;
-    width: 80vw;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
