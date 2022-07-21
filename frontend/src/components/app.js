@@ -9,7 +9,7 @@ import ProfileContainer from './profile/profile_container';
 import "../styles/app.css"
 import Sessions from './session/sessions';
 import LoginMainPage from './main/login_main_page';
-
+import AboutMe from './about_me/about_me'
 
 
 

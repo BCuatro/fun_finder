@@ -6,7 +6,8 @@ h1 {
     font-style: italic;
     font-family: Geneva, Tahoma, sans-serif;
     position: relative;
-    top: -35px;
+    top: -65px;
+    z-index: 0;
 }
 
 #address-details-container {
@@ -22,10 +23,10 @@ h1 {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 220px;
-    font-size: 20px;
+    top: 200px;
+    font-size: 22px;
     left: 120px;
-    color: rgb(199, 40, 12)
+    color: rgb(199, 40, 12);
 }
 
 #address-name {

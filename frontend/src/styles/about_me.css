@@ -1,0 +1,9 @@
+.about-me-container {
+    background-color: greenyellow;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: relative;
+    top: 340px;
+    padding: 30px;
+}

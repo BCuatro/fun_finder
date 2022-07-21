@@ -38,7 +38,7 @@
     bottom: 120px; */
     width: 60%;
     position: relative;
-    top: -150px;
+    top: -200px;
 }
 
 .map-random-buttons-container {
@@ -47,6 +47,7 @@
     justify-content: center;
     position: relative;
     left: 100px;
+    top: -40px;
 }
 
 .search-container {
