@@ -1,24 +1,24 @@
 import React from 'react'
 import "../../styles/profile.css"
+import ExperienceForm from '../reviews/review'
 
-const aboutMe =(user) =>{
+const aboutMe = (user) => {
 
-    return (
-     <div className ="aboutmecontainer">
+  return (
+    <div className="aboutmecontainer">
 
-     <h2 id="AboutTitle">About Me</h2>
-     <label>First Name: {user.fname}</label>
-     <br />
-     <label>Last Name: {user.lname}</label>
-     <br />
-     <label>Pronouns:{ user.pronouns}</label>
-     <br />
-     <label>Gender: {user.gender}</label>
-     <br />
-     
-   </div>
-        
-      )
-    }
+      <h2 id="AboutTitle">About Me</h2>
+      <label>First Name: {user.fname}</label>
+      <br />
+      <label>Last Name: {user.lname}</label>
+      <br />
+      <label>Pronouns:{user.pronouns}</label>
+      <br />
+      <label>Gender: {user.gender}</label>
+      <br />
+    </div>
+
+  )
+}
 
 export default aboutMe

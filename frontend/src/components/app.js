@@ -13,22 +13,22 @@ import LoginMainPage from './main/login_main_page';
 
 
 
-const App= () => (
-    
+const App = () => (
+
     <div className="app">
-         <header>
+        <header>
             <NavBarContainer />
-         </header>
+        </header>
         <Switch>
             <AuthRoute exact path="/" component={MainPage} />
-            
-            
+
+
             <AuthRoute exact path="/sessions" component={Sessions} />
             {/* <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
             <ProtectedRoute exact path="/main" component={LoginMainPage} />
             <Route exact path="/profile" component={ProfileContainer} />
 
-            <ProtectedRoute exact path= "/users/:userId" component={ProfileContainer} />
+            <ProtectedRoute exact path="/users/:userId" component={ProfileContainer} />
         </Switch>
     </div>
 )

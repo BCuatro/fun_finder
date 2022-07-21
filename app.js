@@ -8,8 +8,10 @@ const bodyParser = require('body-parser');
 const User = require("./models/User");
 // const passport = require("./frontend/src/config/passport")
 const passport = require("passport")
-// const { emit } = require("nodemon");
+
 const path = require('path');
+const multer = require("multer");
+require("dotenv").config()
 
 
 // if (process.env.NODE_ENV === 'production') {
@@ -48,6 +50,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/api/users", users );
 // app.use("/api/tweets", tweets);
+app.use((error,req,res, next)=> {
+  if (error instanceof multer.MulterError){
+    if (error.code === "LIMIT_FILE_SIZE"){
+      return res.status(400).json({
+        message: "file is too large"
+      })
+    }
+    if (error.code === "LIMIT_UNEXPECTED_FILE"){
+      return res.status(400).json({
+        message: "File must be an image"
+      })
+    }
+  }
+})
 
 const port = process.env.PORT || 4000;
 

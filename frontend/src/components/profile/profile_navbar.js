@@ -10,8 +10,8 @@ import ExperienceForm from '../reviews/review';
 
 class Headers extends React.Component {
   render() {
-      const selected = this.props.selectedTab;
-      const tabHeaders = this.props.tabs.map((tab, index) => {
+    const selected = this.props.selectedTab;
+    const tabHeaders = this.props.tabs.map((tab, index) => {
       const tabTitle = tab.title;
       const tabIndex = index === selected ? 'active' : '';
 
@@ -30,7 +30,7 @@ class Headers extends React.Component {
       </ul>
 
     );
- }
+  }
 }
 
 export default class ProfileNavBar extends React.Component {
@@ -41,42 +41,41 @@ export default class ProfileNavBar extends React.Component {
     };
     this.selectTab = this.selectTab.bind(this);
   }
- 
-  componentDidMount(){
-        
-       
+
+  componentDidMount() {
+
+
     this.props.fetchUser(this.props.userId)
     // this.props.fetchUsers()
   }
   selectTab(num) {
-    this.setState({selectedTab: num});
+    this.setState({ selectedTab: num });
   }
 
   render() {
 
-    
+
     // debugger
-      console.log("LOOK HERE")
+    console.log("LOOK HERE")
     console.log(this.props.userId)
     //  console.log(this.props.user)
     const tabs = [
-        {title: 'About', content: aboutMe(this.props.currentUser)},
-        {title: 'My Pictures', content: photoAlbum(this.props.currentUser)},
-        {title: 'My Hangout', content: 'Tap and Snack'},
-        {title: 'My Experience', content: <ExperienceForm />},
-      
+      { title: 'About', content: aboutMe(this.props.user) },
+      { title: 'My Pictures', content: photoAlbum(this.props.user) },
+      { title: 'My Hangout', content: "Snack and Tap" },
+      { title: 'My Experience', content: <ExperienceForm /> },
     ];
     const tab = tabs[this.state.selectedTab];
-   
+
 
     return (
       <div>
         <div className='tabs'>
-          <Headers 
+          <Headers
             selectedTab={this.state.selectedTab}
             chosenTab={this.selectTab}
             tabs={tabs}
-            >
+          >
           </Headers>
           <div className='tab-content'>
             <div>

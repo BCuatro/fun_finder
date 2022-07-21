@@ -50,7 +50,9 @@ class ExperienceForm extends React.Component {
   submitHandler = e =>{
     e.preventDefault()
     this.setState({
-      listItems: [...this.state.listItems, this.state.fname + ' ' + this.state.lname + ' gave his activity ' + this.state.rating + ' ☆ \'s:  ' + this.state.review],
+      listItems: [
+        ...this.state.listItems, 
+        this.state.fname + ' ' + this.state.lname + ' gave his activity ' + this.state.rating + ' ☆ \'s:  ' + this.state.review],
       fname: '',
       lname: '',
       rating: '',
