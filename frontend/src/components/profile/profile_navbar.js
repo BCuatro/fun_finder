@@ -5,7 +5,7 @@ import MainPage from '../main/main_page.js';
 import aboutMe from './about_me.js';
 import "../../styles/profile.css"
 import photoAlbum from './photo-album.js';
-
+import ExperienceForm from '../reviews/review';
 
 
 class Headers extends React.Component {
@@ -59,7 +59,7 @@ export default class ProfileNavBar extends React.Component {
         {title: 'About', content: aboutMe(this.props.currentUser)},
         {title: 'My Pictures', content: photoAlbum(this.props.currentUser)},
         {title: 'My Hangout', content: 'Tap and Snack'},
-        {title: 'My Experience', content: "You're probably wondering how I got here"},
+        {title: 'My Experience', content: <ExperienceForm />},
       
     ];
     const tab = tabs[this.state.selectedTab];
