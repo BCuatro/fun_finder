@@ -50,7 +50,7 @@ class ExperienceForm extends React.Component {
   submitHandler = e =>{
     e.preventDefault()
     this.setState({
-      listItems: [...this.state.listItems, this.state.fname + ' ' + this.state.lname + ' ' + this.state.rating + ' ☆: ' + this.state.review],
+      listItems: [...this.state.listItems, this.state.fname + ' ' + this.state.lname + ' gave his activity ' + this.state.rating + ' ☆ \'s:  ' + this.state.review],
       fname: '',
       lname: '',
       rating: '',
@@ -109,13 +109,15 @@ class ExperienceForm extends React.Component {
                 
               </div>
               </form>
-
-              <ul className="review-list">
+                <div className="review-container">
+                <h5 className='usrrev'>User Reviews</h5>
+                  <ul className="review-list">
                 {
-                  this.state.listItems.map((li,key) => <li {...{key}}>{li}</li>)
+                  this.state.listItems.map((li,key) => 
+                    <li {...{key}}>{li}</li>)
                 }
-              </ul> 
-             
+                </ul> 
+                </div>
           </div>
 
 

@@ -35,7 +35,7 @@ const UsersReducer =  (state ={}, action)=> {
             nextState = action.users.data
             return nextState
         case RECEIVE_USER:
-            debugger
+            // debugger
             nextState[action.user.data._id] = action.user.data
             return nextState
         default:
