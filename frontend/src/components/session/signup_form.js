@@ -19,7 +19,7 @@ class SignupForm extends React.Component {
             // bMonth: new Date().getMonth() + 1,
             // bDay: new Date().getDate(),
             // profilepicture:"",
-            errors: {}
+            signupErrors: {}
         };
         console.log(new Date().getFullYear()-17)
         console.log(new Date().getMonth() + 1)
@@ -28,15 +28,16 @@ class SignupForm extends React.Component {
         console.log(this.update("birthdate"))
        
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.clearedErrors = false;
-        this.renderErrors = this.renderErrors.bind(this);
+        // this.clearedErrors = false;
+        this.renderSignupErrors = this.renderSignupErrors.bind(this);
+        this.handleToggle = this.handleToggle.bind(this)
         // this.handleFile = this.handleFile.bind(this)
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.signedIn ===true){
             this.props.history.push('/login');
         }
-        this.setState({errors: nextProps.errors})
+        this.setState({signupErrors: nextProps.signupErrors})
     }
     // componentWillUnmount(){
     //     this.props.removeErrors();
@@ -51,8 +52,18 @@ class SignupForm extends React.Component {
         age--;
     }
     return age;
-    }      
-    
+    }    
+
+    handleToggle() {
+        
+        if (this.state.pos === "left"){
+         
+         this.setState({pos: "right"}) 
+        } else {
+         this.setState({pos: "left"}) 
+        }
+     }
+
     update(field){
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -95,12 +106,12 @@ class SignupForm extends React.Component {
         };
         this.props.signup(user,this.props.history);
     }
-    renderErrors() {
+    renderSignupErrors() {
         return(
           <ul>
-            {Object.keys(this.state.errors).map((error, i) => (
-              <li key={`error-${i}`}>
-                {this.state.errors[error]}
+            {Object.keys(this.state.signupErrors).map((signupError, i) => (
+              <li key={`signupError-${i}`}>
+                {this.state.signupErrors[signupError]}
               </li>
             ))}
           </ul>
@@ -197,9 +208,19 @@ class SignupForm extends React.Component {
                         
                         <br/>
                         <input className="sessionbutton" type = "submit" value= "Submit" />
+                        {/* <button className ="sessionbutton" id="login" onClick ={this.handleToggle}>Go To Login</button> */}
                         
 
-                        {this.renderErrors()}
+                        {this.renderSignupErrors()}
+                        {/* <div id= {this.state.pos}>
+                            <div id= "overlay">
+                                    <h2>Welcome to Fun Finder</h2>
+                                    <Link to={'/'} ><img src={logo} className="seslogo" alt="seslogo" /></Link>
+                                    <h2>Tap and Snack</h2>
+                                    <p>Click center icon to go back to randomizer</p>
+                            </div>
+                        </div > */}
+                           
                         {/* <input type ="date"
                             value = {this.state.birthdate}
                             onChange = {this.update('birthdate')}
