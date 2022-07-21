@@ -10,46 +10,74 @@ const validateLoginInput = require('../../validation/login');
 const passport = require('passport');
 const multer = require("multer");
 const multerS3 =require("multer-s3")
-const AWS = require("aws-sdk")
-const AWS_KEYS = require('../../config/awsKeys')
+// const AWS = require("aws-sdk")
+// const AWS_KEYS = require('../../config/awsKeys')
 const path = require("path");
-const BUCKET_NAME= AWS_KEYS.bucketName
-const s3 = new AWS.S3({
-    accessKeyId: AWS_KEYS.accessKeyId,
-    secretAccessKey: AWS_KEYS.secretAccessKey,
-    region: 'us-east-1'
-})
+const { s3Upload } = require("../../awsS3");
+require("dotenv").config()
+
+// const BUCKET_NAME= AWS_KEYS.bucketName
+// const s3 = new AWS.S3({
+//     accessKeyId: AWS_KEYS.accessKeyId,
+//     secretAccessKey: AWS_KEYS.secretAccessKey,
+//     region: 'us-east-1'
+// })
 
 
-const params = {
-    Bucket: BUCKET_NAME
-}
+// const params = {
+//     Bucket: BUCKET_NAME
+// }
 
 
 
-const fileFilter = (req, file, cb) => {
-    if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' ) {
-        cb(null, true);
+// const fileFilter = (req, file, cb) => {
+//     if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' ) {
+//         cb(null, true);
+//     } else {
+//         cb(new Error('Please upload a JPG, JPEG or PNG file'), false);
+//     }
+// }
+const storage = multer.memoryStorage()
+const fileFilter = (req, file, cb) =>{
+    if (file.mimetype.split("/")[0] ==="image"){
+        cb(null, true)
     } else {
-        cb(new Error('Please upload a JPG, JPEG or PNG file'), false);
-    }
+        cb(new multer.MulterError("LIMIT_UNEXPECTED_FILE"), false);
+     }
 }
 
 const upload = multer({
+    storage,
     fileFilter,
-    storage: multerS3({
-      s3: s3,
-      bucket: BUCKET_NAME,
-      acl: "public-read",
-      metadata: function (req, file, cb) {
-        cb(null, {fieldName: file.fieldname});
-      },
-      key: function (req, file, cb) {
-        cb(null, `${Date.now().toString()}`+"-"+file.originalname)
-      }
-    })
-  })
+    limits: {fileSize: 15000000},
+    // storage: multerS3({
+    //   s3: s3,
+    //   bucket: BUCKET_NAME,
+    //   acl: "public-read",
+    //   metadata: function (req, file, cb) {
+    //     cb(null, {fieldName: file.fieldname});
+      })
+//       filename: (req, file, cb) => {
+            // const { originalname } = file;
+//         cb(null, `${Date.now().toString()} - ${originalname}`)
+//       }
+//     })
+//   })
+// const upload = multer({ dest: "uploads/" });
+// const multiUpload = upload.fields([
+//     {name: "pic1", maxCount: 1},
+//     {name: "pic2", maxCount: 1},
+//     {name: "pic3", maxCount: 1}
+// ])
 
+// router.post("/uploads", multiUpload,(req,res)=> {
+//     res.json({status: "success"})
+//   })
+  router.post("/upload", upload.single("file"), async (req,res)=> {
+    const result = await s3Upload(req.file)
+    res.json({ status: "success" , result});
+  })
+ 
 // router.get("/test",  (req, res)=>{
 //     res.json({msg: "This is the user route"})
 // });
