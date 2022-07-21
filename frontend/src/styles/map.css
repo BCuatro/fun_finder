@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    left: 40px;
+    /* left: 40px; */
     z-index: 1;
 }
 
@@ -39,6 +39,7 @@
     width: 60%;
     position: relative;
     top: -200px;
+    left: 40px;
 }
 
 .map-random-buttons-container {
