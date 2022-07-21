@@ -52,7 +52,7 @@ class Sessions extends React.Component {
                         <Link to={'/'} ><img src={logo} className="seslogo" alt="seslogo" /></Link>
                         <h2>Tap and Snack</h2>
                         <p>Click center icon to go back to randomizer</p>
-                        </div>
+                    </div>
                 </div>
                 {/* <footer>
                     Tap and Snack

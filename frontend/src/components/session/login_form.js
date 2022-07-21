@@ -8,21 +8,32 @@ class LoginForm extends React.Component {
         this.state = {
             email: "",
             password: "",
-            errors: {}
+            loginErrors: {}
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.handleDemoUser = this.handleDemoUser.bind(this);
+        this.handleToggle = this.handleToggle.bind(this)
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.currentUser ===true){
             this.props.history.push('/tweets');
         }
-        this.setState({errors: nextProps.errors})
+        this.setState({loginErrors: nextProps.loginErrors})
     }
     // componentWillUnmount(){
     //         this.props.removeErrors();
     // }
+
+    handleToggle() {
+        
+        if (this.state.pos === "left"){
+         
+         this.setState({pos: "right"}) 
+        } else {
+         this.setState({pos: "left"}) 
+        }
+     }
 
     update(field){
         return e => this.setState({
@@ -45,9 +56,9 @@ class LoginForm extends React.Component {
     renderErrors() {
         return(
           <ul>
-            {Object.keys(this.state.errors).map((error, i) => (
-              <li key={`error-${i}`}>
-                {this.state.errors[error]}
+            {Object.keys(this.state.loginErrors).map((loginError, i) => (
+              <li key={`loginError-${i}`}>
+                {this.state.loginErrors[loginError]}
               </li>
             ))}
           </ul>
@@ -90,7 +101,16 @@ class LoginForm extends React.Component {
                         <input className="sessionbutton" type = "submit" value= "Submit" />
                         <br />
                         <button className ="sessionbutton" id="demo" onClick = {this.handleDemoUser}>DemoUser</button>
-                        {/* {this.renderErrors()} */}
+                        {/* <button className="sessionbutton" id="signup" onClick ={this.handleToggle}>Go To SignUp</button> */}
+                       {/* <div id= {this.state.pos}>
+                            <div id= "overlay" >
+                                <h2>Welcome to Fun Finder</h2>
+                                <Link to={'/'} ><img src={logo} className="seslogo" alt="seslogo" /></Link>
+                                <h2>Tap and Snack</h2>
+                                <p>Click center icon to go back to randomizer</p>
+                            </div>
+                        </div> */}
+                        {this.renderErrors()}
                     </div>
                 </form>
             </div>
