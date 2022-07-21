@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-require("dotenv").config()
+// require("dotenv").config()
 // const User = require('../../models/User');
 // const bcrypt = require("bcryptjs");
 // const keys = require('../../frontend/src/config/keys');
