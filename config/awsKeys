@@ -1,0 +1,5 @@
+module.exports = {
+    accessKeyId: 'AKIAYVGNMNH5ICQ2IQEB',
+    secretAccessKey: "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",
+    bucketName: "fun-finder-dev"
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaStar } from 'react-icons/fa';
+// import { FaStar } from 'react-icons/fa';
 
 
 class ExperienceForm extends React.Component {
@@ -95,10 +95,10 @@ class ExperienceForm extends React.Component {
                             name="radioting" 
                             value={ratingValue} 
                             onClick={this.ratingHandler}/>
-                            <FaStar 
+                            {/* <FaStar 
                               className="star" 
                               color={ratingValue <= this.state.rating ? "ffc107" : "e4e5e9"} 
-                              size={25} /> 
+                              size={25} />  */}
                               {/* {console.log(this.state.rating)} */}
                         </label>
                         )
