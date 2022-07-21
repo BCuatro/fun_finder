@@ -38,7 +38,11 @@
   
 }
 .app{
-  background-color: #fff2e2 ;
-  height: 145vh;
+  /* background-color: #fff2e2 ; */
+  height: 120vh;
   width: 100vw;
+}
+
+html {
+  background-color: #fff2e2;
 }
