@@ -1,7 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 10vh;
     width: 20%;
 }
 
@@ -38,7 +38,8 @@
     bottom: 120px; */
     width: 60%;
     position: relative;
-    top: -200px;
+    /* top: -200px; */
+    top: -100%;
     left: 40px;
 }
 
@@ -47,8 +48,10 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    left: 110px;
-    top: -40px;
+    /* left: 110px;
+    top: -40px; */
+    top: 40%;
+    left: 15%;
 }
 
 .search-container {

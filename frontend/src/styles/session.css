@@ -32,7 +32,7 @@
   
   .modal-input:focus,
   .modal-input:valid {
-    border-color: #1f6cab;
+    border-color: #83BBE1;
     
   }
   .modal-input:focus~.modal-label,
@@ -99,22 +99,22 @@
     transform: translateX(50%);
     transition: transform 2.5s ease;
     background-color: #fff2e2;
-    color:#1f6cab;
+    color:#83BBE1
   
   }
  
 #login{
-  background: #1f6cab;
-  margin-top: 0;
+  background: #83BBE1;
+  margin-top: 15px;
  
 }
 
 #login:hover{
-  outline: 3px solid #1f6cab;
+  outline: 3px solid #83BBE1;
   outline-offset: .3rem;
 }
 .logintitle{
-  color: #1f6cab;
+  color: #83BBE1;
   font-family: sans-serif cursive;
   font-size: 2em;
 }
@@ -127,7 +127,7 @@
 
 #signup{
   background: #c4c459;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #signup:hover{
@@ -145,8 +145,8 @@
   border: #082a3a dashed 5px;
   border-radius: 10%;
 
-  width: 60vw;
-  transform: translate(30%);
+  width: 60%;
+  transform: translate(30%, 10%);
 }
 
 .seslogo{

@@ -57,10 +57,7 @@ class Sessions extends React.Component {
                         <p>Click center icon to go back to randomizer</p>
                     </div>
                 </div>
-                {/* <footer>
-                    Tap and Snack
-                    
-                </footer> */}
+                
             </div>
         );
     }

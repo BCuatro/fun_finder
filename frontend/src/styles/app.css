@@ -37,12 +37,41 @@
   
   
 }
-.app{
+/* .app{
   background-color: #fff2e2;
   height: 100vh;
   width: 100vw;
+} */
+
+html{
+  
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #fff2e2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
-html {
-  background-color: #fff2e2;
+header{
+  width: 100%;
+  height: 10vh;
+  grid-area: 1 / 1 / 2 / 6; 
+
+}
+footer{
+  width: 100%;
+  height: 20vh;
+  grid-area: 5 / 1 / 6 /6;
+}
+
+main {
+  
+  width: 100%;
+  height:70vh;
+  grid-area: 2 / 1 / 5 / 6; 
+  
 }

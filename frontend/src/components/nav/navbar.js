@@ -21,6 +21,11 @@ class NavBar extends React.Component {
             return (
                 <div className="header-container">
                     <Link to={'/'} > <img src={logo} className="logo" alt="logo" /></Link>
+                    {/* <div>
+                        <h2 id="navTitle"> Fun Finder </h2>
+                        <p id="navSubTitle"> Tap and Snack</p>
+
+                    </div> */}
                     <div className="seslinks">
                         <Link className="profileLink" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
                         <button className="logoutButton" onClick={this.logoutUser}>Logout</button>

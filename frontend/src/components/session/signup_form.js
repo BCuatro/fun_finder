@@ -162,7 +162,6 @@ class SignupForm extends React.Component {
                             <label htmlFor='gender' className="modal-label">Gender:</label> 
                         </div> */}
                        
-                        <br/>
                         <div className="modal-input-container">
                             <input type ="password"
                                 id ="password"
