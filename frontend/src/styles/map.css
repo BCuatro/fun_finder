@@ -90,6 +90,7 @@
     width: 150px;
     position: relative;
     top: 20px;
+    z-index: 2;
 }
 
 #find-place-button:hover {

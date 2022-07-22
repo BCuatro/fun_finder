@@ -27,14 +27,18 @@ h1 {
     position: relative;
     top: 200px;
     font-size: 22px;
-    left: 120px;
     color: rgb(199, 40, 12);
 }
 
 #address-name {
-    color: rgb(199, 40, 12)
+    color: rgb(199, 40, 12);
+    position: relative;
+    left: 120px;
 }
 
 #address-details {
-    color: rgb(199, 40, 12)
+    color: rgb(199, 40, 12);
+    position: relative;
+    left: 120px;
+
 }
