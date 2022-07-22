@@ -17,7 +17,9 @@ class Sessions extends React.Component {
         
     }
     handleToggle() {
-        
+
+        // this.props.clearSignupErrors()
+        console.log(this.props)
        if (this.state.pos === "left"){
         
         this.setState({pos: "right"}) 

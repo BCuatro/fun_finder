@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 export const fetchUsers = () => {
     return axios.get('/api/users');
@@ -10,4 +10,10 @@ export const fetchUser = (userId) => {
 
 export const updateUser = (user) => {
     return axios.patch(`/api/users/${user.id}`, user);
+};
+
+export const updatePhoto = (file) => {
+    return axios.post(`/api/users/upload`,file).then(res => {
+        console.log(res)
+    });
 };

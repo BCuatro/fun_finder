@@ -55,10 +55,6 @@ export default class ProfileNavBar extends React.Component {
   render() {
 
 
-    debugger
-    console.log("LOOK HERE")
-    console.log(this.props.userId)
-    //  console.log(this.props.user)
     const tabs = [
       { title: 'About', content: aboutMe(this.props.user) },
       { title: 'My Pictures', content: photoAlbum(this.props.user) },

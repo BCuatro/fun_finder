@@ -19,7 +19,7 @@ class SignupForm extends React.Component {
             // bMonth: new Date().getMonth() + 1,
             // bDay: new Date().getDate(),
             // profilepicture:"",
-            signupErrors: {}
+            signupErrors: []
         };
         console.log(new Date().getFullYear()-17)
         console.log(new Date().getMonth() + 1)

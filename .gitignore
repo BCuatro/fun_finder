@@ -4,3 +4,4 @@
 /config/google_maps_key.js
 /config/awsKeys.js
 /config/keys.js
+/config/.env

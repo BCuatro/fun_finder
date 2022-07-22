@@ -1,4 +1,4 @@
-const { RECEIVE_SESSION_ERRORS,RECEIVE_CURRENT_USER, REMOVE_SESSION_ERRORS } = require("../actions/session_actions");
+import { RECEIVE_SESSION_ERRORS,RECEIVE_CURRENT_USER, REMOVE_SESSION_ERRORS } from "../actions/session_actions";
 const _nullErrors = [];
 
 const SessionErrorsReducer = (state = _nullErrors, action) =>{
@@ -9,7 +9,7 @@ const SessionErrorsReducer = (state = _nullErrors, action) =>{
         case RECEIVE_CURRENT_USER:
             return _nullErrors;
         case REMOVE_SESSION_ERRORS:
-            return [];
+            return _nullErrors;
         default:
             return state;
     }

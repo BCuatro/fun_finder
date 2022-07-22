@@ -13,13 +13,29 @@ class EditForm extends React.Component{
             gender: this.props.user.gender,
             pronouns: this.props.user.pronouns,
             slogan: this.props.user.slogan,
+            file: null
 
         }
        
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.fileUploadHandler= this.fileUploadHandler.bind(this);
+        this.fileSelectedHandler= this.fileSelectedHandler.bind(this)
         // this.handleFile = this.handleFile.bind(this)
         // this.handleProfilePic =this.handleProfilePic.bind(this)
         
+      }
+      fileSelectedHandler = e => {
+        e.preventDefault();
+        this.setState({file: e.target.files[0]})
+      }
+      
+      fileUploadHandler = () => {
+
+        const formData = new FormData();
+        formData.append('image', this.state.file)
+        formData.append('originalname', this.state.file.name)
+        debugger
+        this.props.updatePhoto(this.state.file)
       }
       componentWillUnmount(){
         // this.props.removeErrors();
@@ -81,10 +97,9 @@ class EditForm extends React.Component{
    
     
     render(){ 
-        debugger
         return (
             <div className="editform">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} enctype="multipart/form-data">
                     <button onClick={()=>{this.props.closeModal()}} className="close-x">X</button>
              
                     <h2>Edit Profile</h2>
@@ -141,8 +156,11 @@ class EditForm extends React.Component{
                         />
                         <label htmlFor= "slogan" className="modal-label">Slogan</label>
                     </div>
+
                     
                     <button onClick = {this.handleSubmit}>Submit</button>
+                    <input type = "file" onChange= {this.fileSelectedHandler} />
+                    <button onClick ={this.fileUploadHandler}> Upload</button>
                 </form>
             </div>
         )

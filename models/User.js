@@ -34,6 +34,10 @@ const UserSchema = new Schema({
       type: String,
       default: ""
     },
+    profilePic: {
+      type: String,
+      default: ""
+    },
     // birthdate: {
     //   type: Date,
     //   default: ""
