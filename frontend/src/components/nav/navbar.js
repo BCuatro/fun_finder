@@ -19,11 +19,8 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                <div className="loginNavContainer">
-                    <div>
-                        <Link to={'/'} > <img src={logo} className="logo" alt="logo" /></Link>
-                    </div>
-
+                <div className="header-container">
+                    <Link to={'/'} > <img src={logo} className="logo" alt="logo" /></Link>
                     <div className="seslinks">
                         <Link className="profileLink" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
                         <button className="logoutButton" onClick={this.logoutUser}>Logout</button>

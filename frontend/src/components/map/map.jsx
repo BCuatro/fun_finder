@@ -118,6 +118,7 @@ export default function Map() {
     service.nearbySearch(request, callback);
 
     function callback(results, status) {
+
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         // for (let i = 0; i < results.length; i++) {
         //   let place = results[i];
@@ -127,6 +128,9 @@ export default function Map() {
         //   });
         // console.log(results[i].name)
 
+        // if (our_marker) {
+        //   our_marker.setMap(null)
+        // }
         const random = results[Math.floor(Math.random() * results.length)];
         new google.maps.Marker({
           position: random.geometry.location,
