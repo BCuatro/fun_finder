@@ -7,3 +7,18 @@
     top: 340px;
     padding: 30px;
 }
+
+.about-me-links {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.person {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 21px;
+    color: beige;
+}
