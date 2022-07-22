@@ -111,6 +111,10 @@
 
 /* star YT tutorial */
 
+* {
+  text-decoration-color: black;
+}
+
 input[type="radio"] {
   display: none;
 }
@@ -123,6 +127,10 @@ input[type="radio"] {
 .review-list > li {
   box-sizing: border-box;
   width: 100%;
-  border: solid #5B6DCD 10px;
+  border: solid orangered 3px;
   padding: 5px;
+}
+
+div {
+  color: black;
 }

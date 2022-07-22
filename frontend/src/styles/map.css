@@ -25,7 +25,8 @@
     display: flex;
     justify-content: center;
     position: relative;
-    left: 40px;
+    /* left: 40px; */
+    z-index: 1;
 }
 
 .map-container {
@@ -37,7 +38,8 @@
     bottom: 120px; */
     width: 60%;
     position: relative;
-    top: -150px;
+    top: -200px;
+    left: 40px;
 }
 
 .map-random-buttons-container {
@@ -45,7 +47,8 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    left: 100px;
+    left: 110px;
+    top: -40px;
 }
 
 .search-container {
@@ -67,7 +70,8 @@
     height: 80px;
     width: 150px;
     font-size: 16px;
-    font-family: system-ui
+    font-family: system-ui;
+    z-index: 2;
 }
 
 .category-button:hover {
@@ -86,6 +90,7 @@
     width: 150px;
     position: relative;
     top: 20px;
+    z-index: 2;
 }
 
 #find-place-button:hover {

@@ -118,6 +118,7 @@ export default function Map() {
     service.nearbySearch(request, callback);
 
     function callback(results, status) {
+
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         // for (let i = 0; i < results.length; i++) {
         //   let place = results[i];
@@ -127,6 +128,9 @@ export default function Map() {
         //   });
         // console.log(results[i].name)
 
+        // if (our_marker) {
+        //   our_marker.setMap(null)
+        // }
         const random = results[Math.floor(Math.random() * results.length)];
         new google.maps.Marker({
           position: random.geometry.location,
@@ -172,11 +176,11 @@ export default function Map() {
   return <div className="container">
     <div className="mini-container">
       <div className="map-random-buttons-container">
-        <p id="personality-question">
+        <div id="personality-question">
           <div>
             Pick a category:
           </div>
-        </p>
+        </div>
         <button onClick={introverted} id="introverted-button" className="category-button">I'm shy. Choose for me!</button>
         <button onClick={extraverted} id="extraverted-button" className="category-button">I'm an extravert! You pick!</button>
         <button onClick={bar} id="bar-button" className="category-button">Take me to a bar now!</button>

@@ -4,10 +4,12 @@
     position: relative;
     left: 8px;
     top: 8px;
+    z-index: 2;
 }
 
 .nav_header {
-    width: 90%;
+    /* width: 90%; */
+    width: 100%;
     display: inline-flex;
 }
 
@@ -16,6 +18,7 @@
     width: 100%;
 
 }
+
 
 #logged_out {
     display: flex;
@@ -26,7 +29,7 @@
     font-size: larger;
     position: relative;
     top: 20px;
-    right: 20px;
+    right: 40px;
 }
 
 .nav_header {
@@ -62,14 +65,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    right: 35px;
+    top: 20px;
+}
+
+.profileLink:hover {
+    cursor: pointer;
 }
 
 .logoutButton {
-    width: 15vw;
     padding: 3px;
     margin-top: 5px;
     border-radius: 10px;
     border: #082a3a dashed 2px;
     background-color: #c4c459;
+}
 
+.logoutButton:hover {
+    cursor: pointer;
 }
