@@ -7,7 +7,7 @@ const aboutMe = (user) => {
   return (
     <div className="aboutmecontainer">
 
-      <h2 id="AboutTitle">About Me:</h2>
+      <h2 className= "tabContentTitle" id="AboutTitle">About Me:</h2>
       <ul> 
         <li><label>First Name:&nbsp;&nbsp;{user.fname}</label></li> 
         <li> <label>Last Name:&nbsp;&nbsp;{user.lname}</label></li> 

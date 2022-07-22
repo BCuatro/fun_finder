@@ -12,6 +12,7 @@ html{
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    
 }
 
 header{
@@ -22,14 +23,17 @@ header{
 }
 footer{
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   grid-area: 5 / 1 / 6 /6;
+  
+  
+  
 }
 
 main {
   
   width: 100%;
-  height:70vh;
+  height:75vh;
   grid-area: 2 / 1 / 5 / 6; 
   
 }

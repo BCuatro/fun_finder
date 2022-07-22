@@ -101,7 +101,7 @@
     font-family:Arial;
     margin-left: 5px;
     padding:5px;
-    width: 70%;
+    width: 200px;
     }
 
     /* stars css */
@@ -175,3 +175,8 @@ div {
   padding-left: 10px;
   
 }
+.tabContentTitle{
+  font-size: xx-large;
+  padding-left: 10px;
+}
+

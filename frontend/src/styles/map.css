@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     height: 10vh;
-    width: 20%;
+    width: 100%;
 }
 
 .category-button {
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    /* left: 40px; */
+    left: 40px;
     z-index: 1;
 }
 
@@ -39,8 +39,8 @@
     width: 60%;
     position: relative;
     /* top: -200px; */
-    top: -100%;
-    left: 40px;
+    top: -200%;
+    left: 10px;
 }
 
 .map-random-buttons-container {
@@ -50,8 +50,8 @@
     position: relative;
     /* left: 110px;
     top: -40px; */
-    top: 40%;
-    left: 15%;
+    top:-40%;
+    left: 10%;
 }
 
 .search-container {

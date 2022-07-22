@@ -1,19 +1,36 @@
-.album{
+
+/* .album{
+    position: relative;
+} */
+.albumContainer{
     
-    height: 2em;
-    width: 2em;
-    
+    /* height: 2em;
+    width: 2em; */
+    position:relative;
+    height: 100%;
+    display: flex;
+}
+#albumTitle{
+    color: #83bbe1;
+    align-content: center;
+}
+.albumContainer ul{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    right: 2%;
 }
 
-.pic1{
-    height: 20px;
-    width: 20px;
-}
-.pic2{
-    height: 1%;
-    width: 1%;
-}
-.pic3{
-    height: 1%;
-    width: 1%;
+.albumPicture{
+    height: 45vh;
+    width: 23vw;
+    border:#082a3a dashed 2px; 
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
