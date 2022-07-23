@@ -91,7 +91,7 @@
 
 .modal-input:focus,
 .modal-input:valid {
-  border-color: #1f6cab;
+  border-color: #83BBE1;
 }
 .modal-input:focus~.modal-label,
 .modal-input:valid~.modal-label {

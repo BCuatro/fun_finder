@@ -1,11 +1,27 @@
 .logo {
-    height: 7em;
-    width: 7em;
+    height: 5em;
+    width: 5em;
     position: relative;
     left: 8px;
     top: 8px;
     z-index: 2;
 }
+/* #navTitle {
+    color: rgb(241, 117, 95);
+    font-size: 40px;
+    font-style: italic;
+    font-family: Geneva, Tahoma, sans-serif;
+    margin: 0;
+    
+}
+#navSubTitle{
+    color: #082a3a;;
+    margin: 0;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Geneva, Tahoma, sans-serif;
+    transform: translateX(10%);
+} */
 
 .nav_header {
     /* width: 90%; */
@@ -69,17 +85,38 @@
     right: 35px;
     top: 20px;
 }
-
-.profileLink:hover {
-    cursor: pointer;
+.profileLink  {
+    background-color:#83BBE1;
+    border-radius:16px;
+    border:#082a3a dashed 2px;
+    display:inline-block;
+    cursor:pointer;
+    color:#082a3a;
+    font-family:Arial;
+    font-size:14px;
+    padding:5px 30px;
+    text-decoration:none;
+    
+    }
+.profileLink:active {
+    position:relative;
+    top:1px;
+    
 }
 
+
 .logoutButton {
-    padding: 3px;
+    background-color:#c4c459;
+    border-radius:16px;
+    border:#082a3a dashed 2px;
+    display:inline-block;
+    cursor:pointer;
+    color:#082a3a;
+    font-family:Arial;
+    font-size:13px;
+    padding:5px 30px;
+    text-decoration:none;
     margin-top: 5px;
-    border-radius: 10px;
-    border: #082a3a dashed 2px;
-    background-color: #c4c459;
 }
 
 .logoutButton:hover {

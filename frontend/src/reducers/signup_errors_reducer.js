@@ -1,4 +1,4 @@
-const { RECEIVE_SIGNUP_ERRORS,RECEIVE_CURRENT_USER, REMOVE_SIGNUP_ERRORS } = require("../actions/session_actions");
+import { RECEIVE_SIGNUP_ERRORS,RECEIVE_CURRENT_USER, REMOVE_SIGNUP_ERRORS } from "../actions/session_actions";
 const _nullErrors = [];
 
 const SignupErrorsReducer = (state = _nullErrors, action) =>{
@@ -9,7 +9,7 @@ const SignupErrorsReducer = (state = _nullErrors, action) =>{
         case RECEIVE_CURRENT_USER:
             return _nullErrors;
         case REMOVE_SIGNUP_ERRORS:
-            return [];
+            return _nullErrors;
         default:
             return state;
     }

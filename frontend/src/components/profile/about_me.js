@@ -7,14 +7,13 @@ const aboutMe = (user) => {
   return (
     <div className="aboutmecontainer">
 
-      <h2 id="AboutTitle">About Me</h2>
-      <label>First Name: {user.fname}</label>
-      <br />
-      <label>Last Name: {user.lname}</label>
-      <br />
-      <label>Pronouns:{user.pronouns}</label>
-      <br />
-      <label>Gender: {user.gender}</label>
+      <h2 className= "tabContentTitle" id="AboutTitle">About Me:</h2>
+      <ul> 
+        <li><label>First Name:&nbsp;&nbsp;{user.fname}</label></li> 
+        <li> <label>Last Name:&nbsp;&nbsp;{user.lname}</label></li> 
+        <li><label>Pronouns:&nbsp;&nbsp;{user.pronouns}</label></li>
+        <li> <label>Gender:&nbsp;&nbsp;{user.gender}</label></li>
+      </ul>
       <br />
     </div>
 

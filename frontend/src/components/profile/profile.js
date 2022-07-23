@@ -56,12 +56,16 @@ class Profile extends React.Component{
                 <div className="profilesection"><ProfileNavBarContainer />
                 </div>
                 <div className="profilepicture">
-                   <div> <img id= "profilepic" src={propic} className="profile picture" alt="profile picture" />
+                    <div> <img id= "profilepic" src={propic} className="profile picture" alt="profile picture" /></div>
+                    <div>
                         <p id="ptext">{this.props.user.slogan}</p>
                         <p id="ptext">Name:{this.props.user.fname} {this.props.user.lname}</p>
                         <p id ="ptext">Pronouns: {this.props.user.pronouns}</p>
-                        <button onClick = {this.handleOpenModal}>Edit Profile</button> 
+                        
                     </div>
+                     <button id= "editButton" onClick = {this.handleOpenModal}>Edit Profile</button> 
+                    
+                    
                 </div>
                 
 

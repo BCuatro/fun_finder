@@ -7,8 +7,9 @@ h1 {
     font-size: 50px;
     font-style: italic;
     font-family: Geneva, Tahoma, sans-serif;
-    position: relative;
-    top: -65px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
     z-index: 0;
 }
 
@@ -27,14 +28,21 @@ h1 {
     position: relative;
     top: 200px;
     font-size: 22px;
-    left: 120px;
     color: rgb(199, 40, 12);
 }
 
 #address-name {
-    color: rgb(199, 40, 12)
+    color: rgb(199, 40, 12);
+    position: relative;
+    left: 120px;
 }
 
 #address-details {
-    color: rgb(199, 40, 12)
+    color: rgb(199, 40, 12);
+    position: relative;
+    left: 120px;
+
+}
+#container{
+    position: relative;
 }

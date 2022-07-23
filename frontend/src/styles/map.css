@@ -1,8 +1,8 @@
 .container {
     display: flex;
     justify-content: center;
-    height: 100px;
-    width: 20%;
+    height: 10vh;
+    width: 100%;
 }
 
 .category-button {
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    /* left: 40px; */
+    left: 40px;
     z-index: 1;
 }
 
@@ -38,8 +38,9 @@
     bottom: 120px; */
     width: 60%;
     position: relative;
-    top: -200px;
-    left: 40px;
+    /* top: -200px; */
+    top: -200%;
+    left: 10px;
 }
 
 .map-random-buttons-container {
@@ -47,8 +48,10 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    left: 100px;
-    top: -40px;
+    /* left: 110px;
+    top: -40px; */
+    top:-40%;
+    left: 10%;
 }
 
 .search-container {
@@ -90,6 +93,7 @@
     width: 150px;
     position: relative;
     top: 20px;
+    z-index: 2;
 }
 
 #find-place-button:hover {

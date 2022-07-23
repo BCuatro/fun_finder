@@ -41,7 +41,7 @@
   
   .tabsHeader > li:focus{
   
-    background-color: #1f6cab;  
+    background-color: #83BBE1;  
   
   }
   
@@ -64,8 +64,10 @@
     
     .profilesection { grid-area: 1 / 2 / 6 / 6; }
     .profilepicture  { grid-area: 1 / 1 / 6 / 2; 
-      display: flex;
+    display: flex;
     height: 100%;
+    flex-direction: column
+    
     };
     
     #label{
@@ -73,21 +75,33 @@
     }
 
     #profilepic{
-      padding: 15px;
-      width: 50%;
-      height: 25%;
-      transform: translate(15%,10%);
+      padding: 5px;
+      height: 10em;
+      width: 8em;
+      transform: translate(30%,10%);
       border: dashed ;
       border-radius: 10px;
-
-      justify-content: space-around;
+      
     }
     #ptext {
-      transform: translate(16%, 60%);
-      font-size: large;
+      transform: translate(5%,15%);
+      font-size: 15px;
       font-family: monospace;
+      padding: 3px;
       color: #e46905;
       font-weight: bold;
+    }
+    #editButton{
+    background-color:#83BBE1;
+    border-radius:16px;
+    border:#082a3a dashed 2px;
+    display:inline-block;
+    cursor:pointer;
+    color:#082a3a;
+    font-family:Arial;
+    margin-left: 5px;
+    padding:5px;
+    width: 200px;
     }
 
     /* stars css */
@@ -288,3 +302,34 @@ aka stars
   transform: translateY(-10px);
   transition: all ease 0.3s;
 }
+.aboutmecontainer{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.aboutmecontainer li {
+  transform: translate(30%);
+  display: flex;
+  margin: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: x-large;
+  border-radius:16px;
+  border:#082a3a dashed 2px;
+  width: 30%;
+  padding: 5px;
+  padding-left: 20px;
+  color: #e46905;
+}
+#AboutTitle {
+  color: #83BBE1;
+  font-size: xx-large;
+  padding-left: 10px;
+  
+}
+.tabContentTitle{
+  font-size: xx-large;
+  padding-left: 10px;
+}
+

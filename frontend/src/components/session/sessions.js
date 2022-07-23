@@ -17,7 +17,9 @@ class Sessions extends React.Component {
         
     }
     handleToggle() {
-        
+
+        // this.props.clearSignupErrors()
+        console.log(this.props)
        if (this.state.pos === "left"){
         
         this.setState({pos: "right"}) 
@@ -55,10 +57,7 @@ class Sessions extends React.Component {
                         <p>Click center icon to go back to randomizer</p>
                     </div>
                 </div>
-                {/* <footer>
-                    Tap and Snack
-                    
-                </footer> */}
+                
             </div>
         );
     }

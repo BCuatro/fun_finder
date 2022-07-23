@@ -8,7 +8,7 @@ class LoginForm extends React.Component {
         this.state = {
             email: "",
             password: "",
-            loginErrors: {}
+            loginErrors: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);

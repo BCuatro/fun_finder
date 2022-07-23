@@ -25,9 +25,7 @@ const MainPage = (props) => {
             <h1>FUN FINDER</h1>
             <Map />
             <div id="address-details-container"></div>
-            <footer>
-                <AboutMe />
-            </footer>
+            
         </div>
     );
 }

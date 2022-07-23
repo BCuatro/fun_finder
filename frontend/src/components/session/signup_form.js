@@ -19,7 +19,7 @@ class SignupForm extends React.Component {
             // bMonth: new Date().getMonth() + 1,
             // bDay: new Date().getDate(),
             // profilepicture:"",
-            signupErrors: {}
+            signupErrors: []
         };
         console.log(new Date().getFullYear()-17)
         console.log(new Date().getMonth() + 1)
@@ -162,7 +162,6 @@ class SignupForm extends React.Component {
                             <label htmlFor='gender' className="modal-label">Gender:</label> 
                         </div> */}
                        
-                        <br/>
                         <div className="modal-input-container">
                             <input type ="password"
                                 id ="password"

@@ -77,3 +77,8 @@ export const logout = () => dispatch => {
     APIUtil.setAuthToken(false);
     dispatch(logoutUser());
 };
+
+export const clearSessionsErrors = () => dispatch =>{
+    dispatch(removeSignupErrors);
+    dispatch(removeErrors);
+}
