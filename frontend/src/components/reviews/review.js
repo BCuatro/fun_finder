@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaStar } from 'react-icons/fa';
-
+import propic from "../../SMProfilePic.png"
 
 class ExperienceForm extends React.Component {
   constructor(props) {
@@ -75,12 +75,12 @@ class ExperienceForm extends React.Component {
         return (
           <div> 
             <form onSubmit={this.submitHandler}>
-            <h3>Experiences </h3>
+            {/* <h3>Experiences </h3>
             <div className="form-container">
               
                 <input type="text" placeholder="FirstName.." value={this.state.fname} onChange={this.fnameHandler} />
                 <input type="text" placeholder="LastName.." value={this.state.lname} onChange={this.lnameHandler}  />
-              </div>
+              </div> */}
                 <h3>Rating:</h3>
                   <div className="rating">
                     {/* <i id='5'>☆</i><i id="4">☆</i><i id="3">☆</i><i id="2">☆</i><i id='1'>☆</i> */}
@@ -116,7 +116,7 @@ class ExperienceForm extends React.Component {
                 
               </div>
               </form>
-                <div className="review-container">
+                {/* <div className="review-container">
                 <h5 className='usrrev'>User Reviews</h5>
                   <ul className="review-list">
                 {
@@ -124,13 +124,19 @@ class ExperienceForm extends React.Component {
                     <li {...{key}}>{li}</li>)
                 }
                 </ul> 
-                </div>
+                </div> */}
 
                 <section id="testimonials" >
                   <div class="testimonial-heading">
                     <span>User Reviews</span>
                     {/* <h3>Client Says</h3> */}
                   </div>
+                  <ul className="review-list">
+                    {
+                      this.state.listItems.map((li,key) => 
+                        <li {...{key}}>{li}</li>)
+                    }
+                  </ul> 
                   {/* box */}
                     <div className="testimonial-box-container">
                       {/* top */}
@@ -141,11 +147,11 @@ class ExperienceForm extends React.Component {
                           <div className="profile">
                             {/* img */}
                             <div className="profile-img">
-                              <img src=""/>
+                              <img id= "review" src={propic} className="review picture" alt="review picture" />
                             </div>
                             <div className="name-user">
-                              <strong> David-Allen</strong>
-                                <span>@theRealDavidAllen</span>
+                              <strong> Tom Holland</strong>
+                                <span>@tomholland2013</span>
                             </div>
                           </div>
                           {/* reviews aka stars */}
@@ -188,16 +194,20 @@ class ExperienceForm extends React.Component {
                           <div className="profile">
                             {/* img */}
                             <div className="profile-img">
-                              <img src=""/>
+                              <img id= "review" src={propic} className="review picture" alt="review picture"/>
                             </div>
                             <div className="name-user">
-                              <strong> David-Allen</strong>
-                                <span>@theRealDavidAllen</span>
+                              <strong> Tom Holland</strong>
+                                <span>@tomholland2013</span>
                             </div>
                           </div>
                           {/* reviews aka stars */}
                             <div className="reviews"></div>
                                 <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                  <FaStar 
                                   className="star" 
                                   color="rgb(255, 123, 0)" 
                                   size={25} /> 
@@ -220,11 +230,11 @@ class ExperienceForm extends React.Component {
                           <div className="profile">
                             {/* img */}
                             <div className="profile-img">
-                              <img src=""/>
+                              <img id= "review" src={propic} className="review picture" alt="review picture"/>
                             </div>
                             <div className="name-user">
-                              <strong> David-Allen</strong>
-                                <span>@theRealDavidAllen</span>
+                              <strong> Tom Holland</strong>
+                                <span>@tomholland2013</span>
                             </div>
                           </div>
                           {/* reviews aka stars */}
@@ -260,11 +270,11 @@ class ExperienceForm extends React.Component {
                           <div className="profile">
                             {/* img */}
                             <div className="profile-img">
-                              <img src=""/>
+                              <img id= "review" src={propic} className="review picture" alt="review picture"/>
                             </div>
                             <div className="name-user">
-                              <strong> David-Allen</strong>
-                                <span>@theRealDavidAllen</span>
+                              <strong> Tom Holland</strong>
+                                <span>@tomholland2013</span>
                             </div>
                           </div>
                           {/* reviews aka stars */}
