@@ -163,14 +163,14 @@ div {
 
 /* experience form */
 
-input[type=text] {
+/* input[type=text] {
   padding: 10px;
   margin: 10px, 10px;
   border:0;
   margin: 10px;
   border-radius:10px;
   box-shadow:0 0 15px 4px rgb(255, 123, 0)
-}
+} */
 
 textarea {
   padding: 10px;

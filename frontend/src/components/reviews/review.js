@@ -103,7 +103,7 @@ class ExperienceForm extends React.Component {
                         </label>
                         )
                     })}
-                <h4>Tell Us More</h4>
+                <h4>How was your most recent adventure?</h4>
                   <textarea 
                     placeholder="Please tell us about your activity"
                     cols={80}
