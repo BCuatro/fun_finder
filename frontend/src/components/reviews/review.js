@@ -78,10 +78,8 @@ class ExperienceForm extends React.Component {
             <h3>Experiences </h3>
             <div className="form-container">
               
-                <label>FirstName:</label>
-                <input type="text" value={this.state.fname} onChange={this.fnameHandler} />
-                <label>LastName:</label>
-                <input type="text" value={this.state.lname} onChange={this.lnameHandler}  />
+                <input type="text" placeholder="FirstName.." value={this.state.fname} onChange={this.fnameHandler} />
+                <input type="text" placeholder="LastName.." value={this.state.lname} onChange={this.lnameHandler}  />
               </div>
                 <h3>Rating:</h3>
                   <div className="rating">
@@ -99,14 +97,21 @@ class ExperienceForm extends React.Component {
                             onClick={this.ratingHandler}/>
                             <FaStar 
                               className="star" 
-                              color={ratingValue <= this.state.rating ? "ffc107" : "e4e5e9"} 
+                              color={ratingValue <= this.state.rating ? "rgb(255, 123, 0)" : "e4e5e9"} 
                               size={25} /> 
                               {/* {console.log(this.state.rating)} */}
                         </label>
                         )
                     })}
                 <h4>Tell Us More</h4>
-                  <textarea placeholder="Please tell us about your activity" value={this.state.review} onChange={this.reviewHandler}/>
+                  <textarea 
+                    placeholder="Please tell us about your activity"
+                    cols={80}
+                    rows={15}
+                    maxLength={350} 
+                    value={this.state.review} 
+                    onChange={this.reviewHandler}/>
+                    <br></br>
                   <button className="review-btn" type="submit">Submit</button>
                 
               </div>
@@ -120,6 +125,177 @@ class ExperienceForm extends React.Component {
                 }
                 </ul> 
                 </div>
+
+                <section id="testimonials" >
+                  <div class="testimonial-heading">
+                    <span>User Reviews</span>
+                    {/* <h3>Client Says</h3> */}
+                  </div>
+                  {/* box */}
+                    <div className="testimonial-box-container">
+                      {/* top */}
+                      <div className="testimonial-box">
+
+                        <div className="box-top">
+                          {/* profile */}
+                          <div className="profile">
+                            {/* img */}
+                            <div className="profile-img">
+                              <img src=""/>
+                            </div>
+                            <div className="name-user">
+                              <strong> David-Allen</strong>
+                                <span>@theRealDavidAllen</span>
+                            </div>
+                          </div>
+                          {/* reviews aka stars */}
+                            <div className="reviews"></div>
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                  <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                          </div>
+
+                          {/* comments */}
+                          <div className="user-review">
+                            <p>This is the best app ever</p>
+                          </div>
+                        
+                        </div>
+                    </div>
+                    <div className="testimonial-box-container">
+                      {/* top */}
+                      <div className="testimonial-box">
+
+                        <div className="box-top">
+                          {/* profile */}
+                          <div className="profile">
+                            {/* img */}
+                            <div className="profile-img">
+                              <img src=""/>
+                            </div>
+                            <div className="name-user">
+                              <strong> David-Allen</strong>
+                                <span>@theRealDavidAllen</span>
+                            </div>
+                          </div>
+                          {/* reviews aka stars */}
+                            <div className="reviews"></div>
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                           
+                          </div>
+
+                          {/* comments */}
+                          <div className="user-review">
+                            <p>Didn't like that pizza place downtown </p>
+                          </div>
+                        
+                        </div>
+                    </div>
+                    <div className="testimonial-box-container">
+                      {/* top */}
+                      <div className="testimonial-box">
+
+                        <div className="box-top">
+                          {/* profile */}
+                          <div className="profile">
+                            {/* img */}
+                            <div className="profile-img">
+                              <img src=""/>
+                            </div>
+                            <div className="name-user">
+                              <strong> David-Allen</strong>
+                                <span>@theRealDavidAllen</span>
+                            </div>
+                          </div>
+                          {/* reviews aka stars */}
+                            <div className="reviews"></div>
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                              
+                          </div>
+
+                          {/* comments */}
+                          <div className="user-review">
+                            <p>Gym was fun! I'm out of shape though!</p>
+                          </div>
+                        
+                        </div>
+                    </div>
+                    <div className="testimonial-box-container">
+                      {/* top */}
+                      <div className="testimonial-box">
+
+                        <div className="box-top">
+                          {/* profile */}
+                          <div className="profile">
+                            {/* img */}
+                            <div className="profile-img">
+                              <img src=""/>
+                            </div>
+                            <div className="name-user">
+                              <strong> David-Allen</strong>
+                                <span>@theRealDavidAllen</span>
+                            </div>
+                          </div>
+                          {/* reviews aka stars */}
+                            <div className="reviews"></div>
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                                <FaStar 
+                                  className="star" 
+                                  color="rgb(255, 123, 0)" 
+                                  size={25} /> 
+                    
+                          </div>
+
+                          {/* comments */}
+                          <div className="user-review">
+                            <p>Hit the bar with my buddies and we had a blast!</p>
+                          </div>
+                        
+                        </div>
+                    </div>
+                </section>
           </div>
 
 
