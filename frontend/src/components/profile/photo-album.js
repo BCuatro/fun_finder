@@ -15,9 +15,15 @@ const photoAlbum =(user) =>{
           {/* <li id = "pic1"><img src={picA}  alt="picture 1" /></li>
           <li id = "pic2"><img src={picB} alt="picture 2" /></li>
           <li id= "pic3"><img src={picC}  alt="picture 3" /></li> */}
-          <li className= "albumPicture" id="pic1">Image 1</li>
-          <li className= "albumPicture"  id="pic2">Image 2</li>
-          <li className= "albumPicture"  id="pic2">Image 3</li>
+          <li className= "albumPicture" id="pic1">
+          <img src={user.aboutMePicA}  />
+          </li>
+          <li className= "albumPicture"  id="pic2">
+          <img src={user.aboutMePicB}  />
+          </li>
+          <li className= "albumPicture"  id="pic2">
+          <img src={user.aboutMePicC}  />
+          </li>
         </ul>
       </div>
       

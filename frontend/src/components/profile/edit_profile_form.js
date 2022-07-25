@@ -14,7 +14,7 @@ class EditForm extends React.Component{
             pronouns: this.props.user.pronouns,
             slogan: this.props.user.slogan,
             profilePic: this.props.user.profilePic,
-            file: null
+            // file: null
 
         }
        
@@ -37,7 +37,7 @@ class EditForm extends React.Component{
 
         formData.append('file', this.state.file)
         // this.props.updatePhoto(this.state.file)
-        const result = await axios.post('/api/users/uploads', formData, { headers: {'Content-Type': 'multipart/form-data'}})
+        const result = await axios.post('/api/users/uploads/', formData, { headers: {'Content-Type': 'multipart/form-data'}})
        
         // console.log(result)
         // .then(result => 
@@ -178,8 +178,8 @@ class EditForm extends React.Component{
 
                     
                     <button onClick = {this.handleSubmit}>Submit</button>
-                    <input  type = "file" onChange= {this.fileSelectedHandler}  ref={fileInput => this.fileInput = fileInput}/>
-                    {/* <button onClick ={this.fileInput.click()}> Pick Profile Picture </button> */}
+                    <input style ={{display: 'none'}} type = "file" onChange= {this.fileSelectedHandler}  ref={fileInput => this.fileInput = fileInput}/>
+                    <button onClick ={() => this.fileInput.click()}> Pick Profile Picture </button>
                     {/* <button onClick ={}> Upload</button> */}
                 </form>
             </div>

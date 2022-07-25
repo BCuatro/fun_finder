@@ -16,6 +16,7 @@ class Profile extends React.Component{
         
         
         this.handleOpenModal = this.handleOpenModal.bind(this);
+        
        
            
     }
