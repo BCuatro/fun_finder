@@ -27,6 +27,7 @@ const mapStateToProps = (state, ownProps) => {
       fetchUser: (userId) => dispatch(fetchUser(userId)),
       fetchUsers: () => dispatch(fetchUsers()),
       openModal: ()=> dispatch(openModal('editprofile')),
+      profilePicModal: ()=> dispatch(openModal('editprofilepicture')),
       closeModal: () => dispatch(closeModal())
     };
   };
