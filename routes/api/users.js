@@ -73,11 +73,16 @@ const upload = multer({
 // router.post("/uploads", multiUpload,(req,res)=> {
 //     res.json({status: "success"})
 //   })
-  router.post("/upload", upload.single("file"), async (req,res)=> {
-    console.log(req.file)
-    const result = await s3Upload(req.file)
-    res.json({ status: "success" , result});
-  })
+  router.post("/uploads", upload.single("file"), async (req,res)=> {
+    try {
+        const results = await s3Upload(req.file);
+        console.log(results);
+        return res.json({ status: "success", location:results.Location });
+      } catch (err) {
+        console.log(err);
+      }
+    });
+
  
 // router.get("/test",  (req, res)=>{
 //     res.json({msg: "This is the user route"})
@@ -97,6 +102,7 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
         gender: req.user.gender,
         pronouns: req.user.pronouns,
         slogan: req.user.slogan,
+        profilePic: req.user.profilePic
         // profilepicture: req.user.profilepicture
     });
 })
@@ -176,6 +182,7 @@ router.post('/login', (req, res) => {
                     pronouns: user.pronouns,
                     gender: user.gender,
                     slogan: user.slogan,
+                    profilePic: user.profilePic
                  }
                  jwt.sign(
                     payload,
@@ -204,7 +211,8 @@ router.patch("/:id",
       lname: req.body.lname,   
       gender: req.body.gender,  
       slogan: req.body.slogan, 
-      pronouns: req.body.pronouns    
+      pronouns: req.body.pronouns,
+      profilePic: req.body.profilePic   
     }, { new: true })
     .then(user=> res.json(user))
     .catch(error => res.status(404).json(error))

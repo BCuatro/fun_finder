@@ -38,6 +38,19 @@ const UserSchema = new Schema({
       type: String,
       default: ""
     },
+    aboutMePicA: {
+      type: String,
+      default: ""
+    },
+    aboutMePicB: {
+      type: String,
+      default: ""
+    },
+    aboutMePicC: {
+      type: String,
+      default: ""
+    },
+    
     // birthdate: {
     //   type: Date,
     //   default: ""

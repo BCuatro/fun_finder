@@ -25,10 +25,10 @@ const s3 = new AWS.S3({
 
 exports.s3Upload = async (file) => {
 
-
+console.log(file)
   const params = {
     Bucket: "fun-finder-dev",
-    Key: `uploads/${Date.now().toString()} - ${file.originalname}`,
+    Key: `uploads/${Date.now().toString()}-${file.originalname}`,
     Body: file.buffer
 
   }
