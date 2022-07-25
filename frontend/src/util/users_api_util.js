@@ -13,7 +13,7 @@ export const updateUser = (user) => {
 };
 
 export const updatePhoto = (file) => {
-    return axios.post(`/api/users/upload`,file).then(res => {
+    return axios.post(`/api/users/uploads`,file).then(res => {
         console.log(res)
     });
 };

@@ -4,6 +4,7 @@ import "../../styles/profile.css"
 import "../../styles/modal.css"
 import propic from "../../SMProfilePic.png"
 import Modal from '../modal/modal';
+
 // import EditProfileContainer from '../profile/edit_profile_container';
 // import Tabs from './tabs';
 
