@@ -57,7 +57,8 @@ class Profile extends React.Component{
                 <div className="profilesection"><ProfileNavBarContainer />
                 </div>
                 <div className="profilepicture">
-                    <div> <img id= "profilepic" src={propic} className="profile picture" alt="profile picture" /></div>
+                    <div> <img id= "profilepic"  src={this.props.user.profilePic}  /></div>
+                   
                     <div>
                         <p id="ptext">{this.props.user.slogan}</p>
                         <p id="ptext">Name:{this.props.user.fname} {this.props.user.lname}</p>

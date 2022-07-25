@@ -178,7 +178,8 @@ class EditForm extends React.Component{
 
                     
                     <button onClick = {this.handleSubmit}>Submit</button>
-                    <input type = "file" onChange= {this.fileSelectedHandler} />
+                    <input  type = "file" onChange= {this.fileSelectedHandler}  ref={fileInput => this.fileInput = fileInput}/>
+                    {/* <button onClick ={this.fileInput.click()}> Pick Profile Picture </button> */}
                     {/* <button onClick ={}> Upload</button> */}
                 </form>
             </div>
