@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import EditProfileContainer from '../profile/edit_profile_container';
 import { withRouter } from 'react-router-dom';
 import "../../styles/modal.css"
+import ProfilePictureContainer from '../profile/profile_picture_container';
 
 
 
@@ -26,6 +27,10 @@ function Modal({modal, closeModal, userId, currentUser}) {
       
       component = <EditProfileContainer className="editProfile" />;
       break;
+    case 'editprofilepicture':
+      
+        component = <ProfilePictureContainer className="editProfile" />;
+        break;
 
     default:
       return null;
