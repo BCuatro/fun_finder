@@ -183,7 +183,7 @@ textarea {
   box-shadow:0 0 15px 4px rgb(255, 123, 0)
 }
 
-.review-btn{
+.rvw-buttons{
    /* remove default behavior */
 
    appearance:none;
@@ -192,13 +192,39 @@ textarea {
    /* usual styles */
    padding:10px;
    border:none;
+   background-color:#c4c459;
    
-   background-color:#3F51B5;
    color:#fff;
    font-weight:600;
    border-radius:5px;
    width:65%;
+
+   border-radius:16px;
+   border:#082a3a dashed 2px;
+   display:inline-block;
+   cursor:pointer;
+   color:#082a3a;
+   font-family:Arial;
+   font-size:14px;
+   padding:5px 30px;
+   text-decoration:none;
 }
+
+.rvw-buttons:active {
+  position:relative;
+  top:1px;
+  
+}
+
+.rvw-buttons {
+  background-color:#c4c459;
+  margin-top: 5px;
+  font-size:13px;
+  
+  
+}
+
+
 
 /* * {
   margin: 0px;
