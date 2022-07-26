@@ -58,6 +58,8 @@
     grid-row-gap: 0px;
 
     position: relative;
+    padding-top: 25px;
+   
     height: 100%;
     }
     
@@ -86,7 +88,7 @@
     #ptext {
       transform: translate(5%,15%);
       font-size: 15px;
-      font-family: 'Times New Roman', Times, serif;
+      font-family: time;
       padding: 3px;
       color: #e46905;
       font-weight: bold;

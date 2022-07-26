@@ -72,7 +72,7 @@ class ProfilePictureForm extends React.Component{
             <div className="editform">
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                     <button onClick={()=>{this.props.closeModal()}} className="close-x" id="picture-x">X</button>
-                    <h2>Update Profile Photo</h2>
+                    <h2 className= "modalTitle">Update Profile Photo</h2>
                     <div className= "picture-buttons">
 
                         <input 
