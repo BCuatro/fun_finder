@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 
-class ProfilePictureForm extends React.Component{
+class PhotoAlbumForm extends React.Component{
     constructor(props) {
         super(props);
         this.state ={
@@ -11,7 +11,7 @@ class ProfilePictureForm extends React.Component{
             // gender: this.props.user.gender,
             // pronouns: this.props.user.pronouns,
             // slogan: this.props.user.slogan,
-            profilePic: this.props.user.profilePic,
+            aboutMePicA: this.props.user.aboutMePicA,
             file: null
 
         }
@@ -52,7 +52,7 @@ class ProfilePictureForm extends React.Component{
         await this.fileUploadHandler()
         .then((res)=> {
         console.log(res)
-        this.setState({"profilePic": res.data.location})})
+        this.setState({aboutMePicA: res.data.location})})
         console.log("check state here", this.state)
         this.props.updateUser(this.state)
         .then(this.props.closeModal)
@@ -73,11 +73,11 @@ class ProfilePictureForm extends React.Component{
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                     <button onClick={()=>{this.props.closeModal()}} className="close-x">X</button>
                     
-                    <h2>Update Profile Picture</h2>
+                    <h2>Update My Picture - Photo A</h2>
 
                     <input style ={{display: 'none'}} type = "file" onChange= {this.fileSelectedHandler}  ref={fileInput => this.fileInput = fileInput}/>
 
-                    <button onClick ={() => this.fileInput.click()}> Pick Profile Picture </button>
+                    <button onClick ={() => this.fileInput.click()}> Pick Photo A  </button>
 
                     <button onClick = {this.handleSubmit}>Submit</button>
 
@@ -87,4 +87,4 @@ class ProfilePictureForm extends React.Component{
      }
   
 }
-export default ProfilePictureForm
+export default PhotoAlbumForm

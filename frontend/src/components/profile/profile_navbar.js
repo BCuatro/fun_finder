@@ -4,7 +4,7 @@ import React from 'react';
 // import PostIndexContainer from '../posts/post_index_container';
 import aboutMe from './about_me.js';
 import "../../styles/profile.css"
-import photoAlbum from './photo-album.js';
+import photoAlbum from './photo_album_show.js';
 import ExperienceForm from '../reviews/review';
 
 class Headers extends React.Component {

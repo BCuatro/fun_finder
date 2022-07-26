@@ -102,7 +102,8 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
         gender: req.user.gender,
         pronouns: req.user.pronouns,
         slogan: req.user.slogan,
-        profilePic: req.user.profilePic
+        profilePic: req.user.profilePic,
+        aboutMePicA: req.user.aboutMePicA
         // profilepicture: req.user.profilepicture
     });
 })
@@ -182,7 +183,8 @@ router.post('/login', (req, res) => {
                     pronouns: user.pronouns,
                     gender: user.gender,
                     slogan: user.slogan,
-                    profilePic: user.profilePic
+                    profilePic: user.profilePic,
+                    aboutMePicA: user.aboutMePicA
                  }
                  jwt.sign(
                     payload,
@@ -212,7 +214,8 @@ router.patch("/:id",
       gender: req.body.gender,  
       slogan: req.body.slogan, 
       pronouns: req.body.pronouns,
-      profilePic: req.body.profilePic   
+      profilePic: req.body.profilePic,  
+      aboutMePicA: req.body.aboutMePicA
     }, { new: true })
     .then(user=> res.json(user))
     .catch(error => res.status(404).json(error))
