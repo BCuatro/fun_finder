@@ -125,7 +125,7 @@ class ExperienceForm extends React.Component {
               </div>
               </form>
                 {/* <div className="review-container">
-                <h5 className='usrrev'>User Reviews</h5>
+                <h5 className='usrrev'>User rvw-star</h5>
                   <ul className="review-list">
                 {
                   this.state.listItems.map((li,key) => 
@@ -162,7 +162,7 @@ class ExperienceForm extends React.Component {
                      
                         {console.log("NEW REVIEW", li)}
                           {/* {console.log("PROPS", props)} */}
-                        <div className="reviews">
+                        <div className="rvw-star">
                         {[...Array(Number(li.rating))].map((star, i) => {
                       
                               return ( 
@@ -206,8 +206,8 @@ class ExperienceForm extends React.Component {
                               
                             </div>
                           </div>
-                          {/* reviews aka stars */}
-                            <div className="reviews">
+                          {/* rvw-star aka stars */}
+                            <div className="rvw-star">
                                 <FaStar 
                                   className="star" 
                                   color="rgb(255, 123, 0)" 
@@ -254,8 +254,8 @@ class ExperienceForm extends React.Component {
                               
                             </div>
                           </div>
-                          {/* reviews aka stars */}
-                            <div className="reviews">
+                          {/* rvw-star aka stars */}
+                            <div className="rvw-star">
                                 <FaStar 
                                   className="star" 
                                   color="rgb(255, 123, 0)" 
@@ -291,8 +291,8 @@ class ExperienceForm extends React.Component {
                               
                             </div>
                           </div>
-                          {/* reviews aka stars */}
-                            <div className="reviews">
+                          {/* rvw-star aka stars */}
+                            <div className="rvw-star">
                                 <FaStar 
                                   className="star" 
                                   color="rgb(255, 123, 0)" 
@@ -332,8 +332,8 @@ class ExperienceForm extends React.Component {
                               
                             </div>
                           </div>
-                          {/* reviews aka stars */}
-                            <div className="reviews">
+                          {/* rvw-star aka stars */}
+                            <div className="rvw-star">
                                 <FaStar 
                                   className="star" 
                                   color="rgb(255, 123, 0)" 
@@ -517,8 +517,8 @@ export default ExperienceForm;
 //         return (
 //           <Card>
 //           <CardBody>
-//           <CardTitle tag="h1">Reviews Page</CardTitle>
-//               <div className="reviews-top">
+//           <CardTitle tag="h1">rvw-star Page</CardTitle>
+//               <div className="rvw-star-top">
 //               <div className="user-details">
 //                 {/* <CardImg
 //                   className="avatar"
@@ -536,7 +536,7 @@ export default ExperienceForm;
 //                   return <CardSubtitle tag="h5">⭐ </CardSubtitle>;
 //                 })}
 //               </div>
-//               <div className="reviews-body">
+//               <div className="rvw-star-body">
 //                 <CardText>
 //                   {'yrttt' ||
 //                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis delectus dignissimos, nisi pariatur fuga officiis itaque fugiat! Quibusdam accusantium quae beatae vel.Quas possimus reprehenderit sequi quia nesciunt sunt!"}
