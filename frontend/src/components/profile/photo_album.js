@@ -71,15 +71,24 @@ class PhotoAlbumForm extends React.Component{
         return (
             <div className="editform">
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
-                    <button onClick={()=>{this.props.closeModal()}} className="close-x">X</button>
+                    <button onClick={()=>{this.props.closeModal()}} className="close-x" id="picture-x">X</button>
                     
                     <h2>Update My Picture - Photo A</h2>
+                    <div className= "picture-buttons">
 
-                    <input style ={{display: 'none'}} type = "file" onChange= {this.fileSelectedHandler}  ref={fileInput => this.fileInput = fileInput}/>
-
-                    <button onClick ={() => this.fileInput.click()}> Pick Photo A  </button>
-
-                    <button onClick = {this.handleSubmit}>Submit</button>
+                      <input 
+                      style ={{display: 'none'}} 
+                      type = "file" 
+                      onChange= {this.fileSelectedHandler}  
+                      ref={fileInput => this.fileInput = fileInput}
+                      />
+                      <button className= "buttons" 
+                      id="choose-pic"
+                      onClick ={() => this.fileInput.click()}> Pick Photo A  </button>
+                      <button className = "buttons" 
+                      id="upload-pic"
+                      onClick = {this.handleSubmit}>Submit</button>
+                    </div>
 
                 </form>
             </div>

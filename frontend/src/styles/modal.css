@@ -1,11 +1,11 @@
 .modal-background {
     position: absolute;
-    top: 0;
+    top: -13%;
     bottom: 0;
     right: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    height: 130%;
+    width: 99%;
     background: transparent;
 
     border-radius: 5px;
@@ -22,11 +22,11 @@
     justify-content: center;
     top: 50%;
     left: 50%;
-    border: solid;
+    border: dashed;
     border-radius: 15px;
     border-image-slice: 1;
     border-width: 5px;
-    background-color: white;
+    /* background-color: white; */
     /* border-image-source:
     linear-gradient(
       60deg,
@@ -37,37 +37,67 @@
     overflow:auto;
     box-shadow: 
     5px 5px 5px #2E2F43,
-    10px 10px 10px #A38ED2;
-  
+    7px 7px 7px rgb(255, 123, 0);
+    min-height: 25%;
+    min-width: 35%;
+    align-items: center;
+    justify-content: center;
+    /* backdrop-filter: blur(10px) ; */
+    
   }
 
   .editform{
     position: relative;
-    left: 10%;
+    /* justify-content: center; */
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    padding-bottom: 10px;
+    min-height: 150px;
+    min-width: 400px;
+    justify-content: center;
   }
 
   .editform form div{
-    padding: 5px;
+    padding: 1px;
   }
  
   .close-x {
     position: absolute;
-    top: 5px;
-    right: 40px;
+    right: -5%;
+    top: 2%;
     cursor: pointer;
     border-radius: 70%;
     background-color: rgb(234, 234, 234);
     font-size: larger;
     font-family: sans-serif;
+    
   }
+  #picture-x{
+    top: -15%;
+
+  }
+ 
+  .picture-buttons{
+    display: flex;
+    justify-content: space-around;
+    min-width: 350px;
+}
+
+#choose-pic{
+  background-color: #83BBE1;
+
+}
+
+#upload-pic{
+  background-color: #c4c459;
+}
+
 
 
 .modal-input-container {
   position: relative;
   width: 250px;
-  height: 40px;
+  height: 50px;
   line-height: 40px;
 }
 .modal-label {

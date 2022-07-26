@@ -86,7 +86,7 @@
     #ptext {
       transform: translate(5%,15%);
       font-size: 15px;
-      font-family: monospace;
+      font-family: 'Times New Roman', Times, serif;
       padding: 3px;
       color: #e46905;
       font-weight: bold;
