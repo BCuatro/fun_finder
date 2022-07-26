@@ -1,49 +1,45 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-// import NewPostContainer from '../posts/new_post_container';
 import EditProfileContainer from '../profile/edit_profile_container';
 import { withRouter } from 'react-router-dom';
-import "../../styles/modal.css"
+import "../../styles/modal.css";
 import ProfilePictureContainer from '../profile/profile_picture_container';
 import PhotoAlbumContainer from '../profile/photo_album_container';
 import PhotoBContainer from '../profile/photo_b_container';
+import PhotoCContainer from '../profile/photo_c_container';
 
 
 
-
-function Modal({modal, closeModal, userId, currentUser}) {
+function Modal({ modal, closeModal, userId, currentUser }) {
   if (!modal) {
     return null;
   }
   let component;
   switch (modal) {
-    // case 'login':
-    //   component = <LoginFormContainer />;
-    //   break;
-    
-    // case 'createpost':
-    //   component = <NewPostContainer className="newPost" closeModal = {closeModal} userid ={userId} />;
-    //   break;
-    
+
     case 'editprofile':
-      
+
       component = <EditProfileContainer className="editProfile" />;
       break;
     case 'editprofilepicture':
-      
-        component = <ProfilePictureContainer className="editProfile" />;
-        break;
+
+      component = <ProfilePictureContainer className="editProfile" />;
+      break;
     case 'editphotoA':
-  
+
       component = <PhotoAlbumContainer className="editProfile" />;
       break;
 
     case 'editphotoB':
-  
-        component = <PhotoBContainer className="editProfile" />;
-        break;
-    
+
+      component = <PhotoBContainer className="editProfile" />;
+      break;
+
+    case 'editphotoC':
+
+      component = <PhotoCContainer className="editProfile" />;
+      break;
 
     default:
       return null;
@@ -51,7 +47,7 @@ function Modal({modal, closeModal, userId, currentUser}) {
   return (
     <div className="modal-background">
       <div className="modal-child" onClick={e => e.stopPropagation()}>
-        <div>{ component }</div>
+        <div>{component}</div>
       </div>
     </div>
   );

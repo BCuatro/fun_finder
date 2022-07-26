@@ -16,27 +16,6 @@ const path = require("path");
 const { s3Upload } = require("../../awsS3");
 require("dotenv").config()
 
-// const BUCKET_NAME= AWS_KEYS.bucketName
-// const s3 = new AWS.S3({
-//     accessKeyId: AWS_KEYS.accessKeyId,
-//     secretAccessKey: AWS_KEYS.secretAccessKey,
-//     region: 'us-east-1'
-// })
-
-
-// const params = {
-//     Bucket: BUCKET_NAME
-// }
-
-
-
-// const fileFilter = (req, file, cb) => {
-//     if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' ) {
-//         cb(null, true);
-//     } else {
-//         cb(new Error('Please upload a JPG, JPEG or PNG file'), false);
-//     }
-// }
 const storage = multer.memoryStorage()
 const fileFilter = (req, file, cb) =>{
     if (file.mimetype.split("/")[0] ==="image"){
@@ -50,33 +29,11 @@ const upload = multer({
     storage,
     fileFilter,
     limits: {fileSize: 15000000},
-    // storage: multerS3({
-    //   s3: s3,
-    //   bucket: BUCKET_NAME,
-    //   acl: "public-read",
-    //   metadata: function (req, file, cb) {
-    //     cb(null, {fieldName: file.fieldname});
       })
-//       filename: (req, file, cb) => {
-            // const { originalname } = file;
-//         cb(null, `${Date.now().toString()} - ${originalname}`)
-//       }
-//     })
-//   })
-// const upload = multer({ dest: "uploads/" });
-// const multiUpload = upload.fields([
-//     {name: "pic1", maxCount: 1},
-//     {name: "pic2", maxCount: 1},
-//     {name: "pic3", maxCount: 1}
-// ])
-
-// router.post("/uploads", multiUpload,(req,res)=> {
-//     res.json({status: "success"})
-//   })
+      
   router.post("/uploads", upload.single("file"), async (req,res)=> {
     try {
         const results = await s3Upload(req.file);
-        console.log(results);
         return res.json({ status: "success", location:results.Location });
       } catch (err) {
         console.log(err);
@@ -84,9 +41,7 @@ const upload = multer({
     });
 
  
-// router.get("/test",  (req, res)=>{
-//     res.json({msg: "This is the user route"})
-// });
+
 router.get('/', (req, res) => {
     User.find()
         .then(users => res.json(users))
@@ -104,8 +59,8 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
         slogan: req.user.slogan,
         profilePic: req.user.profilePic,
         aboutMePicA: req.user.aboutMePicA,
-        aboutMePicB: req.user.aboutMePicB
-        // profilepicture: req.user.profilepicture
+        aboutMePicB: req.user.aboutMePicB,
+        aboutMePicC: req.user.aboutMePicC
     });
 })
 
@@ -186,7 +141,8 @@ router.post('/login', (req, res) => {
                     slogan: user.slogan,
                     profilePic: user.profilePic,
                     aboutMePicA: user.aboutMePicA,
-                    aboutMePicB: user.aboutMePicB
+                    aboutMePicB: user.aboutMePicB,
+                    aboutMePicC: user.aboutMePicC
                  }
                  jwt.sign(
                     payload,
@@ -218,19 +174,18 @@ router.patch("/:id",
       pronouns: req.body.pronouns,
       profilePic: req.body.profilePic,  
       aboutMePicA: req.body.aboutMePicA,
-      aboutMePicB: req.body.aboutMePicB
+      aboutMePicB: req.body.aboutMePicB,
+      aboutMePicC: req.body.aboutMePicC
     }, { new: true })
     .then(user=> res.json(user))
     .catch(error => res.status(404).json(error))
 })
 
 router.get("/:id", (req, res) => {
-    console.log(req.params)
     User.findById(req.params.id)
       .then(
         user => 
         {
-            console.log(user)
             res.json(user)
         })
       .catch(err => res.json(err))

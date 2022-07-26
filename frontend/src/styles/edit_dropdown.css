@@ -10,7 +10,7 @@
     position: relative;
     display: inline-block;
     height: 30px;
-    width: 200px;
+    width: 150px;
     border:#082a3a dashed 2px;
     border-radius:10px;
     line-height: 30px;
@@ -18,14 +18,14 @@
     cursor: default;
     color: #082a3a;
     background-color: #c4c459;
-    margin-left: 10px;
+    margin-left: 15%;
 
 }
 
 .dropdown{
     position: relative;
     padding: 0;
-    width:200px;
+    width:150px;
     
 }
 

@@ -1,7 +1,7 @@
 
-/* .album{
+.album{
     position: relative;
-} */
+}
 .albumContainer{
     
     /* height: 2em;
@@ -17,33 +17,63 @@
 .albumContainer ul{
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     right: 2%;
+    
 }
 
 .albumPicture{
     height: 45vh;
     width: 23vw;
-    border:#082a3a dashed 2px; 
+    
     border-radius: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
+   
+
+
     
 }
-#pic1{
-    height: 90%;
-    width: 90%;
+
+
+#pic{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 5%;
+    border:#082a3a dashed 2px; 
+    border-radius: 10px;
+   
 
 }
 
-#pic2{
-    height: 90%;
-    width: 90%;
+
+
+
+
+#pic:hover{
+    transform: scale(2);
+    z-index: 100;
+    backdrop-filter: blur(10px) ;
+    
+}
+
+.fun-fact-label{
+    color: #83BBE1;
+    font-size: xx-large;
+    margin: 0;
+
 
 }
 
-
+#fun-fact{
+    font-size: x-large;
+    color: #082a3a;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10%;
+}
