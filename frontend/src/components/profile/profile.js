@@ -12,8 +12,9 @@ class Profile extends React.Component{
         super(props)
             
         this.handleOpenModal = this.handleOpenModal.bind(this);
-        this.handleProfilePicModal= this.handleProfilePicModal.bind(this)
-        this.handlePhotoAModal= this.handlePhotoAModal.bind(this)
+        this.handleProfilePicModal= this.handleProfilePicModal.bind(this);
+        this.handlePhotoAModal= this.handlePhotoAModal.bind(this);
+        this.handlePhotoBModal= this.handlePhotoBModal.bind(this);
                   
     }
     
@@ -33,6 +34,11 @@ class Profile extends React.Component{
     handlePhotoAModal(e){
         e.preventDefault();
         this.props.photoAModal()
+    }
+
+    handlePhotoBModal(e){
+        e.preventDefault();
+        this.props.photoBModal()
     }
     
     
@@ -69,7 +75,7 @@ class Profile extends React.Component{
                                 <li><button className="editButton" onClick = {this.handleOpenModal}>Profile Info</button></li>
                                 <li> <button className="editButton" onClick = {this.handleProfilePicModal}>Profile Picture</button> </li>
                                 <li> <button className="editButton" onClick = {this.handlePhotoAModal}>My Picture-Photo A</button> </li>
-                                <li>4</li>
+                                <li> <button className="editButton" onClick = {this.handlePhotoBModal}>My Picture-Photo B</button> </li>
                                 <li>5</li>
                             </ul>
 

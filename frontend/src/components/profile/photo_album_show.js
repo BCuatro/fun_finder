@@ -19,11 +19,11 @@ const photoAlbum =(user) =>{
               <img src={user.aboutMePicA} id="pic1"  />
             </li>
           
-          <li className= "albumPicture"  id="pic2">
-          <img src={user.aboutMePicB}  />
+          <li className= "albumPicture"  >
+          <img src={user.aboutMePicB} id="pic2" />
           </li>
-          <li className= "albumPicture"  id="pic2">
-          <img src={user.aboutMePicC}  />
+          <li className= "albumPicture"  >
+          <img src={user.aboutMePicC} id="pic2" />
           </li>
         </ul>
       </div>
