@@ -112,7 +112,7 @@ class ExperienceForm extends React.Component {
                     value={this.state.review} 
                     onChange={this.reviewHandler}/>
                     <br></br>
-                  <button className="review-btn" type="submit">Submit</button>
+                  <button className="rvw-buttons" type="submit">Submit</button>
                 
               </div>
               </form>
