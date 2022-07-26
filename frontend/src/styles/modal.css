@@ -4,7 +4,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    height: 180%;
+    height: 150%;
     width: 99%;
     background: transparent;
 
@@ -26,7 +26,7 @@
   border-radius: 15px;
   border-image-slice: 1;
   border-width: 5px;
-  /* background-color: white; */
+  background-color:  #fff2e2;;
   /* border-image-source:
   linear-gradient(
     60deg,
@@ -42,7 +42,7 @@
   min-width: 20%;
   align-items: center;
   justify-content: center;
-  /* backdrop-filter: blur(10px) ; */
+  backdrop-filter: blur(10px) ;
   
 }
 
@@ -58,7 +58,7 @@
 }
 
 .editform form div{
-  padding: 1px;
+  padding: 3%;
 }
 
 .close-x {
@@ -112,6 +112,16 @@ left: 5px;
 color: #d3d3d3;
 transition: 0.2s all;
 cursor: text;
+
+}
+.modal-label-edit{
+position: absolute;
+top: 0;
+left: 5px;
+color: #d3d3d3;
+transition: 0.7s all;
+cursor: text;
+padding: 3%;
 }
 .modal-input {
 width: 75%;
@@ -130,6 +140,15 @@ border-color: #83BBE1;
 }
 .modal-input:focus~.modal-label,
 .modal-input:valid~.modal-label {
+font-size: 14px;
+top: -22px;
+color: #082a3a;
+padding: 0;
+}
+
+
+.modal-input:focus~.modal-label-edit,
+.modal-input:valid~.modal-label-edit {
 font-size: 14px;
 top: -22px;
 color: #082a3a;

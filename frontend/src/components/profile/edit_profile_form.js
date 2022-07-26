@@ -53,7 +53,7 @@ class EditForm extends React.Component {
                             value={this.state.fname}
                             onChange={this.handleUpdate('fname')}
                         />
-                        <label htmlFor='first_name' className="modal-label">First Name:</label>
+                        <label htmlFor='first_name' className="modal-label-edit">First Name:</label>
                     </div>
                     <div className="modal-input-container">
                         <input type="text"
@@ -63,7 +63,7 @@ class EditForm extends React.Component {
                             value={this.state.lname}
                             onChange={this.handleUpdate('lname')}
                         />
-                        <label htmlFor='last_name' className="modal-label">Last Name:</label>
+                        <label htmlFor='last_name' className="modal-label-edit">Last Name:</label>
                     </div>
                     <div className="modal-input-container">
                         <input type="text"
@@ -73,7 +73,7 @@ class EditForm extends React.Component {
                             value={this.state.gender}
                             onChange={this.handleUpdate('gender')}
                         />
-                        <label htmlFor='last_name' className="modal-label">Gender:</label>
+                        <label htmlFor='last_name' className="modal-label-edit">Gender:</label>
                     </div>
                     <div className="modal-input-container">
                         <input type="text"
@@ -83,7 +83,7 @@ class EditForm extends React.Component {
                             value={this.state.pronouns}
                             onChange={this.handleUpdate('pronouns')}
                         />
-                        <label htmlFor='last_name' className="modal-label">Pronouns</label>
+                        <label htmlFor='last_name' className="modal-label-edit">Pronouns</label>
                     </div>
 
                     <div className="modal-input-container">
@@ -94,7 +94,7 @@ class EditForm extends React.Component {
                             value={this.state.slogan}
                             onChange={this.handleUpdate('slogan')}
                         />
-                        <label htmlFor="slogan" className="modal-label">Slogan</label>
+                        <label htmlFor="slogan" className="modal-label-edit">Slogan</label>
                     </div>
 
 
