@@ -73,7 +73,7 @@ class PhotoAlbumForm extends React.Component{
                 <form onSubmit={this.handleSubmit} encType="multipart/form-data">
                     <button onClick={()=>{this.props.closeModal()}} className="close-x" id="picture-x">X</button>
                     
-                    <h2>Update My Picture - Photo A</h2>
+                    <h2 className="modalTitle">Update My Picture - Photo A</h2>
                     <div className= "picture-buttons">
 
                       <input 
