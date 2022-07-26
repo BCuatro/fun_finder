@@ -127,7 +127,7 @@ class ExperienceForm extends React.Component {
                 </div> */}
 
                 <section id="testimonials" >
-                  <div class="testimonial-heading">
+                  <div className="testimonial-heading">
                     <span>User Reviews</span>
                     {/* <h3>Client Says</h3> */}
                   </div>

@@ -6,85 +6,52 @@ class EditForm extends React.Component{
         super(props);
         this.state ={
             id: this.props.userId,
-            // fname:"",
-            // lname:""
             fname: this.props.user.fname, 
             lname: this.props.user.lname,
             gender: this.props.user.gender,
             pronouns: this.props.user.pronouns,
             slogan: this.props.user.slogan,
-            profilePic: this.props.user.profilePic,
+            // profilePic: this.props.user.profilePic,
             // file: null
-
-        }
+          }
        
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.fileUploadHandler= this.fileUploadHandler.bind(this);
-        this.fileSelectedHandler= this.fileSelectedHandler.bind(this)
-        // this.handleFile = this.handleFile.bind(this)
-        // this.handleProfilePic =this.handleProfilePic.bind(this)
+        // this.fileUploadHandler= this.fileUploadHandler.bind(this);
+        // this.fileSelectedHandler= this.fileSelectedHandler.bind(this)
         
       }
-      fileSelectedHandler = e => {
-        e.preventDefault();
-        this.setState({file: e.target.files[0]})
-        // console.log(e.target.files)
-      }
+      // fileSelectedHandler = e => {
+      //   e.preventDefault();
+      //   this.setState({file: e.target.files[0]})
+      // }
       
-      fileUploadHandler = async () => {
+      // fileUploadHandler = async () => {
 
-        const formData = new FormData();
+      //   const formData = new FormData();
 
-        formData.append('file', this.state.file)
-        // this.props.updatePhoto(this.state.file)
-        const result = await axios.post('/api/users/uploads/', formData, { headers: {'Content-Type': 'multipart/form-data'}})
+      //   formData.append('file', this.state.file)
+      //   const result = await axios.post('/api/users/uploads/', formData, { headers: {'Content-Type': 'multipart/form-data'}})
        
-        // console.log(result)
-        // .then(result => 
-        //   {
-        //     this.setState({profilePic: result.data.location})
-        //     console.log(this.state)
-        //   })
-        console.log(this.state)
-        return result
-      }
-      componentWillUnmount(){
-        // this.props.removeErrors();
-
-      }
+      //   console.log(this.state)
+      //   return result
+      // }
       componentDidMount() {
         
         this.props.fetchUser(this.state.id)
-        this.props.updatePhoto(this.state.file)
-        // this.setState({
-        //     fname: this.props.user.fname, 
-        //     lname: this.props.user.lname
-        // })
-        // .then(
-        //     data =>console.log(data)
-        // )
+        // this.props.updatePhoto(this.state.file)
+      
     
       }
-
-        // handleFile(e) {
-        //     this.setState({photoFile: e.currentTarget.value});
-        // }
 
       handleSubmit= async (e)=> {
         e.preventDefault();
         
-        await this.fileUploadHandler()
-        .then((res)=> {
-        console.log(res)
-        this.setState({profilePic: res.data.location})})
-        console.log("check state here", this.state)
+        // await this.fileUploadHandler()
+        // .then((res)=> {
+        // this.setState({profilePic: res.data.location})})
         this.props.updateUser(this.state)
         .then(this.props.closeModal)
-        // .then(() => this.props.history.push(`/users/${this.state.id}`))
-        // .then( this.forceUpdate())
-        
-    //     const formData = new FormData();
-    //     formData.append('user[profile_pic]', this.state.photoFile)
+
         
       }
     
@@ -94,22 +61,6 @@ class EditForm extends React.Component{
             [type]: e.currentTarget.value
         })
     }
-    // componentDidUpdate(prevProps, prevState) {
-    //     console.log(this.state)
-    //     console.log(prevState)
-    //     console.log(prevProps)
-    //     if (prevState.fname !== this.state.fname || prevState.lname !== this.state.lname) {
-    //         this.props.fetchUser(this.state.id)
-    //     }
-    //   }
-
-    // handleProfilePic(user){
-    //     if (!user.profile_picUrl) {
-    //         return <p>no photo</p>
-    //     } else {
-    //         return <img className="profilePic"src={user.profile_picUrl} />;
-    //     }
-    // }
    
 
 
@@ -178,8 +129,8 @@ class EditForm extends React.Component{
 
                     
                     <button onClick = {this.handleSubmit}>Submit</button>
-                    <input style ={{display: 'none'}} type = "file" onChange= {this.fileSelectedHandler}  ref={fileInput => this.fileInput = fileInput}/>
-                    <button onClick ={() => this.fileInput.click()}> Pick Profile Picture </button>
+                    {/* <input style ={{display: 'none'}} type = "file" onChange= {this.fileSelectedHandler}  ref={fileInput => this.fileInput = fileInput}/>
+                    <button onClick ={() => this.fileInput.click()}> Pick Profile Picture </button> */}
                     {/* <button onClick ={}> Upload</button> */}
                 </form>
             </div>

@@ -1,0 +1,87 @@
+
+.dropdown-menu ul{
+    list-style: none;
+    font-family:Arial;
+    font-size:14px;
+
+}
+
+.dropdown-menu{
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    border:#082a3a dashed 2px;
+    border-radius:10px;
+    line-height: 30px;
+    text-align: center;
+    cursor: default;
+    color: #082a3a;
+    background-color: #c4c459;
+    margin-left: 10px;
+
+}
+
+.dropdown{
+    position: relative;
+    padding: 0;
+    width:200px;
+    
+}
+
+.dropdown li{
+    display: none;
+    opacity: 0;
+    background-color: transparent;
+    transition: color 1s;
+    margin-top: 2px;
+}
+
+.dropdown li:hover{
+    position:relative;
+    top:1px;
+} 
+
+.dropdown-menu:hover .dropdown li{
+    display: block;
+    animation:menu1 .5s forwards;
+    
+
+}
+
+@keyframes animation{
+    from{
+        opacity: 0;
+        transform: translateY (50px);
+
+    }
+
+    to{
+        opacity: 1;
+        transform:translate(0);
+    }
+}
+.dropdown-menu .dropdown li:nth-last-child(1){
+    animation-delay: 0s;
+}
+.dropdown-menu .dropdown li:nth-last-child(2){
+    animation-delay: .2s;
+}
+
+.dropdown-menu .dropdown li:nth-last-child(2){
+    animation-delay: .4s;
+}
+.dropdown-menu .dropdown li:nth-last-child(2){
+    animation-delay: .6s;
+}
+.dropdown-menu .dropdown li:nth-last-child(2){
+    animation-delay: .8s;
+}
+.dropdown-menu:hover .dropdown li{
+    animation: animation .5s forwards;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}

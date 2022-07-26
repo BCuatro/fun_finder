@@ -91,17 +91,19 @@
       color: #e46905;
       font-weight: bold;
     }
-    #editButton{
+    .editButton{
     background-color:#83BBE1;
-    border-radius:16px;
+    border-radius:10px;
     border:#082a3a dashed 2px;
     display:inline-block;
     cursor:pointer;
     color:#082a3a;
     font-family:Arial;
-    margin-left: 5px;
-    padding:5px;
-    width: 200px;
+    font-size: 10px;
+    width: 150px;
+    height: 25px;
+    
+    
     }
 
     /* stars css */

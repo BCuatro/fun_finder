@@ -1,5 +1,5 @@
 import React from 'react';
-import MainPage from '../main/main_page.js';
+// import MainPage from '../main/main_page.js';
 // import PostContainer from '../posts/post_container';
 // import PostIndexContainer from '../posts/post_index_container';
 import aboutMe from './about_me.js';
