@@ -86,10 +86,10 @@
       
     }
     #ptext {
-      transform: translate(5%,15%);
+      transform: translate(15%,15%);
       font-size: 15px;
-      font-family: time;
-      padding: 3px;
+      font-family: 'Times New Roman', Times, serif;
+      padding-left: 5%;
       color: #e46905;
       font-weight: bold;
     }

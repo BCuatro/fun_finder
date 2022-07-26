@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import logo from "../../fun_finder.png"
-import "../../styles/navbar.css"
+import logo from "../../fun_finder.png";
+import "../../styles/navbar.css";
 
 
 
@@ -21,14 +21,10 @@ class NavBar extends React.Component {
             return (
                 <div className="header-container">
                     <Link to={'/'} > <img src={logo} className="logo" alt="logo" /></Link>
-                    {/* <div>
-                        <h2 id="navTitle"> Fun Finder </h2>
-                        <p id="navSubTitle"> Tap and Snack</p>
 
-                    </div> */}
                     <div className="seslinks">
-                        <Link className = "buttons" id="profileLink" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
-                        <button className= "buttons" id="logoutButton" onClick={this.logoutUser}>Logout</button>
+                        <Link className="buttons" id="profileLink" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
+                        <button className="buttons" id="logoutButton" onClick={this.logoutUser}>Logout</button>
                     </div>
                 </div>
             );

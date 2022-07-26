@@ -3,7 +3,7 @@ import React from 'react';
 // import PostContainer from '../posts/post_container';
 // import PostIndexContainer from '../posts/post_index_container';
 import aboutMe from './about_me.js';
-import "../../styles/profile.css"
+import "../../styles/profile.css";
 import photoAlbum from './photo_album_show.js';
 import ExperienceForm from '../reviews/review';
 
@@ -44,7 +44,7 @@ export default class ProfileNavBar extends React.Component {
   componentDidMount() {
 
 
-    this.props.fetchUser(this.props.userId)
+    this.props.fetchUser(this.props.userId);
     // this.props.fetchUsers()
   }
   selectTab(num) {
@@ -52,12 +52,6 @@ export default class ProfileNavBar extends React.Component {
   }
 
   render() {
-
-
-    // debugger
-    console.log("LOOK HERE")
-    console.log(this.props.userId)
-    //  console.log(this.props.user)
     const tabs = [
       { title: 'About', content: aboutMe(this.props.user) },
       { title: 'My Pictures', content: photoAlbum(this.props.user) },
