@@ -7,6 +7,8 @@ import { withRouter } from 'react-router-dom';
 import "../../styles/modal.css"
 import ProfilePictureContainer from '../profile/profile_picture_container';
 import PhotoAlbumContainer from '../profile/photo_album_container';
+import PhotoBContainer from '../profile/photo_b_container';
+
 
 
 
@@ -36,6 +38,12 @@ function Modal({modal, closeModal, userId, currentUser}) {
   
       component = <PhotoAlbumContainer className="editProfile" />;
       break;
+
+    case 'editphotoB':
+  
+        component = <PhotoBContainer className="editProfile" />;
+        break;
+    
 
     default:
       return null;
