@@ -39,8 +39,8 @@
     width: 60%;
     
     /* top: -200px; */
-    top: -175%;
-    left: 10px;
+    top: -325%;
+    left: -5%
 }
 
 .map-random-buttons-container {
@@ -49,7 +49,7 @@
     justify-content: center;
     position: relative;
     /* left: 110px; */
-    /* top: -40px;  */
+    top: -200%; 
     left: 10%;
     
     

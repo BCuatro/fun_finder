@@ -7,14 +7,10 @@ h1 {
     font-size: 50px;
     font-style: italic;
     font-family: Geneva, Tahoma, sans-serif;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    z-index: 0;
-}
-.mapdiv{
-    position:relative;
-    min-height: 100%;
+    position: relative;
+    transform: translate(0,-100%);
+    z-index: -1;
+    
 }
 #address-details-container {
     /* position: relative;
@@ -29,9 +25,10 @@ h1 {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 200px;
+    top: 60px;
     font-size: 22px;
     color: rgb(199, 40, 12);
+    right:5%
 }
 
 #address-name {

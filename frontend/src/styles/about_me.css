@@ -3,8 +3,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    position: sticky;
-    /* top: 300px; */
+    position: relative;
     height: 90%;
     width: 99%;
     background-color: rgb(128, 187, 41);
