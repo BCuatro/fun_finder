@@ -32,9 +32,9 @@ const App = () => (
             <ProtectedRoute exact path="/users/:userId" component={ProfileContainer} />
         </Switch>
         </main>
-        {/* <footer>
+        <footer>
             <AboutMe />
-        </footer> */}
+        </footer>
     </div>
 )
 
