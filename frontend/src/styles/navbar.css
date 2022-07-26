@@ -85,7 +85,7 @@
     right: 35px;
     top: 20px;
 }
-.profileLink  {
+/* .profileLink  {
     background-color:#83BBE1;
     border-radius:16px;
     border:#082a3a dashed 2px;
@@ -98,27 +98,42 @@
     text-decoration:none;
     
     }
+
 .profileLink:active {
     position:relative;
     top:1px;
     
+} */
+#profileLink{
+    background-color:#83BBE1;
 }
 
-
-.logoutButton {
-    background-color:#c4c459;
+.buttons  {
+    
     border-radius:16px;
     border:#082a3a dashed 2px;
     display:inline-block;
     cursor:pointer;
     color:#082a3a;
     font-family:Arial;
-    font-size:13px;
+    font-size:14px;
     padding:5px 30px;
     text-decoration:none;
-    margin-top: 5px;
+    
+    
+    }
+
+.buttons:active {
+    position:relative;
+    top:1px;
+    
 }
 
-.logoutButton:hover {
-    cursor: pointer;
+#logoutButton {
+    background-color:#c4c459;
+    margin-top: 5px;
+    font-size:13px;
+    
+    
 }
+

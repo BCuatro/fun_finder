@@ -66,7 +66,7 @@ class Profile extends React.Component{
                         <p id ="ptext">Pronouns: {this.props.user.pronouns}</p>
                         
                     </div>
-                     <button id= "editButton" onClick = {this.handleOpenModal}>Edit Profile</button> 
+                     <button className= "buttons" id= "editButton" onClick = {this.handleOpenModal}>Edit Profile</button> 
                     
                     
                 </div>
