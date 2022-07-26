@@ -323,20 +323,21 @@ a{
   font-size: 0.8rem;
 }
 
-/* .reviews {
-aka stars
-} */
+.rvw-star {
+  margin-left: auto;
+}
 
 .box-top {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .user-review p {
   font-size: 0.9rem;
   color: #4b4b4b;
+
 }
 
 .testimonial-box:hover {
