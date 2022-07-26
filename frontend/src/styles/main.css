@@ -12,7 +12,10 @@ h1 {
     left: 50%;
     z-index: 0;
 }
-
+.mapdiv{
+    position:relative;
+    min-height: 100%;
+}
 #address-details-container {
     /* position: relative;
     top: 144px;

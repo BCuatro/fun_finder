@@ -30,14 +30,14 @@
 }
 
 .map-container {
-    /* position: relative; */
+    position: relative;
     height: 450px;
     /* display: flex; */
     /* justify-content: center; */
     /* left: 150px;
     bottom: 120px; */
     width: 60%;
-    position: relative;
+    
     /* top: -200px; */
     top: -175%;
     left: 10px;

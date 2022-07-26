@@ -60,15 +60,17 @@
     position: relative;
     padding-top: 25px;
    
-    height: 100%;
+    min-height: 100%;
     }
     
     
-    .profilesection { grid-area: 1 / 2 / 6 / 6; }
+    .profilesection { grid-area: 1 / 2 / 6 / 6; 
+    position: relative;}
     .profilepicture  { grid-area: 1 / 1 / 6 / 2; 
     display: flex;
     height: 100%;
-    flex-direction: column
+    flex-direction: column;
+    position: relative;
     
     };
     

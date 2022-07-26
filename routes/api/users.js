@@ -36,7 +36,7 @@ const upload = multer({
         const results = await s3Upload(req.file);
         return res.json({ status: "success", location:results.Location });
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     });
 

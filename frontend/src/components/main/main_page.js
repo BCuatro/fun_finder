@@ -17,7 +17,7 @@ const MainPage = (props) => {
     if (!isLoaded) return <div>Loading...</div>
 
     return (
-        <div>
+        <div className="mapdiv">
             <h1>FUN FINDER</h1>
             <Map />
             <div id="address-details-container"></div>

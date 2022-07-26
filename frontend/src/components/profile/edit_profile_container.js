@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 import { fetchUser, fetchUsers, updateUser } from "../../actions/users_actions";
 import { openModal, closeModal } from '../../actions/modal_actions';
 import EditForm from "./edit_profile_form";
-import { updatePhoto } from "../../util/users_api_util";
 
 
 
@@ -34,7 +33,7 @@ const mapDispatchToProps = (dispatch) => {
     openModal: () => dispatch(openModal('editprofile')),
     closeModal: () => dispatch(closeModal()),
     updateUser: (user) => dispatch(updateUser(user)),
-    updatePhoto: (file) => updatePhoto(file)
+    
 
 
   };
