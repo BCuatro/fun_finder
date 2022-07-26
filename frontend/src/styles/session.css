@@ -160,7 +160,16 @@
 #demo{
   transform: translateY(30%);
 }
+.errors{
+  margin-top: 5px;
+  color: red;
+  font-size: 15px;
+  font-family:'Times New Roman', Times, serif;
 
+}
+#signup-errors{
+  transform: translateY(20%);
+}
 
 
   

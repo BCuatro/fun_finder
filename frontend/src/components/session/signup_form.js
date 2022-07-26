@@ -113,7 +113,9 @@ class SignupForm extends React.Component {
                 <form onSubmit ={this.handleSubmit}>
                     <div>
                         <br /> 
+                        <div className="errors" id="signup-errors">
                         {this.renderSignupErrors()}
+                        </div>
                         <h2 className="signuptitle">Sign Up</h2>
                         <div className="modal-input-container">
                             <input type ="text"
