@@ -143,23 +143,23 @@ input[type="radio"] {
   transition: color 200ms;
 }
 
-.review-list > li {
-  /* box-sizing: border-box; */
-  /* width: 100%; */
-  /* border: solid orangered 3px; */
-  /* padding: 5px; */
+/* .review-list > li {
+  box-sizing: border-box;
+  width: 100%;
+  border: solid orangered 3px;
+  padding: 5px;
   display:flex;
   justify-content: left;
   align-items: left;
-  /* flex-wrap: wrap; */
-  /* width: 100%; */
+  flex-wrap: wrap;
+  width: 100%;
   width: 500px;
   box-shadow:0 0 15px 4px rgb(255, 123, 0);
   background-color: #ffffff;
   padding: 20px;
   margin: 15px;
   cursor: pointer;
-}
+} */
 
 div {
   color: black;
@@ -199,7 +199,7 @@ textarea {
    color:#fff;
    font-weight:600;
    border-radius:5px;
-   width:65%;
+   width:30%;
 
    border-radius:16px;
    border:#082a3a dashed 2px;

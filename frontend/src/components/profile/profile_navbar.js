@@ -56,7 +56,7 @@ export default class ProfileNavBar extends React.Component {
       { title: 'About', content: aboutMe(this.props.user) },
       { title: 'My Pictures', content: photoAlbum(this.props.user) },
       { title: 'My Hangout', content: "Under Construction" },
-      { title: 'My Experience', content: <ExperienceForm /> },
+      { title: 'My Experience', content: <ExperienceForm props={this.props.user} /> },
     ];
     const tab = tabs[this.state.selectedTab];
 
