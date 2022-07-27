@@ -38,7 +38,7 @@ export default function Search({ panTo }) {
         panTo({ lat, lng });
       })
       .catch(error => {
-        console.log("😱 Error: ", error);
+        console.log("Error: ", error);
       });
   };
 

@@ -16,12 +16,19 @@ const MainPage = (props) => {
 
     if (!isLoaded) return <div>Loading...</div>
 
+    //this is the wrong page to fix
     return (
         <div className="mapdiv">
-            <h1>FUN FINDER</h1>
+            <h1>
+                <div className="fun-finder-title">
+                    FUN FINDER
+                </div>
+            </h1>
             <Map />
             <div id="address-details-container"></div>
-           
+            <footer>
+                <AboutMe />
+            </footer>
         </div>
     );
 }

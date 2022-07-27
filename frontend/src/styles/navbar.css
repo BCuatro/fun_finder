@@ -1,40 +1,21 @@
 .logo {
-    height: 5em;
-    width: 5em;
+    height: 8em;
+    width: 8em;
     position: relative;
     left: 8px;
     top: 8px;
     z-index: 2;
 }
-/* #navTitle {
-    color: rgb(241, 117, 95);
-    font-size: 40px;
-    font-style: italic;
-    font-family: Geneva, Tahoma, sans-serif;
-    margin: 0;
-    
-}
-#navSubTitle{
-    color: #082a3a;;
-    margin: 0;
-    font-size: 20px;
-    font-style: italic;
-    font-family: Geneva, Tahoma, sans-serif;
-    transform: translateX(10%);
-} */
 
 .nav_header {
     /* width: 90%; */
     width: 100%;
-    height: 100%;
     display: inline-flex;
-    position: relative;
 }
 
 .container {
     display: inline-flex;
     width: 100%;
-    height: 100;
 
 }
 
@@ -51,7 +32,9 @@
     right: 40px;
 }
 
-
+.nav_header {
+    position: relative;
+}
 
 #sessionlinks {
     /* position: relative;
@@ -68,6 +51,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    font-size: 20px;
 }
 
 .loginNavContainer {
@@ -83,58 +67,39 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    right: 35px;
+    right: 15px;
     top: 20px;
 }
-/* .profileLink  {
-    background-color:#83BBE1;
-    border-radius:16px;
-    border:#082a3a dashed 2px;
-    display:inline-block;
-    cursor:pointer;
-    color:#082a3a;
-    font-family:Arial;
-    font-size:14px;
-    padding:5px 30px;
-    text-decoration:none;
-    
-    }
 
-.profileLink:active {
-    position:relative;
-    top:1px;
-    
-} */
-#profileLink{
-    background-color:#83BBE1;
+#profileLink {
+    background-color: #83BBE1;
 }
 
-.buttons  {
-    
-    border-radius:16px;
-    border:#082a3a dashed 2px;
-    display:inline-block;
-    cursor:pointer;
-    color:#082a3a;
-    font-family:Arial;
-    font-size:14px;
-    padding:5px 30px;
-    text-decoration:none;
-    
-    
-    }
+.buttons {
+
+    border-radius: 16px;
+    border: #082a3a dashed 2px;
+    display: inline-block;
+    cursor: pointer;
+    color: #082a3a;
+    font-family: Arial;
+    font-size: 16px;
+    padding: 5px 30px;
+    text-decoration: none;
+
+
+}
 
 .buttons:active {
-    position:relative;
-    top:1px;
-    
+    position: relative;
+    top: 1px;
+
 }
 
 #logoutButton {
-    background-color:#c4c459;
+    background-color: #c4c459;
     margin-top: 5px;
-    font-size:13px;
-    
-    
-}
+    font-size: 16px;
 
+
+}

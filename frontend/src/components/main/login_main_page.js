@@ -21,11 +21,16 @@ const MainPage = (props) => {
         <div>
             <br />
             <br />
-
-            <h1>FUN FINDER</h1>
+            <h1>
+                <div className="fun-finder-title">
+                    FUN FINDER
+                </div>
+            </h1>
             <Map />
             <div id="address-details-container"></div>
-            
+            <footer>
+                <AboutMe />
+            </footer>
         </div>
     );
 }

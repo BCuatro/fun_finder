@@ -14,14 +14,14 @@ class AboutMe extends React.Component {
                         Alisher Podavonov
                     </div>
                     <div className="about-me-links">
-                        <a href="https://github.com/apodavonov3616">
-                        <img src={github} alt="github" width = "39px" id="github"/>
+                        <a target="_blank" href="https://github.com/apodavonov3616">
+                            <img src={github} alt="github" width="39px" id="github" />
                         </a>
-                        <a href="https://alisher-podavonov.com/">
-                            <img src={porfolio} alt="portfolio" width = "39px" id="portfolio"/>
+                        <a target="_blank" href="https://alisher-podavonov.com/">
+                            <img src={porfolio} alt="portfolio" width="39px" id="portfolio" />
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/alisher-podavonov-80b85a23b/">
-                            <img src={linkedin} alt="linkedin" width = "39px" id="linked"/>
+                            <img src={linkedin} alt="linkedin" width="39px" id="linked" />
                         </a>
                     </div>
                 </div>
@@ -30,14 +30,14 @@ class AboutMe extends React.Component {
                         Eric Balfour
                     </div>
                     <div className="about-me-links">
-                        <a href="google.com">
-                        <img src={github} alt="github" width = "39px" id="github"/>
-                        </a>
-                        <a href="google.com">
-                            <img src={porfolio} alt="portfolio" width = "39px" id="portfolio"/>
+                        <a target="_blank" href="google.com">
+                            <img src={github} alt="github" width="39px" id="github" />
                         </a>
                         <a target="_blank" href="google.com">
-                            <img src={linkedin} alt="linkedin" width = "39px" id="linked"/>
+                            <img src={porfolio} alt="portfolio" width="39px" id="portfolio" />
+                        </a>
+                        <a target="_blank" href="google.com">
+                            <img src={linkedin} alt="linkedin" width="39px" id="linked" />
                         </a>
                     </div>
                 </div>
@@ -46,14 +46,14 @@ class AboutMe extends React.Component {
                         David-Allen Asencio
                     </div>
                     <div className="about-me-links">
-                        <a href="https://github.com/davida11en">
-                        <img src={github} alt="github" width = "39px" id="github"/>
+                        <a target="_blank" href="https://github.com/davida11en">
+                            <img src={github} alt="github" width="39px" id="github" />
                         </a>
-                        <a href="google.com">
-                            <img src={porfolio} alt="portfolio" width = "39px" id="portfolio"/>
+                        <a target="_blank" href="google.com">
+                            <img src={porfolio} alt="portfolio" width="39px" id="portfolio" />
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/david-allen-asencio-9107b0122/">
-                            <img src={linkedin} alt="linkedin" width = "39px" id="linked"/>
+                            <img src={linkedin} alt="linkedin" width="39px" id="linked" />
                         </a>
                     </div>
                 </div>

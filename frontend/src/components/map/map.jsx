@@ -23,7 +23,6 @@ export default function Map() {
     }
     document.getElementById('introverted-button').style.backgroundColor = 'blue';
     types = ['cafe', 'bakery', 'museum', 'shopping_mall', 'tourist_attraction']
-    console.log(types)
   }
 
   const extraverted = () => {
@@ -33,7 +32,6 @@ export default function Map() {
     }
     document.getElementById('extraverted-button').style.backgroundColor = 'blue';
     types = ['restaurant', 'bar', 'gym', 'tourist_attraction']
-    console.log(types)
   }
 
   const bar = () => {
@@ -43,7 +41,6 @@ export default function Map() {
     }
     document.getElementById('bar-button').style.backgroundColor = 'blue';
     types = ['bar']
-    console.log(types)
   }
 
   const food = () => {
@@ -53,7 +50,6 @@ export default function Map() {
     }
     document.getElementById('food-button').style.backgroundColor = 'blue';
     types = ['bakery', 'restaurant']
-    console.log(types)
   }
 
   const cafe = () => {
@@ -63,7 +59,6 @@ export default function Map() {
     }
     document.getElementById('cafe-button').style.backgroundColor = 'blue';
     types = ['cafe']
-    console.log(types)
   }
 
   const tourist_attraction = () => {
@@ -73,7 +68,6 @@ export default function Map() {
     }
     document.getElementById('tourist-button').style.backgroundColor = 'blue';
     types = ['tourist_attraction']
-    console.log(types)
   }
 
   const both = () => {
@@ -106,7 +100,6 @@ export default function Map() {
     var randType;
     randType = types[Math.floor(Math.random() * types.length)]
 
-    console.log(randType)
 
     let request = {
       location: { lat, lng },
@@ -120,17 +113,7 @@ export default function Map() {
     function callback(results, status) {
 
       if (status === google.maps.places.PlacesServiceStatus.OK) {
-        // for (let i = 0; i < results.length; i++) {
-        //   let place = results[i];
-        //   new google.maps.Marker({
-        //     position: place.geometry.location,
-        //     map
-        //   });
-        // console.log(results[i].name)
 
-        // if (our_marker) {
-        //   our_marker.setMap(null)
-        // }
         const random = results[Math.floor(Math.random() * results.length)];
         new google.maps.Marker({
           position: random.geometry.location,
