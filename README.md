@@ -24,12 +24,16 @@ on our colorful map (achieved with Google Maps API) as well as the location's na
 
 ## Randomizing Functions
 
+### Places API Searchbar Autocomplete
+
 I was able to tap into and manipulate the searchbar functionality within Places API. 
 By inserting a random letter from the alphabet in our handleInput function, I utilized suggestions from the autocomplete functionality
 and selected one suggestion. Each suggestion houses a collection of results. Then, I used the geocode location to also retrieve the respective positions
 on the map, which gets rendered as a marker on our map.
 
 ![code](/frontend/src/fun-finder-search.png)
+
+### Places API types
 
 Each button that a user selects changes the 'types' array. Each 'types' array holds one or more types, which is used by Places API
 when filtering the destinations to show. For example, the 'cafe' button holds only one type while the 'extraverted' button holds a collection
@@ -40,6 +44,8 @@ accurate results based on the 'types' we pass into Google Places.
 
 ![code](/frontend/src/fun-finder-extraverted.png)
 ![code](/frontend/src/fun-finder-cafe.png)
+
+### Destination Selector
 
 After the results are retreived, I used another Math.random() function to pluck out just one result and render a marker onto the map.
 Since we have the result, we can retreive multiple details about the result, in this case being the name and address of the chosen destination.
