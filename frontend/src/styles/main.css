@@ -32,10 +32,9 @@ h1 {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 160px;
+    top: 120px;
     font-size: 22px;
     color: rgb(199, 40, 12);
-    right: 5%
 }
 
 #address-name {
