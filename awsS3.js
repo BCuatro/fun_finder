@@ -3,7 +3,7 @@ const router = express.Router();
 
 const BUCKET_NAME = "fun-finder-dev";
 const AWS = require("aws-sdk");
-const AWS_KEYS = require("./config/awsKeys");
+const AWS_KEYS = require("./config/keys");
 
 
 const s3 = new AWS.S3({
