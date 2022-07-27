@@ -3,9 +3,8 @@
     justify-content: space-around;
     flex-direction: row;
     position: relative;
-    /* top: 50px; */
-    padding: 10px;
-    width: 98%;
+    top: 220px;
+    /* width: 98%; */
     background-color: rgb(128, 187, 41);
     border: #082a3a dashed 3px;
     border-radius: 40px;

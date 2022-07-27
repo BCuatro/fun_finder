@@ -25,7 +25,6 @@ header {
 
 footer {
   width: 100%;
-  position: absolute;
   height: 10%;
   bottom: 0%;
   grid-area: 5 / 1 / 6 /6;
