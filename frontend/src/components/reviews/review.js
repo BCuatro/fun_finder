@@ -5,7 +5,7 @@ import propic from "../../SMProfilePic.png"
 class ExperienceForm extends React.Component {
   constructor(props) {
     super(props);
-    // console.log('FOR PROPS', props);
+    console.log('FOR PROPS', props);
     this.state = {
       listItems: [],
       fname: this.props.props.fname, 
@@ -199,7 +199,7 @@ class ExperienceForm extends React.Component {
                           <div className="profile">
                             {/* img */}
                             <div className="profile-img">
-                              <img id= "review" src={propic} className="review picture" alt="review picture" />
+                              <img id= "review" src={this.props.props.profilePic} className="review picture" alt="review picture" />
                             </div>
                             <div className="name-user">
                               <strong> {this.props.props.fname + ' ' + this.props.props.lname}</strong>
