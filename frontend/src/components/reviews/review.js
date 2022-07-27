@@ -5,7 +5,7 @@ import { FaStar } from 'react-icons/fa';
 class ExperienceForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log('FOR PROPS', props);
+    // console.log('FOR PROPS', props);
     this.state = {
       listItems: [],
       fname: this.props.props.fname, 
@@ -160,7 +160,7 @@ class ExperienceForm extends React.Component {
                             </div>
                           </div>
                      
-                        {console.log("NEW REVIEW", li)}
+                        {/* {console.log("NEW REVIEW", li)} */}
                           {/* {console.log("PROPS", props)} */}
                         <div className="rvw-star">
                         {[...Array(Number(li.rating))].map((star, i) => {
