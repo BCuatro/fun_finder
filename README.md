@@ -38,15 +38,15 @@ is not always accurate, for example a doctors office may be included in bowling 
 there is little we can do with changing that aspect. So I decided a solid workaround is to use only the 'types' that most frequently retreive the most
 accurate results based on the 'types' we pass into Google Places.
 
-![code](/frontend/src/fin-finder-extraverted.png)
-![code](/frontend/src/fin-finder-cafe.png)
+![code](/frontend/src/fun-finder-extraverted.png)
+![code](/frontend/src/fun-finder-cafe.png)
 
 After the results are retreived, I used another Math.random() function to pluck out just one result and render a marker onto the map.
 Since we have the result, we can retreive multiple details about the result, in this case being the name and address of the chosen destination.
 Every time a new search result is rendered, we search the document for the previous location name and address, remove it, and create
 the new search's name and address in it's place.
 
-![code](/frontend/src/fin-finder-callback.png)
+![code](/frontend/src/fun-finder-callback.png)
 
 ## Core Features
 
