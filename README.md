@@ -8,7 +8,7 @@ on a place's 'type' property, ie. bar, cafe, tourist_attraction, etc. Then, afte
 the website randomly selects a place to go to. The random search result will then render the location's marker
 on our colorful map (achieved with Google Maps API) as well as the location's name and address. 
 
-![website structure](/frontend/src/fun-finder-page.png)
+![website structure](/frontend/src/fun-finder-page.gif)
 
 ## Technologies:
 - HTML
@@ -24,11 +24,29 @@ on our colorful map (achieved with Google Maps API) as well as the location's na
 
 ## Randomizing Functions
 
-We were able to tap into the searchbar autocomplete functionality within Places API
-in order to have search results that are filtered based on the 'types' property. Then,
-one search result is chosen with a Math.random() function and shown on page. Below is an image of how a random 'type' was chosen from an array of different types, expanding on the randomness of a chosen place:
+I was able to tap into and manipulate the searchbar functionality within Places API. 
+By inserting a random letter from the alphabet in our handleInput function, I utilized suggestions from the autocomplete functionality
+and selected one suggestion. Each suggestion houses a collection of results. Then, I used the geocode location to also retrieve the respective positions
+on the map, which gets rendered as a marker on our map.
 
-![code](/frontend/src/screenshot1.png)
+![code](/frontend/src/fun-finder-search.png)
+
+Each button that a user selects changes the 'types' array. Each 'types' array holds one or more types, which is used by Places API
+when filtering the destinations to show. For example, the 'cafe' button holds only one type while the 'extraverted' button holds a collection
+of types and one of those is chosen at random, increasing the randomness of our app. One potential problem with this is that the information on Google Places
+is not always accurate, for example a doctors office may be included in bowling places. Since this is due to incorrect information on google's library, 
+there is little we can do with changing that aspect. So I decided a solid workaround is to use only the 'types' that most frequently retreive the most
+accurate results based on the 'types' we pass into Google Places.
+
+![code](/frontend/src/fin-finder-extraverted.png)
+![code](/frontend/src/fin-finder-cafe.png)
+
+After the results are retreived, I used another Math.random() function to pluck out just one result and render a marker onto the map.
+Since we have the result, we can retreive multiple details about the result, in this case being the name and address of the chosen destination.
+Every time a new search result is rendered, we search the document for the previous location name and address, remove it, and create
+the new search's name and address in it's place.
+
+![code](/frontend/src/fin-finder-callback.png)
 
 ## Core Features
 
@@ -40,8 +58,8 @@ one search result is chosen with a Math.random() function and shown on page. Bel
 
 ## Contributers
 
-- Alisher Podavonov
-- Eric Balfour
-- David-Allen Asencio
+- [Alisher Podavonov](https://www.linkedin.com/in/alisher-podavonov-80b85a23b/)
+- [Eric Balfour](www.linkedin.com/in/eric-balfour)
+- [David-Allen Asencio](https://www.linkedin.com/in/david-allen-asencio-9107b0122/)
 
 
