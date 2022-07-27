@@ -56,6 +56,28 @@ the new search's name and address in it's place.
 
 ![code](/frontend/src/fun-finder-callback.png)
 
+## User Functions
+
+### User Authentication 
+
+Users will have the ability to login with their email and password, or sign up to the application by inputting their email, password and some basic
+information.  Both the sign up and login forms will prompt errors if the user's information is invalid.  
+
+![website structure](https://github.com/BCuatro/fun_finder/blob/main/assets/session-demo.gif)
+
+### User Profile
+
+After successful sign up or login, users will still have access to the randomizer, but will gain access to their own profile page, which they can 
+customize by uploading a profile picture, modifying personal information and adding 3 additional pictures that best describes them.  Upon creation of 
+the profile, all images will be default images until the user adds their photos.  Users will also have the ability to review and post about their 
+hangout activities chosen by the randomizer.  Users could seamlessly navigate through their profile by clicking on the profile tabs to view specific
+content, and the can hover over the "Edit Profile" dropdown to update their information.  The profile functionalities were developed using RESTful 
+routes that gives the user CRUD capabilities, allows the user's information to be stored or retrieved from the database, and to upload and retrieve 
+images from AWS.  Image validations were implemented to prevent user from uploading files that are not images.  
+ 
+![code](/assets/profile_example.png)
+
+
 ## Core Features
 
 - ### User Authentication (users are able to login, logout, and register)
