@@ -18,7 +18,7 @@
     cursor: default;
     color: #082a3a;
     background-color: #c4c459;
-    margin-left: 25%;
+    left: 25%;
 
 }
 
@@ -26,6 +26,7 @@
     position: relative;
     padding: 0;
     width:150px;
+    
     
 }
 
