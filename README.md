@@ -14,6 +14,8 @@ on our colorful map (achieved with Google Maps API) as well as the location's na
 - HTML
 - Javascript
 - CSS
+- Google Maps API
+- Google Places API
 - nodeJS
 - Express
 - React
