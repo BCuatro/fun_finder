@@ -3,14 +3,18 @@
     justify-content: space-around;
     flex-direction: row;
     position: relative;
-    top: 220px;
+    top: 214px;
     /* width: 98%; */
     background-color: rgb(128, 187, 41);
     border: #082a3a dashed 3px;
     border-radius: 40px;
     align-items: center;
-    bottom: 0%;
+    bottom: 0.5%;
 
+}
+
+.person-container {
+    padding: 5px;
 }
 
 .about-me-links {
