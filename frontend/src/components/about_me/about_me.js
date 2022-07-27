@@ -30,13 +30,13 @@ class AboutMe extends React.Component {
                         Eric Balfour
                     </div>
                     <div className="about-me-links">
-                        <a target="_blank" href="google.com">
+                        <a target="_blank" href="https://github.com/BCuatro">
                             <img src={github} alt="github" width="39px" id="github" />
                         </a>
                         <a target="_blank" href="google.com">
                             <img src={porfolio} alt="portfolio" width="39px" id="portfolio" />
                         </a>
-                        <a target="_blank" href="google.com">
+                        <a target="_blank" href="www.linkedin.com/in/eric-balfour">
                             <img src={linkedin} alt="linkedin" width="39px" id="linked" />
                         </a>
                     </div>

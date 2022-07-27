@@ -7,7 +7,7 @@ module.exports = function validateRegisterInput(data) {
 
     data.fname = validText(data.fname) ? data.fname: "";
     data.lname = validText(data.lname) ? data.lname: "";
-    // data.gender = validText(data.gender) ? data.gender: "";
+    data.gender = validText(data.gender) ? data.gender: "";
     // data.birthdate = data.birthdate ? data.birthdate: "";
     data.email = validText(data.email) ? data.email: "";
     data.password = validText(data.password) ? data.password: '';
@@ -39,9 +39,9 @@ module.exports = function validateRegisterInput(data) {
     }
 
 
-    // if(Validator.isEmpty(data.gender)){
-    //     errors.gender = "Gender is required ";
-    // }
+    if(Validator.isEmpty(data.gender)){
+        errors.gender = "Gender is required ";
+    }
 
     // if(Validator.isEmpty(data.birthdate)){
     //     errors.birthdate = " Please enter your birthday ";

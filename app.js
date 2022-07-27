@@ -33,12 +33,7 @@ mongoose
 
 //routes on app object to listen to incoming request
 app.get("/",(req,res)=> {
-    // const user = new User({
-    //     handle: "emoney",
-    //     email: "emoney@money.com",
-    //     password:"money123"
-    // })
-    // user.save()
+    
     res.send("What's Poppin!");
 
 });

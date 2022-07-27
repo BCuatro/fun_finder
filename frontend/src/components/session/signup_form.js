@@ -59,7 +59,7 @@ class SignupForm extends React.Component {
             email: this.state.email,
             fname: this.state.fname,
             lname: this.state.lname,
-            // gender: this.state.gender,
+            gender: this.state.gender,
             // birthdate: this.state.birthdate,
             password: this.state.password,
             password2: this.state.password2,
@@ -123,7 +123,7 @@ class SignupForm extends React.Component {
                         </div>
 
                         <br />
-                        {/* <div className="modal-input-container">
+                        <div className="modal-input-container">
                             <input type ="text"
                                 id ="gender"
                                 required
@@ -132,8 +132,8 @@ class SignupForm extends React.Component {
                                 onChange = {this.update('gender')}
                             />
                             <label htmlFor='gender' className="modal-label">Gender:</label> 
-                        </div> */}
-
+                        </div>
+                        <br/>
                         <div className="modal-input-container">
                             <input type="password"
                                 id="password"

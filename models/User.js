@@ -28,7 +28,7 @@ const UserSchema = new Schema({
     },
     slogan: {
       type: String,
-      default: ""
+      default: "I love meeting new people on Fun Finder"
     },
     pronouns: {
       type: String,
@@ -36,19 +36,19 @@ const UserSchema = new Schema({
     },
     profilePic: {
       type: String,
-      default: ""
+      default: "https://fun-finder-dev.s3.amazonaws.com/uploads/1658921921896-Default_Profile_Pic.jpeg"
     },
     aboutMePicA: {
       type: String,
-      default: ""
+      default: "https://fun-finder-dev.s3.amazonaws.com/uploads/1658921842988-Default_Photo_A.jpeg"
     },
     aboutMePicB: {
       type: String,
-      default: ""
+      default: "https://fun-finder-dev.s3.amazonaws.com/uploads/1658919034367-Default_Photo_B.jpeg"
     },
     aboutMePicC: {
       type: String,
-      default: ""
+      default: "https://fun-finder-dev.s3.amazonaws.com/uploads/1658919211036-Default_Photo_C.jpeg"
     },
     
     // birthdate: {
