@@ -56,11 +56,11 @@ the new search's name and address in it's place.
 
 ## Core Features
 
-- User Authentication (users are able to login, logout, and register)
-- User Profile Page (only users who are logged in can see their own page, which includes information about users and their picture uploads)
-- Google Maps API
-- Place Randomization (with a click of a button, users leave the 'finding' aspect to our app, which uses Google Places API's properties such as autocomplete and 'types')
-- Reviews (logged in users can post about their experiences at the various places Fun Finder chose for them)
+- ### User Authentication (users are able to login, logout, and register)
+- ### User Profile Page (only users who are logged in can see their own page, which includes information about users and their picture uploads)
+- ### Google Maps API
+- ### Place Randomization (with a click of a button, users leave the 'finding' aspect to our app, which uses Google Places API's properties such as autocomplete and 'types')
+- ### Reviews (logged in users can post about their experiences at the various places Fun Finder choses for them)
 
 ## Contributers
 
