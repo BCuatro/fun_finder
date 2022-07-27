@@ -5,3 +5,4 @@
 /config/awsKeys.js
 /config/keys.js
 /config/.env
+/config/dbkeys.js

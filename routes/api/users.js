@@ -2,16 +2,15 @@ const express = require("express");
 const router = express.Router();
 const User = require('../../models/User');
 const bcrypt = require("bcryptjs");
-// const keys = require('../../frontend/src/config/keys');
-const keys = require('../../config/keys')
+
+const keys = require('../../config/dbkeys')
 const jwt = require('jsonwebtoken');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 const passport = require('passport');
 const multer = require("multer");
 const multerS3 =require("multer-s3")
-// const AWS = require("aws-sdk")
-// const AWS_KEYS = require('../../config/awsKeys')
+
 const path = require("path");
 const { s3Upload } = require("../../awsS3");
 require("dotenv").config()
