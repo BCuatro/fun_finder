@@ -1,2 +1,2 @@
-export default 'AIzaSyA8iJvIGrEWrjL1D32Qgd7eQZG1NO5TdOQ';
+export default 'AIzaSyAtclt69S7zh-UwdZdcYaurYtSDxw3J9PI';
 // module.exports
